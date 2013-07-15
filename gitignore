@@ -1,0 +1,16 @@
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Rbenv
+.ruby-version
+.rbenv-vars
