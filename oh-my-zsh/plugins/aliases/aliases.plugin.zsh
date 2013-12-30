@@ -8,5 +8,5 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 alias hosts="sudo vim /etc/hosts"
 
 # Postgresql
-alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias pg_start='pg_ctl -D /usr/local/var/postgres -l logfile start'
+alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
