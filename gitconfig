@@ -1,11 +1,12 @@
 [user]
-	name = Gabriel Rinaldi
-	email = gabriel_rinaldi@mac.com
+  name = Gabriel Rinaldi
+  email = gabriel_rinaldi@mac.com
 [push]
-	default = simple
+  default = simple
 [core]
-	editor = subl
-	excludesfile = /Users/Gabriel/.gitignore
+  editor = subl
+  excludesfile = /Users/Gabriel/.gitignore
+  trustctime = false
 [color]
     ui = auto
   [color "branch"]
@@ -19,26 +20,17 @@
     added = yellow
     changed = green
     untracked = cyan
-[alias]
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
 [mergetool]
-	keepBackup = true
-	prompt = false
+  keepBackup = true
+  prompt = false
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 [difftool]
-	prompt = false
+  prompt = false
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [merge]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
