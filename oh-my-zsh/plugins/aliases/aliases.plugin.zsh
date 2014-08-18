@@ -10,3 +10,9 @@ alias hosts="sudo vim /etc/hosts"
 # Postgresql
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l logfile start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
+# Bower
+alias bower='noglob bower'
+
+# Pod
+alias pi='pod install'
