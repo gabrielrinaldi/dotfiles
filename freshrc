@@ -9,3 +9,10 @@
 # See http://freshshell.com/readme for documentation.
 
 fresh freshshell/fresh bin/fresh --bin
+
+fresh zshrc.after --file
+fresh gemrc --file
+fresh gitconfig --file
+fresh gitignore --file
+fresh pryrc --file
+fresh vimrc.after --file
