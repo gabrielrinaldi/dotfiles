@@ -1,8 +1,3 @@
-# Online help
-unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/helpfiles
-
 # Command history configuration
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
