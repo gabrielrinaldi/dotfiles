@@ -35,7 +35,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Which plugins would you like to load?
   plugins=(aliases bower brew cp dirs gem gibo git mvn node npm nvm pod rails rbenv tmux xcode)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-  # TODO
+  # Which plugins would you like to load?
+  plugins=(gem git rbenv)
 fi
 
 # Set name of the theme to load
