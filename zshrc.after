@@ -33,7 +33,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source $(brew --prefix nvm)/nvm.sh
 
   # Which plugins would you like to load?
-  plugins=(aliases bower brew cp dirs gem gibo git mvn node npm nvm pod rails rbenv tmux xcode)
+  plugins=(aliases brew cp dirs gem gibo git mvn node npm nvm pod rbenv)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Which plugins would you like to load?
   plugins=(gem git rbenv)
