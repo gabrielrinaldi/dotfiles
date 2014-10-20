@@ -2,35 +2,47 @@
 	name = Gabriel Rinaldi
 	email = gabriel_rinaldi@mac.com
 [push]
-  default = simple
+	default = simple
 [core]
-  editor = subl
-  excludesfile = /Users/Gabriel/.gitignore
-  trustctime = false
+	editor = subl
+	excludesfile = /Users/Gabriel/.gitignore
+	trustctime = false
 [color]
-    ui = auto
-  [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-  [color "diff"]
-    old = red
-    new = green
-  [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	commit = yellow reverse
+	old = red
+	new = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[merge]
+	log = true
+	conflictstyle = diff3
+	tool = Kaleidoscope
+
 [mergetool]
 	keepBackup = true
-  prompt = false
+	prompt = false
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+[diff]
+	tool = Kaleidoscope
+
+[difftool]
+	prompt = false
+
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-  tool = Kaleidoscope
-[difftool]
-  prompt = false
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
-[merge]
-  tool = Kaleidoscope
