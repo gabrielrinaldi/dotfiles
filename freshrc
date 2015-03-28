@@ -11,8 +11,16 @@
 fresh freshshell/fresh bin/fresh --bin
 
 fresh zshrc.after --file
-fresh gemrc --file
 fresh gitconfig --file
 fresh gitignore --file
-fresh pryrc --file
 fresh vimrc.after --file
+fresh pryrc --file
+fresh oh-my-zsh/themes/glean.zsh-theme --file=~/.oh-my-zsh/custom/themes/glean.zsh-theme
+
+fresh twe4ked/dotfiles config/pryrc --file
+fresh jasoncodes/dotfiles config/gemrc --file
+fresh jasoncodes/dotfiles config/irbrc --file
+fresh nojhan/liquidprompt liquidprompt
+fresh foobacca/dotfiles shell/aliases-dir
+fresh foobacca/dotfiles shell/tmux
+fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
