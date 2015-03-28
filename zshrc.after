@@ -32,8 +32,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
 
+  # PATH
+  export PATH="/usr/local/sbin:$PATH"
+
   # Which plugins would you like to load?
-  plugins=(aliases brew cp dirs gem gibo git mvn node npm nvm pod rbenv)
+  plugins=(aliases brew cp dirs gem gibo git mvn node npm nvm pod rbenv tmux tmuxinator vagrant)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Which plugins would you like to load?
   plugins=(gem git rbenv)
