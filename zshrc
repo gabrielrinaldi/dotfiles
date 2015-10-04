@@ -36,7 +36,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/usr/local/sbin:$PATH"
 
   # Which plugins would you like to load?
-  plugins=(aliases brew brew-cask cp dirs gem gibo git mvn node npm nvm pod rbenv)
+  plugins=(aliases brew brew-cask cp gem gibo git mvn node npm nvm pod rbenv z)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Which plugins would you like to load?
   plugins=(gem git rbenv)
