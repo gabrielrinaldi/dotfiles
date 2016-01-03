@@ -41,10 +41,6 @@ fi
 # Set name of the theme to load
 ZSH_THEME="glean"
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.dotfiles/base16-twilight.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # How often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS=1
 
