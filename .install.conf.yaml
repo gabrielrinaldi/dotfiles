@@ -1,6 +1,10 @@
 - clean: ['~']
 
 - link:
+    ~/.htoprc:
+        force: true
+        relink: true
+        path: htoprc
     ~/.gitconfig:
         force: true
         relink: true
