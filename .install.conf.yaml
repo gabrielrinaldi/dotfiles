@@ -5,6 +5,10 @@
         force: true
         relink: true
         path: htoprc
+    ~/.tmux.conf:
+        force: true
+        relink: true
+        path: tmux.conf
     ~/.gitconfig:
         force: true
         relink: true
