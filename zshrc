@@ -39,7 +39,9 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 fi
 
 # Set name of the theme to load
-ZSH_THEME="glean"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir root_indicator vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws rbenv nvm)
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # How often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS=1
