@@ -17,9 +17,6 @@ ZSH=$HOME/.oh-my-zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  # Java
-  export JAVA_HOME="$(/usr/libexec/java_home)"
-
   # Set my editor and git editor
   export EDITOR="/usr/local/bin/subl -w"
   export GIT_EDITOR='/usr/local/bin/subl -w'
@@ -32,16 +29,13 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/usr/local/sbin:$PATH"
 
   # Which plugins would you like to load?
-  plugins=(adb aliases aws brew brew-cask bundler colored-man-pages command-not-found cp gem gibo git heroku mvn node npm nvm pod rbenv z)
+  plugins=(adb aliases aws brew brew-cask bundler colored-man-pages command-not-found cp gem gibo git heroku node npm nvm pod rbenv z)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Which plugins would you like to load?
   plugins=(gem git rbenv)
 fi
 
-# Set name of the theme to load
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir root_indicator vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws rbenv nvm)
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="glean"
 
 # How often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS=1
@@ -51,3 +45,6 @@ COMPLETION_WAITING_DOTS="true"
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# Travis
+[ -f /Users/Gabriel/.travis/travis.sh ] && source /Users/Gabriel/.travis/travis.sh
