@@ -3,7 +3,6 @@
 - shell:
     - [git submodule update, Updating dotbot]
     - [git submodule update --init --recursive, Installing submodules]
-    - ["curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh", Installing Alcatraz]
 
 - link:
     ~/.htoprc:

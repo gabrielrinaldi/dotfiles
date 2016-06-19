@@ -1,7 +1,7 @@
 [user]
 	name = Gabriel Rinaldi
 	email = gabriel_rinaldi@mac.com
-	signingkey = 9394BE63
+	signingkey = 63DF7276
 
 [push]
 	default = simple
