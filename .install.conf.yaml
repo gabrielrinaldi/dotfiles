@@ -10,10 +10,10 @@
         force: true
         relink: true
         path: htoprc
-    ~/.tmux.conf:
+    ~/.npmrc:
         force: true
         relink: true
-        path: tmux.conf
+        path: npmrc
     ~/.gitconfig:
         force: true
         relink: true
