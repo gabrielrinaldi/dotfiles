@@ -1,7 +1,6 @@
 [user]
 	name = Gabriel Rinaldi
 	email = gabriel_rinaldi@mac.com
-	signingkey = 63DF7276
 
 [push]
 	default = simple
@@ -68,6 +67,3 @@
 
 [alias]
 	lol = log --graph --decorate --oneline
-
-[commit]
-	gpgsign = true
