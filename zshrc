@@ -28,6 +28,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # PATH
   export PATH="/usr/local/sbin:$PATH"
 
+  # Google Cloud SDK
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
   # Which plugins would you like to load?
   plugins=(adb aliases aws brew brew-cask bundler colored-man-pages command-not-found cp gem gibo git heroku node npm nvm pod rbenv z)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
