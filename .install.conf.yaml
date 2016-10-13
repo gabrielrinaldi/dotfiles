@@ -21,6 +21,10 @@
         force: true
         relink: true
         path: gitignore
+    ~/.tmux.conf:
+        force: true
+        relink: true
+        path: tmux.conf
     ~/.zshrc:
         force: true
         relink: true
