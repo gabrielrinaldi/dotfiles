@@ -4,3 +4,6 @@
 [submodule ".dotbot-brew"]
 	path = .dotbot-brew
 	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule ".janus"]
+	path = .janus
+	url = git@github.com:carlhuda/janus.git
