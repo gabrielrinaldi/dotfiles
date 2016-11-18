@@ -71,6 +71,3 @@
         force: true
         relink: true
         path: oh-my-zsh/plugins/dirs/dirs.plugin.zsh
-
-- shell:
-    - [cd $HOME/.vim && rake, Installing Janus]
