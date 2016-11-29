@@ -49,6 +49,3 @@ COMPLETION_WAITING_DOTS="true"
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
-# Travis
-[ -f /Users/Gabriel/.travis/travis.sh ] && source /Users/Gabriel/.travis/travis.sh
