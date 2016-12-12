@@ -5,14 +5,18 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
+    ~/.vim:
+        force: true
+        relink: true
+        path: vim
+    ~/.vimrc:
+        force: true
+        relink: true
+        path: vimrc
     ~/.htoprc:
         force: true
         relink: true
         path: htoprc
-    ~/.vim:
-        force: true
-        relink: true
-        path: .janus
     ~/.npmrc:
         force: true
         relink: true
