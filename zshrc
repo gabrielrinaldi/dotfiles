@@ -39,14 +39,7 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   plugins=(gem git rbenv)
 fi
 
-# Powerline configuration
-DEFAULT_USER='gabriel'
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir nvm rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vi_mode background_jobs time)
-
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="glean"
 
 # How often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS=1

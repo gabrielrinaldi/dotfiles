@@ -33,11 +33,11 @@
         force: true
         relink: true
         path: zshrc
-    ~/.oh-my-zsh/custom/themes/powerlevel9k:
+    ~/.oh-my-zsh/custom/themes/glean:
         create: true
         force: true
         relink: true
-        path: oh-my-zsh/themes/powerlevel9k
+        path: oh-my-zsh/themes/glean
     ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh:
         create: true
         force: true
