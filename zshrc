@@ -25,6 +25,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
 
+  # Exenv
+  if which exenv > /dev/null; then eval "$(exenv init -)"; fi
+
   # PATH
   export PATH="/usr/local/sbin:$PATH"
 
