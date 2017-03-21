@@ -36,7 +36,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
   # Which plugins would you like to load?
-  plugins=(adb aliases brew brew-cask bundler docker docker-compose gem git heroku kubectl node npm nvm pod rbenv tmux)
+  plugins=(adb aliases brew brew-cask bundler docker docker-compose gem git heroku kubectl node npm nvm pod rbenv tmux tmuxinator)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Which plugins would you like to load?
   plugins=(gem git rbenv)
