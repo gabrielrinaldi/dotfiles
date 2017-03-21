@@ -1,0 +1,22 @@
+# ~/.tmuxinator/Dashboard.yml
+
+name: Dashboard
+root: ~/Code/IS/Clients/Dashboard/
+
+# Start MySQL
+pre: brew services start mysql
+
+# Focus on terminal panel
+startup_pane: 2
+
+# Use iTerm
+attach: false
+post: tmux -CC attach -t Dashboard
+
+# Window management
+windows:
+  - main:
+      layout: main-horizontal
+      panes:
+        - mix phoenix.server
+        -

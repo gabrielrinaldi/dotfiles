@@ -33,6 +33,10 @@
         force: true
         relink: true
         path: tmux.conf
+    ~/.tmuxinator:
+        force: true
+        relink: true
+        path: tmuxinator
     ~/.zshrc:
         force: true
         relink: true

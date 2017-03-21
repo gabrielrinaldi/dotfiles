@@ -1,0 +1,25 @@
+# ~/.tmuxinator/Dashboard.yml
+
+name: Empire
+root: ~/Code/IS/Empire/DeathStar/
+
+# Start MySQL
+pre: brew services start postgresql && brew services start redis && brew services start memcached
+
+# Focus on terminal panel
+startup_window: main
+startup_pane: 1
+
+# Use iTerm
+attach: false
+post: tmux -CC attach -t Empire
+
+# Window management
+windows:
+  - main:
+      layout: tiled
+      panes:
+        -
+        - cd ../Endor
+        - foreman start
+        - cd ../Endor && nf start
