@@ -28,6 +28,9 @@
 	changed = green
 	untracked = cyan
 
+[credential]
+	helper = osxkeychain
+	
 [merge "Kaleidoscope"]
 	log = true
 	conflictstyle = diff3
