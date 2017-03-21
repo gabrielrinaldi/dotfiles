@@ -37,11 +37,11 @@
         force: true
         relink: true
         path: zshrc
-    ~/.oh-my-zsh/custom/themes/glean:
+    ~/.oh-my-zsh/custom/themes/glean.zsh-theme:
         create: true
         force: true
         relink: true
-        path: oh-my-zsh/themes/glean
+        path: oh-my-zsh/themes/glean.zsh-theme
     ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh:
         create: true
         force: true
