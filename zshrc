@@ -42,7 +42,7 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   plugins=(gem git rbenv)
 fi
 
-ZSH_THEME="glean"
+ZSH_THEME="bullet-train"
 
 # How often before auto-updates occur? (in days)
 export UPDATE_ZSH_DAYS=1
