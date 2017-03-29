@@ -41,11 +41,11 @@
         force: true
         relink: true
         path: zshrc
-    ~/.oh-my-zsh/custom/themes/bullet-train.zsh-theme:
+    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme:
         create: true
         force: true
         relink: true
-        path: bullet-train/bullet-train.zsh-theme
+        path: Spaceship/spaceship.zsh-theme
     ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh:
         create: true
         force: true
