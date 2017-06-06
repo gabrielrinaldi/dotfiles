@@ -33,6 +33,11 @@
         force: true
         relink: true
         path: tmux.conf
+    ~/.tmux/plugins/tpm:
+        create: true
+        force: true
+        relink: true
+        path: tpm
     ~/.tmuxinator:
         force: true
         relink: true
