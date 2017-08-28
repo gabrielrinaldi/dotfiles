@@ -50,7 +50,7 @@
         create: true
         force: true
         relink: true
-        path: Spaceship/spaceship.zsh-theme
+        path: spaceship/spaceship.zsh-theme
     ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh:
         create: true
         force: true
