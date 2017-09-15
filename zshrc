@@ -42,6 +42,27 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   plugins=(aliases git tmux)
 fi
 
+# Spaceship config
+SPACESHIP_PROMPT_ORDER=(
+  time
+  user
+  dir
+  git
+  package
+  node
+  ruby
+  elixir
+  xcode
+  swift
+  golang
+  docker
+  exec_time
+  line_sep
+  jobs
+  exit_code
+  char
+)
+
 ZSH_THEME="spaceship"
 
 # How often before auto-updates occur? (in days)
