@@ -46,10 +46,6 @@
         force: true
         relink: true
         path: zshrc
-    ~/.hyper.js:
-        force: true
-        relink: true
-        path: hyper.js
     ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme:
         create: true
         force: true
