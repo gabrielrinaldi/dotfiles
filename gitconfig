@@ -71,3 +71,5 @@
 
 [alias]
 	lol = log --graph --decorate --oneline
+[pull]
+	rebase = true
