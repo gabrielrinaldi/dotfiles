@@ -56,6 +56,8 @@ SPACESHIP_PROMPT_ORDER=(
   swift
   golang
   docker
+  aws
+  kubecontext
   exec_time
   line_sep
   jobs
