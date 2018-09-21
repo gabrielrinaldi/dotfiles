@@ -15,6 +15,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'kylef/apiblueprint.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'dracula/vim'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
