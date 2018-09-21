@@ -24,6 +24,26 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # NVM
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
+  autoload -U add-zsh-hook
+  load-nvmrc() {
+    local node_version="$(nvm version)"
+    local nvmrc_path="$(nvm_find_nvmrc)"
+
+    if [ -n "$nvmrc_path" ]; then
+      local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+      if [ "$nvmrc_node_version" = "N/A" ]; then
+        nvm install
+      elif [ "$nvmrc_node_version" != "$node_version" ]; then
+        nvm use
+      fi
+    elif [ "$node_version" != "$(nvm version default)" ]; then
+      echo "Reverting to nvm default version"
+      nvm use default
+    fi
+  }
+  add-zsh-hook chpwd load-nvmrc
+  load-nvmrc
 
   # Exenv
   if which exenv > /dev/null; then eval "$(exenv init -)"; fi
@@ -36,7 +56,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
   # Which plugins would you like to load?
-  plugins=(adb aliases brew brew-cask bundler docker docker-compose gem git heroku kubectl node npm nvm pod rbenv tmux tmuxinator)
+  plugins=(adb aliases brew brew-cask bundler docker docker-compose gem git heroku kubectl node nvm pod rbenv tmux tmuxinator yarn)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Which plugins would you like to load?
   plugins=(aliases git tmux)
