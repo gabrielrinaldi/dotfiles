@@ -58,8 +58,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Which plugins would you like to load?
   plugins=(adb aliases brew brew-cask bundler docker docker-compose gem git heroku kubectl node nvm pod rbenv tmux tmuxinator yarn)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Path
+  export PATH="$(yarn global bin):$PATH"
+
   # Which plugins would you like to load?
-  plugins=(aliases git tmux)
+  plugins=(aliases git nvm tmux yarn)
 fi
 
 # Spaceship config
