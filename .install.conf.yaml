@@ -13,10 +13,6 @@
         force: true
         relink: true
         path: SpaceVim
-    ~/.config/nvim:
-        force: true
-        relink: true
-        path: SpaceVim
     ~/.cache/vimfiles/repos/github.com/Shougo/dein.vim:
         create: true
         force: true
