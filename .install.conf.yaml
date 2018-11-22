@@ -5,14 +5,27 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
+    ~/.SpaceVim:
+        force: true
+        relink: true
+        path: SpaceVim
     ~/.vim:
         force: true
         relink: true
-        path: vim
-    ~/.vimrc:
+        path: SpaceVim
+    ~/.config/nvim:
         force: true
         relink: true
-        path: vimrc
+        path: SpaceVim
+    ~/.cache/vimfiles/repos/github.com/Shougo/dein.vim:
+        create: true
+        force: true
+        relink: true
+        path: dein.vim
+    ~/.SpaceVim.d:
+        force: true
+        relink: true
+        path: SpaceVim.d
     ~/.htoprc:
         force: true
         relink: true
@@ -29,19 +42,6 @@
         force: true
         relink: true
         path: gitignore
-    ~/.tmux.conf:
-        force: true
-        relink: true
-        path: tmux.conf
-    ~/.tmux/plugins/tpm:
-        create: true
-        force: true
-        relink: true
-        path: tpm
-    ~/.tmuxinator:
-        force: true
-        relink: true
-        path: tmuxinator
     ~/.zshrc:
         force: true
         relink: true

@@ -4,3 +4,9 @@
 [submodule "spaceship"]
 	path = spaceship
 	url = https://github.com/denysdovhan/spaceship-zsh-theme.git
+[submodule "SpaceVim"]
+	path = SpaceVim
+	url = https://github.com/SpaceVim/SpaceVim.git
+[submodule "dein.vim"]
+	path = dein.vim
+	url = https://github.com/Shougo/dein.vim.git
