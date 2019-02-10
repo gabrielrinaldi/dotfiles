@@ -48,6 +48,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   # Exenv
   if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
+  # Direnv
+  eval "$(direnv hook zsh)"
+
   # PATH
   export PATH="/usr/local/sbin:$PATH"
 
