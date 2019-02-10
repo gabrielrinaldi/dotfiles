@@ -18,8 +18,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Set my editor and git editor
-  export EDITOR="/usr/local/bin/subl -w"
-  export GIT_EDITOR='/usr/local/bin/subl -w'
+  export EDITOR="/usr/local/bin/vim -w"
+  export GIT_EDITOR='/usr/local/bin/code -w'
 
   # NVM
   export NVM_DIR=~/.nvm
