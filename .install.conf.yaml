@@ -30,6 +30,10 @@
         force: true
         relink: true
         path: gemrc
+    ~/.irbrc:
+        force: true
+        relink: true
+        path: irbrc
     ~/.npmrc:
         force: true
         relink: true
