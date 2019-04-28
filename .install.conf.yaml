@@ -26,6 +26,10 @@
         force: true
         relink: true
         path: htoprc
+    ~/.gemrc:
+        force: true
+        relink: true
+        path: gemrc
     ~/.npmrc:
         force: true
         relink: true
