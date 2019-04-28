@@ -19,7 +19,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Set my editor and git editor
   export EDITOR="/usr/local/bin/vim -w"
-  export GIT_EDITOR='/usr/local/bin/code -w'
+  export GIT_EDITOR='/usr/local/bin/subl -w'
 
   # NVM
   export NVM_DIR=~/.nvm
@@ -45,6 +45,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   add-zsh-hook chpwd load-nvmrc
   load-nvmrc
 
+  # Rbenv
+  eval "$(rbenv init -)"
+
   # Exenv
   if which exenv > /dev/null; then eval "$(exenv init -)"; fi
 
@@ -59,7 +62,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
   # Which plugins would you like to load?
-  plugins=(adb aliases brew brew-cask bundler docker docker-compose gem git heroku kubectl node nvm pod rbenv tmux tmuxinator yarn)
+  plugins=(aliases brew bundler docker docker-compose gem git heroku kubectl node nvm pod rails)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Path
   export PATH="$(yarn global bin):$PATH"
