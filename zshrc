@@ -17,6 +17,12 @@ ZSH=$HOME/.oh-my-zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  # GitHub API Key
+  source $HOME/.gitkey
+
+  # GPG
+  export GPG_TTY=$(tty)
+  
   # Set my editor and git editor
   export EDITOR="/usr/local/bin/vim -w"
   export GIT_EDITOR='/usr/local/bin/subl -w'
