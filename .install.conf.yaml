@@ -5,23 +5,6 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.SpaceVim:
-        force: true
-        relink: true
-        path: SpaceVim
-    ~/.vim:
-        force: true
-        relink: true
-        path: SpaceVim
-    ~/.cache/vimfiles/repos/github.com/Shougo/dein.vim:
-        create: true
-        force: true
-        relink: true
-        path: dein.vim
-    ~/.SpaceVim.d:
-        force: true
-        relink: true
-        path: SpaceVim.d
     ~/.htoprc:
         force: true
         relink: true
