@@ -8,7 +8,7 @@
 
 [core]
 	editor = subl
-	excludesfile = /Users/Gabriel/.gitignore
+	excludesfile = /Users/gabriel/.gitignore
 	trustctime = false
 
 [color]
@@ -31,15 +31,11 @@
 
 [credential]
 	helper = osxkeychain
-	
+
 [merge "Kaleidoscope"]
 	log = true
 	conflictstyle = diff3
 	tool = Kaleidoscope
-
-[merge "mergepbx"]
-  name = Xcode project files merger
-  driver = mergepbx %O %A %B
 
 [mergetool]
 	keepBackup = true
@@ -48,9 +44,6 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-
-[mergetool "mergepbx"]
-  cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 
 [diff]
 	tool = Kaleidoscope
@@ -67,14 +60,14 @@
 	required = true
 	process = git-lfs filter-process
 
-[http]
-	cookiefile = /Users/Gabriel/.gitcookies
-
 [alias]
 	lol = log --graph --decorate --oneline
+
 [pull]
 	rebase = true
+
 [commit]
 	gpgsign = true
+
 [gpg]
 	program = /usr/local/bin/gpg
