@@ -22,40 +22,13 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   # GPG
   export GPG_TTY=$(tty)
-  
+
   # Set my editor and git editor
   export EDITOR="/usr/local/bin/vim -w"
   export GIT_EDITOR='/usr/local/bin/subl -w'
 
-  # NVM
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
-  autoload -U add-zsh-hook
-  load-nvmrc() {
-    local node_version="$(nvm version)"
-    local nvmrc_path="$(nvm_find_nvmrc)"
-
-    if [ -n "$nvmrc_path" ]; then
-      local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-      if [ "$nvmrc_node_version" = "N/A" ]; then
-        nvm install
-      elif [ "$nvmrc_node_version" != "$node_version" ]; then
-        nvm use
-      fi
-    elif [ "$node_version" != "$(nvm version default)" ]; then
-      echo "Reverting to nvm default version"
-      nvm use default
-    fi
-  }
-  add-zsh-hook chpwd load-nvmrc
-  load-nvmrc
-
-  # Rbenv
-  eval "$(rbenv init -)"
-
-  # Exenv
-  if which exenv > /dev/null; then eval "$(exenv init -)"; fi
+  # Ejson keys
+  export EJSON_KEYDIR="$HOME/.keys"
 
   # Direnv
   eval "$(direnv hook zsh)"
@@ -68,7 +41,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
   # Which plugins would you like to load?
-  plugins=(aliases brew bundler docker docker-compose gem git heroku kubectl node nvm pod rails)
+  plugins=(aliases asdf brew docker docker-compose git heroku kubectl mix node zsh_reload)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   # Path
   export PATH="$(yarn global bin):$PATH"
