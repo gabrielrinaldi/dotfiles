@@ -9,6 +9,10 @@
         force: true
         relink: true
         path: htoprc
+    ~/.asdfrc:
+        force: true
+        relink: true
+        path: asdfrc
     ~/.gemrc:
         force: true
         relink: true
