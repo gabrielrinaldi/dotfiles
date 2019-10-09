@@ -76,3 +76,5 @@
 	rebase = true
 [commit]
 	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
