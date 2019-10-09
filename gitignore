@@ -3,10 +3,3 @@
 Icon
 .Spotlight-V100
 .Trashes
-
-# Sublime Text
-*.sublime-workspace
-*.sublime-project
-
-# Rbenv
-.rbenv-vars
