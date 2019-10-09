@@ -9,6 +9,10 @@
         force: true
         relink: true
         path: asdfrc
+    ~/.Brewfile:
+        force: true
+        relink: true
+        path: Brewfile
     ~/.default-gems:
         force: true
         relink: true
