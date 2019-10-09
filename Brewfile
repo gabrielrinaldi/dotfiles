@@ -22,31 +22,24 @@ brew 'wget'
 brew 'zsh'
 
 # Casks
-cask 'boostnote'
-cask 'clockify'
-cask 'rowanj-gitx'
-cask 'fork'
-cask 'google-backup-and-sync'
+cask 'alfred'
+cask 'docker'
+cask 'fliqlo'
+cask 'framer-x'
 cask 'google-chrome'
-cask 'karabiner-elements'
+cask 'google-cloud-sdk'
 cask 'iterm2'
+cask 'keybase'
 cask 'rescuetime'
-cask 'recordit'
-cask 'sequel-pro'
-cask 'slack'
-cask 'spectacle'
+cask 'setapp'
+cask 'sketch'
+cask 'skype'
 cask 'spotify'
 cask 'sublime-text'
+cask 'tower'
 cask 'visual-studio-code'
-cask 'fliqlo'
-cask 'xmind'
-cask 'firefox'
-cask 'grammarly'
-cask 'psequel'
-cask 'authy'
-cask 'adobe-acrobat-reader'
-cask 'chromedriver'
-cask 'graphql-ide'
+
+cask 'font-input'
 
 # App store
 brew 'mas'
@@ -62,6 +55,8 @@ mas 'Microsoft Excel', id: 462058435
 mas 'Microsoft PowerPoint', id: 462062816
 mas 'NordVPN IKE', id: 1116599239
 mas 'Pixelmator Pro', id: 1289583905
+mas 'Slack', id: 803453959
+mas 'Spark', id: 1176895641
 mas 'Things', id: 904280696
 mas 'Tweetbot', id: 1384080005
 mas 'xScope', id: 889428659
