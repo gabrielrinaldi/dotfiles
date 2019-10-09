@@ -5,26 +5,18 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.htoprc:
-        force: true
-        relink: true
-        path: htoprc
     ~/.asdfrc:
         force: true
         relink: true
         path: asdfrc
+    ~/.default-gems:
+        force: true
+        relink: true
+        path: default-gems
     ~/.gemrc:
         force: true
         relink: true
         path: gemrc
-    ~/.irbrc:
-        force: true
-        relink: true
-        path: irbrc
-    ~/.npmrc:
-        force: true
-        relink: true
-        path: npmrc
     ~/.gitconfig:
         force: true
         relink: true
@@ -33,15 +25,18 @@
         force: true
         relink: true
         path: gitignore
-    ~/.zshrc:
+    ~/.htoprc:
         force: true
         relink: true
-        path: zshrc
-    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme:
-        create: true
+        path: htoprc
+    ~/.irbrc:
         force: true
         relink: true
-        path: spaceship/spaceship.zsh-theme
+        path: irbrc
+    ~/.npmrc:
+        force: true
+        relink: true
+        path: npmrc
     ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh:
         create: true
         force: true
@@ -52,3 +47,12 @@
         force: true
         relink: true
         path: oh-my-zsh/plugins/dirs/dirs.plugin.zsh
+    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme:
+        create: true
+        force: true
+        relink: true
+        path: spaceship/spaceship.zsh-theme
+    ~/.zshrc:
+        force: true
+        relink: true
+        path: zshrc
