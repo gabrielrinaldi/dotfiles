@@ -37,6 +37,10 @@
         force: true
         relink: true
         path: irbrc
+    ~/.itermocil:
+        force: true
+        relink: true
+        path: itermocil
     ~/.npmrc:
         force: true
         relink: true

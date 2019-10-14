@@ -1,0 +1,12 @@
+windows:
+  - name: Backend
+    root: ~/Code/Aero/Aero
+    layout: main-vertical
+    panes:
+      - echo "Let's go"
+      - commands:
+        - mix deps.get
+        name: 'mix'
+      - commands:
+        - docker-compose -f "docker-compose.yml" up -d --build
+        name: 'docker'
