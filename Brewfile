@@ -15,6 +15,7 @@ brew 'gpg'
 brew 'htop'
 brew 'kubetail'
 brew 'TomAnthony/brews/itermocil'
+brew 'mint'
 brew 'postgis'
 brew 'postgresql'
 brew 'redis'
@@ -26,6 +27,7 @@ brew 'zsh'
 
 # Casks
 cask 'abstract'
+cask 'adobe-creative-cloud'
 cask 'alfred'
 cask 'appcleaner'
 cask 'docker'
@@ -33,6 +35,7 @@ cask 'fliqlo'
 cask 'framer-x'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
+cask 'insomnia'
 cask 'iterm2'
 cask 'rescuetime'
 cask 'setapp'
@@ -51,6 +54,7 @@ brew 'mas'
 
 mas '1Password 7', id: 1333542190
 mas 'Bear', id: 1091189122
+mas 'Cascadea', id: 1432182561
 mas 'Day One', id: 1055511498
 mas 'Grammarly for Safari', id: 1462114288
 mas 'iHosts', id: 1102004240
