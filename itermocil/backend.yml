@@ -8,5 +8,5 @@ windows:
         - mix deps.get
         name: 'mix'
       - commands:
-        - docker-compose -f "docker-compose.yml" up -d --build
-        name: 'docker'
+        - mix deps.get && mix npm.install && iex -S mix phx.server
+        name: 'server'
