@@ -47,33 +47,9 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   plugins=(aliases git nvm tmux yarn)
 fi
 
-# Spaceship config
-SPACESHIP_PROMPT_ORDER=(
-  time
-  user
-  dir
-  git
-  package
-  node
-  ruby
-  elixir
-  xcode
-  swift
-  golang
-  docker
-  aws
-  kubecontext
-  exec_time
-  line_sep
-  jobs
-  exit_code
-  char
-)
-
-ZSH_THEME="spaceship"
-
-# How often before auto-updates occur? (in days)
-export UPDATE_ZSH_DAYS=1
+# Starship config
+export STARSHIP_CONFIG=$HOME/.dotfiles/starship.toml
+eval "$(starship init zsh)"
 
 # Do you want red dots to be displayed while waiting for completion?
 COMPLETION_WAITING_DOTS="true"

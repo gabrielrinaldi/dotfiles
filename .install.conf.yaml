@@ -63,11 +63,6 @@
         force: true
         relink: true
         path: oh-my-zsh/plugins/dirs/dirs.plugin.zsh
-    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme:
-        create: true
-        force: true
-        relink: true
-        path: spaceship/spaceship.zsh-theme
     ~/.zshrc:
         force: true
         relink: true
