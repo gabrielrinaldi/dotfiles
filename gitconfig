@@ -7,7 +7,7 @@
 	default = simple
 
 [core]
-	editor = subl
+	editor = nvim
 	excludesfile = /Users/gabriel/.gitignore
 	trustctime = false
 
