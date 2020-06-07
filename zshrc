@@ -10,20 +10,42 @@ setopt hist_ignore_space
 setopt inc_append_history
 setopt share_history
 
-# Path to your oh-my-zsh configuration
-ZSH=$HOME/.oh-my-zsh
+# Aliases
+source $HOME/.dotfiles/aliases.zsh
+
+# Antigen
+source $HOME/.dotfiles/antigen.zsh
+
+# Load oh-my-zsh's library
+antigen use oh-my-zsh
+
+# Load oh-my-zsh's plugins
+antigen bundle asdf
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle git
+antigen bundle heroku
+antigen bundle kubectl
+antigen bundle mix
+antigen bundle npm
+antigen bundle ssh-agent
+
+# Other plguins
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 
 # More completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Ejson keys
+export EJSON_KEYDIR="$HOME/.keys"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # GitHub API Key
   source $HOME/.gitkey
 
   # Set my editor and git editor
-
-  # Ejson keys
-  export EJSON_KEYDIR="$HOME/.keys"
   export EDITOR="/usr/local/bin/nvim -w"
   export GIT_EDITOR='/usr/local/bin/nvim -w'
 
@@ -37,14 +59,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-  # Which plugins would you like to load?
-  plugins=(aliases asdf brew docker docker-compose git heroku kubectl mix node zsh_reload)
+  # Load oh-my-zsh's plugins
+  antigen bundle brew
+  antigen bundle brew-cask
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-  # Path
-  export PATH="$(yarn global bin):$PATH"
-
-  # Which plugins would you like to load?
-  plugins=(aliases git nvm tmux yarn)
+  
 fi
 
 # Starship config
@@ -54,5 +73,5 @@ eval "$(starship init zsh)"
 # Do you want red dots to be displayed while waiting for completion?
 COMPLETION_WAITING_DOTS="true"
 
-# Load oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# Apply antigen
+antigen apply
