@@ -1,7 +1,6 @@
 [user]
 	name = Gabriel Rinaldi
-	email = gabriel_rinaldi@mac.com
-	signingkey = EE093ABF773273C67106981FB5C1801B917EA40C
+	email = 2741588-gabriel_rinaldi@users.noreply.gitlab.com
 
 [push]
 	default = simple
@@ -139,6 +138,8 @@
   psaom = push --all origin master					# Same as `push --all origin` but for master branch.
   psfom = push --force origin master				# Same as `push --force origin` but for master branch.
   psuom = push --set-upstream origin master # Same as `push --set-upstream origin` but for master branch.
+  #############
+  pmr = push -o merge_request.create -o merge_request.merge_when_pipeline_succeeds -o merge_request.assign=gabriel_rinaldi origin # Push to origin and open an MR on GitLab
   #############
   pl = pull 																# Fetch from and integrate with another repository or a local branch.
   plr = pull --rebase 											# When true, rebase the current branch on top of the upstream branch after fetching.
