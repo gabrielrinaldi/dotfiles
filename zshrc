@@ -46,8 +46,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source $HOME/.gitkey
 
   # Set my editor and git editor
-  export EDITOR="/usr/local/bin/nvim -w"
-  export GIT_EDITOR='/usr/local/bin/nvim -w'
+  export EDITOR="/usr/local/bin/subl -w"
+  export GIT_EDITOR="/usr/local/bin/subl -w"
 
   # Direnv
   eval "$(direnv hook zsh)"
