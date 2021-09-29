@@ -49,6 +49,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export EDITOR="/usr/local/bin/subl -w"
   export GIT_EDITOR="/usr/local/bin/subl -w"
 
+  # QMK
+  export QMK_HOME="~/.qmk"
+
   # Direnv
   eval "$(direnv hook zsh)"
 
