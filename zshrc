@@ -1,3 +1,6 @@
+# Fig
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+
 # Command history configuration
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
@@ -19,24 +22,8 @@ source $HOME/.dotfiles/antigen.zsh
 # Load oh-my-zsh's library
 antigen use oh-my-zsh
 
-# Load oh-my-zsh's plugins
-antigen bundle asdf
-antigen bundle docker
-antigen bundle docker-compose
-antigen bundle git
-antigen bundle heroku
-antigen bundle kubectl
-antigen bundle mix
-antigen bundle npm
-antigen bundle ssh-agent
-
 # Other plguins
 antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-
-# More completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Ejson keys
 export EJSON_KEYDIR="$HOME/.keys"
@@ -60,11 +47,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
   # Google Cloud SDK
   source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
   # Load oh-my-zsh's plugins
   antigen bundle brew
-  antigen bundle brew-cask
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   
 fi
@@ -73,8 +58,8 @@ fi
 export STARSHIP_CONFIG=$HOME/.dotfiles/starship.toml
 eval "$(starship init zsh)"
 
-# Do you want red dots to be displayed while waiting for completion?
-COMPLETION_WAITING_DOTS="true"
+# Fig
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 
 # Apply antigen
 antigen apply
