@@ -1,9 +1,11 @@
 # Taps
+tap 'hashicorp/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/services'
 tap 'johanhaleby/kubetail'
+tap 'qmk/qmk'
 
 # Commands
 brew 'asdf'
@@ -12,32 +14,45 @@ brew 'diff-so-fancy'
 brew 'direnv'
 brew 'git'
 brew 'gpg'
+brew 'helmfile'
 brew 'htop'
+brew 'jq'
 brew 'kubetail'
 brew 'mint'
 brew 'pinentry-mac'
 brew 'postgis'
 brew 'postgresql'
+brew 'qmk'
 brew 'redis'
 brew 'starship'
+brew 'terraform'
+brew 'tflint'
 brew 'watch'
 brew 'wget'
 brew 'wxmac'
 brew 'zsh'
 
 # Casks
+cask '1password'
 cask 'adobe-creative-cloud'
+cask 'backblaze'
+cask 'brave-browser'
+casl 'discord'
 cask 'docker'
-cask 'google-chrome'
+cask 'figma'
 cask 'google-cloud-sdk'
+cask 'iterm2'
+cask 'kaleidoscope'
 cask 'ngrok'
-cask 'rescuetime'
+cask 'raycast'
 cask 'setapp'
+cask 'sf-symbols'
 cask 'spotify'
 cask 'sublime-text'
 cask 'tower'
+cask 'transmit'
 cask 'visual-studio-code'
-cask 'zoomus'
+cask 'zoomus'			
 
 # Font
 cask 'font-input'
@@ -45,17 +60,25 @@ cask 'font-input'
 # App store
 brew 'mas'
 
+
 mas '1Password 7', id: 1333542190
+mas 'Apple Developer', id: 640199958
+mas 'Cardhop', id: 1290358394
 mas 'Day One', id: 1055511498
+mas 'Edison Main', id: 1489591003
+mas 'Fantastical', id: 975937182
+mas 'Flighty', id: 1358823008
 mas 'Grammarly for Safari', id: 1462114288
-mas 'iHosts', id: 1102004240
+mas 'JSON Peep', id: 1458969831
 mas 'Keynote', id: 409183694
 mas 'Magnet', id: 441258766
 mas 'Microsoft Excel', id: 462058435
 mas 'Microsoft PowerPoint', id: 462062816
+mas 'Microsoft Word', id: 462054704
 mas 'Pixelmator Pro', id: 1289583905
 mas 'Slack', id: 803453959
 mas 'Spark', id: 1176895641
+mas 'Testflight', id: 899247664
 mas 'Things', id: 904280696
 mas 'Tweetbot', id: 1384080005
 mas 'xScope', id: 889428659
