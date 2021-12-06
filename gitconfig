@@ -6,7 +6,7 @@
 	default = simple
 
 [core]
-	editor = nvim
+	editor = subl
 	excludesfile = /Users/gabriel/.gitignore
 	trustctime = false
 
@@ -230,6 +230,6 @@
 	gpgsign = true
 
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [init]
 	defaultBranch = main

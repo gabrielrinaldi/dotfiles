@@ -5,7 +5,6 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/services'
 tap 'johanhaleby/kubetail'
-tap 'qmk/qmk'
 
 # Commands
 brew 'asdf'
@@ -22,23 +21,29 @@ brew 'mint'
 brew 'pinentry-mac'
 brew 'postgis'
 brew 'postgresql'
-brew 'qmk'
 brew 'redis'
 brew 'starship'
 brew 'terraform'
 brew 'tflint'
 brew 'watch'
 brew 'wget'
-brew 'wxmac'
 brew 'zsh'
+
+# asdf
+brew 'autoconf'
+brew 'gawk'
+brew 'openssl'
+brew 'openssl@1.1'
+brew 'readline'
 
 # Casks
 cask '1password'
 cask 'adobe-creative-cloud'
 cask 'backblaze'
 cask 'brave-browser'
-casl 'discord'
+cask 'discord'
 cask 'docker'
+cask 'fig'
 cask 'figma'
 cask 'google-cloud-sdk'
 cask 'iterm2'
@@ -52,7 +57,7 @@ cask 'sublime-text'
 cask 'tower'
 cask 'transmit'
 cask 'visual-studio-code'
-cask 'zoomus'			
+cask 'zoomus'
 
 # Font
 cask 'font-input'
@@ -60,8 +65,6 @@ cask 'font-input'
 # App store
 brew 'mas'
 
-
-mas '1Password 7', id: 1333542190
 mas 'Apple Developer', id: 640199958
 mas 'Cardhop', id: 1290358394
 mas 'Day One', id: 1055511498
