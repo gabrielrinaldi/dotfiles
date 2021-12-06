@@ -31,6 +31,8 @@ zpm load @omz/npm,async
 zpm if macos load @omz/brew,async
 
 # Other plguins
+zpm load zpm-zsh/check-deps,async
+zpm load zpm-zsh/zsh-history-substring-search,source:/zsh-history-substring-search.zsh,async
 zpm load zpm-zsh/zsh-autosuggestions,async
 zpm load zpm-zsh/zsh-completions,async
 zpm load zdharma-continuum/fast-syntax-highlighting,async
@@ -39,7 +41,6 @@ zpm load zpm-zsh/ls,async
 zpm load zpm-zsh/colorize,async
 zpm load zpm-zsh/ssh,async
 zpm load zpm-zsh/dot,async
-zpm load zpm-zsh/zsh-history-substring-search,async
 zpm load zdharma-continuum/history-search-multi-word,fpath:/,async
 zpm load zpm-zsh/clipboard,async
 zpm load zpm-zsh/pretty-time-zsh,async

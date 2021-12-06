@@ -28,6 +28,7 @@ brew 'tflint'
 brew 'watch'
 brew 'wget'
 brew 'zsh'
+brew 'zsh-history-substring-search'
 
 # asdf
 brew 'autoconf'
@@ -43,7 +44,6 @@ cask 'backblaze'
 cask 'brave-browser'
 cask 'discord'
 cask 'docker'
-cask 'fig'
 cask 'figma'
 cask 'google-cloud-sdk'
 cask 'iterm2'
@@ -57,7 +57,7 @@ cask 'sublime-text'
 cask 'tower'
 cask 'transmit'
 cask 'visual-studio-code'
-cask 'zoomus'
+cask 'zoom'
 
 # Font
 cask 'font-input'
@@ -68,7 +68,7 @@ brew 'mas'
 mas 'Apple Developer', id: 640199958
 mas 'Cardhop', id: 1290358394
 mas 'Day One', id: 1055511498
-mas 'Edison Main', id: 1489591003
+mas 'Edison Mail', id: 1489591003
 mas 'Fantastical', id: 975937182
 mas 'Flighty', id: 1358823008
 mas 'Grammarly for Safari', id: 1462114288
