@@ -28,7 +28,6 @@ brew 'tflint'
 brew 'watch'
 brew 'wget'
 brew 'zsh'
-brew 'zsh-history-substring-search'
 
 # asdf
 brew 'autoconf'
