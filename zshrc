@@ -26,6 +26,8 @@ zpm load @omz
 zpm load @omz/docker,async
 zpm load @omz/git
 zpm load @omz/kubectl,async
+zpm load @omz/gcloud,async
+zpm load @omz/asdf,async
 zpm load @omz/mix,async
 zpm load @omz/npm,async
 zpm if macos load @omz/brew,async
