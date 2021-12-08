@@ -65,8 +65,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source $HOME/.gitkey
 
   # Set my editor and git editor
-  export EDITOR="/usr/local/bin/subl -w"
-  export GIT_EDITOR="/usr/local/bin/subl -w"
+  export EDITOR="/opt/homebrew/bin/subl -w"
+  export GIT_EDITOR="/opt/homebrew/bin/subl -w"
 
   # Google Cloud SDK
   source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
