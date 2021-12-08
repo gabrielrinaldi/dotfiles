@@ -31,10 +31,13 @@ brew 'zsh'
 
 # asdf
 brew 'autoconf'
+brew 'fop'
 brew 'gawk'
+brew 'libxslt'
 brew 'openssl'
 brew 'openssl@1.1'
 brew 'readline'
+brew 'wxwidgets'
 
 # Casks
 cask '1password'
