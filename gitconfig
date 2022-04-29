@@ -1,6 +1,7 @@
 [user]
 	name = Gabriel Rinaldi
-	email = 2741588-gabriel_rinaldi@users.noreply.gitlab.com
+	email = gabrielrinaldi@users.noreply.github.com
+	signingkey = B14146E5EDD1D3A442913BB3C464D03E333358BA
 
 [push]
 	default = simple
