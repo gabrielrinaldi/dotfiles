@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Command history configuration
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
@@ -82,3 +84,6 @@ eval "$(starship init zsh)"
 
 # Do you want red dots to be displayed while waiting for completion?
 COMPLETION_WAITING_DOTS="true"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
