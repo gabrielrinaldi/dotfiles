@@ -3,49 +3,31 @@ tap 'hashicorp/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/services'
-tap 'johanhaleby/kubetail'
 
 # Commands
 brew 'asdf'
 brew 'curl'
-brew 'diff-so-fancy'
 brew 'direnv'
 brew 'git'
-brew 'gpg'
-brew 'helmfile'
 brew 'htop'
-brew 'jq'
-brew 'kubetail'
-brew 'mint'
-brew 'pinentry-mac'
 brew 'postgis'
 brew 'postgresql'
 brew 'redis'
 brew 'starship'
-brew 'terraform'
-brew 'tflint'
 brew 'watch'
 brew 'wget'
 brew 'zsh'
 
-# asdf
-brew 'autoconf'
-brew 'fop'
-brew 'gawk'
-brew 'libxslt'
-brew 'openssl'
-brew 'openssl@1.1'
-brew 'readline'
-brew 'wxwidgets'
-
 # Casks
-cask '1password'
+cask '1password-beta'
 cask 'adobe-creative-cloud'
 cask 'backblaze'
 cask 'brave-browser'
 cask 'discord'
 cask 'docker'
+cask 'fig'
 cask 'figma'
 cask 'google-cloud-sdk'
 cask 'iterm2'
@@ -67,13 +49,11 @@ cask 'font-input'
 # App store
 brew 'mas'
 
-mas 'Apple Developer', id: 640199958
+mas '1Password for Safari', id: 1569813296
 mas 'Cardhop', id: 1290358394
 mas 'Day One', id: 1055511498
-mas 'Edison Mail', id: 1489591003
 mas 'Fantastical', id: 975937182
 mas 'Flighty', id: 1358823008
-mas 'Grammarly for Safari', id: 1462114288
 mas 'JSON Peep', id: 1458969831
 mas 'Keynote', id: 409183694
 mas 'Magnet', id: 441258766
