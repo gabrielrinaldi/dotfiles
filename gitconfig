@@ -1,7 +1,6 @@
 [user]
 	name = Gabriel Rinaldi
 	email = gabrielrinaldi@users.noreply.github.com
-	signingkey = B14146E5EDD1D3A442913BB3C464D03E333358BA
 
 [push]
 	default = simple
@@ -232,5 +231,6 @@
 
 [gpg]
 	program = /opt/homebrew/bin/gpg
+
 [init]
 	defaultBranch = main
