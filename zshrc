@@ -1,16 +1,8 @@
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # Command history configuration
-HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt append_history
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt inc_append_history
-setopt share_history
+HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 
 # ZPM
 if [[ ! -f ~/.zpm/zpm.zsh ]]; then
@@ -25,16 +17,10 @@ source $HOME/.dotfiles/aliases.zsh
 zpm load @omz
 
 # Load oh-my-zsh's plugins
-zpm load @omz/docker,async
+zpm load @omz/command-not-found,async
 zpm load @omz/git
-zpm load @omz/kubectl,async
-zpm load @omz/gcloud,async
-zpm load @omz/mix,async
-zpm load @omz/npm,async
-zpm if macos load @omz/brew,async
 
 # Other plguins
-zpm load zpm-zsh/check-deps,async
 zpm load zpm-zsh/zsh-history-substring-search,source:/zsh-history-substring-search.zsh,async
 zpm load zpm-zsh/zsh-autosuggestions,async
 zpm load zpm-zsh/zsh-completions,async
@@ -42,8 +28,6 @@ zpm load zdharma-continuum/fast-syntax-highlighting,async
 zpm load zpm-zsh/core-config
 zpm load zpm-zsh/ls,async
 zpm load zpm-zsh/colorize,async
-zpm load zpm-zsh/ssh,async
-zpm load zpm-zsh/dot,async
 zpm load zdharma-continuum/history-search-multi-word,fpath:/,async
 zpm load zpm-zsh/clipboard,async
 zpm load zpm-zsh/pretty-time-zsh,async
