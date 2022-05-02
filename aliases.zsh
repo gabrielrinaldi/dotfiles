@@ -1,5 +1,3 @@
-alias vim="nvim"                              # NeoVim as default
-
 alias ls='ls -G'                              # colorize `ls` output
 alias zshreload='source ~/.zshrc'             # reload ZSH
 alias shtop='sudo htop'                       # run `htop` with root rights
