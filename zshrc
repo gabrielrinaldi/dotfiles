@@ -33,9 +33,6 @@ zpm load zpm-zsh/pretty-time-zsh,async
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # Ejson keys
 export EJSON_KEYDIR="$HOME/.keys"
 
@@ -45,6 +42,9 @@ export GPG_TTY=$(tty)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Load Homebrew
   eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  # asdf
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
   # GitHub API Key
   source $HOME/.gitkey
