@@ -39,6 +39,9 @@ bindkey '^[[B' history-substring-search-down
 # Ejson keys
 export EJSON_KEYDIR="$HOME/.keys"
 
+# GPG
+export GPG_TTY=$(tty)
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Load Homebrew
   eval "$(/opt/homebrew/bin/brew shellenv)"
