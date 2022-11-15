@@ -49,6 +49,10 @@
         force: true
         relink: true
         path: npmrc
+    ~/.warp:
+        force: true
+        relink: true
+        path: warp
     ~/.zshrc:
         force: true
         relink: true
