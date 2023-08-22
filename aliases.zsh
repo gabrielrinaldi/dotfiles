@@ -9,3 +9,5 @@ alias vim='lvim'
 alias vi='lvim'
 
 alias weather='curl wttr.in/~Castle+Rock'               # print weather for current location (https://github.com/chubin/wttr.in)
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
