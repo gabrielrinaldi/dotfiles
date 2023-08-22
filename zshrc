@@ -24,9 +24,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# Ejson keys
-export EJSON_KEYDIR="$HOME/.keys"
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Enable 1Password
   export OP_BIOMETRIC_UNLOCK_ENABLED=true
@@ -40,11 +37,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
   # Set my editor and git editor
-  export EDITOR="/opt/homebrew/bin/subl -w"
-  export GIT_EDITOR="/opt/homebrew/bin/subl -w"
-
-  # Google Cloud SDK
-  source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+  export EDITOR="/usr/local/bin/subl -w"
+  export GIT_EDITOR="/usr/local/bin/subl -w"
 
   # Direnv
   eval "$(direnv hook zsh)"
