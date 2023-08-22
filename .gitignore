@@ -1,2 +1,2 @@
-# ZPM compiled files
-*.zwc
+# Antigen
+antigen.zsh

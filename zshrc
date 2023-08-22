@@ -1,33 +1,24 @@
 # Command history configuration
 HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 
-# ZPM
-if [[ ! -f ~/.zpm/zpm.zsh ]]; then
-  git clone --recursive https://github.com/zpm-zsh/zpm ~/.zpm
-fi
-source ~/.zpm/zpm.zsh
+# Antigen
+source $HOME/.dotfiles/antigen.zsh
 
 # Aliases
 source $HOME/.dotfiles/aliases.zsh
 
 # Load Oh-my-zsh
-zpm load @omz
+antigen use oh-my-zsh
 
 # Load oh-my-zsh's plugins
-zpm load @omz/command-not-found,async
-zpm load @omz/git
+antigen bundle git
+antigen bundle command-not-found
 
 # Other plguins
-zpm load zpm-zsh/zsh-history-substring-search,source:/zsh-history-substring-search.zsh,async
-zpm load zpm-zsh/zsh-autosuggestions,async
-zpm load zpm-zsh/zsh-completions,async
-zpm load zdharma-continuum/fast-syntax-highlighting,async
-zpm load zpm-zsh/core-config
-zpm load zpm-zsh/ls,async
-zpm load zpm-zsh/colorize,async
-zpm load zdharma-continuum/history-search-multi-word,fpath:/,async
-zpm load zpm-zsh/clipboard,async
-zpm load zpm-zsh/pretty-time-zsh,async
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Substring search
 bindkey '^[[A' history-substring-search-up
