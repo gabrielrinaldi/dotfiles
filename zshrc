@@ -27,18 +27,17 @@ bindkey '^[[B' history-substring-search-down
 # Ejson keys
 export EJSON_KEYDIR="$HOME/.keys"
 
-# GPG
-export GPG_TTY=$(tty)
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Enable 1Password
+  export OP_BIOMETRIC_UNLOCK_ENABLED=true
+  eval "$(op completion zsh)"; compdef _op op
+  source $HOME/.config/op/plugins.sh
+
   # Load Homebrew
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   # asdf
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-  # GitHub API Key
-  source $HOME/.gitkey
 
   # Set my editor and git editor
   export EDITOR="/opt/homebrew/bin/subl -w"

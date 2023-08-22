@@ -30,14 +30,6 @@
         force: true
         relink: true
         path: gitignore
-    ~/.gnupg/gpg-agent.conf:
-        force: true
-        relink: true
-        path: gpg-agent.conf
-    ~/.gnupg/gpg.conf:
-        force: true
-        relink: true
-        path: gpg.conf
     ~/.htoprc:
         force: true
         relink: true
