@@ -1,11 +1,11 @@
 # Command history configuration
 HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 
-# Antigen
-source $HOME/.dotfiles/antigen.zsh
-
 # Aliases
 source $HOME/.dotfiles/aliases.zsh
+
+# Antigen
+source $HOME/.dotfiles/antigen.zsh
 
 # Load Oh-my-zsh
 antigen use oh-my-zsh
@@ -20,6 +20,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Apply plugins
+antigen apply
+
 # Substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -27,9 +30,8 @@ bindkey '^[[B' history-substring-search-down
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Enable 1Password
   export OP_BIOMETRIC_UNLOCK_ENABLED=true
-  eval "$(op completion zsh)"; compdef _op op
   source $HOME/.config/op/plugins.sh
-
+  
   # Load Homebrew
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -37,14 +39,14 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
   # Set my editor and git editor
-  export EDITOR="/usr/local/bin/subl -w"
-  export GIT_EDITOR="/usr/local/bin/subl -w"
+  export EDITOR="/opt/homebrew/bin/subl -w"
+  export GIT_EDITOR="/opt/homebrew/bin/subl -w"
 
   # Direnv
   eval "$(direnv hook zsh)"
 
   # LunarVim
-  PATH=$PATH:~/.local/bin
+  PATH=$PATH:$HOME/.local/bin:$HOME/.docker/bin
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   
 fi

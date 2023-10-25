@@ -15,9 +15,6 @@ brew 'git'
 brew 'htop'
 brew 'k9s'
 brew 'neovim'
-brew 'postgis'
-brew 'postgresql@15'
-brew 'redis'
 brew 'starship'
 brew 'watch'
 brew 'wget'
@@ -25,12 +22,16 @@ brew 'zsh'
 
 # Casks
 cask '1password'
-cask 'backblaze'
 cask '1password-cli'
+cask 'backblaze'
+cask 'discord'
 cask 'docker'
 cask 'figma'
+cask 'google-chrome'
 cask 'kaleidoscope'
+cask 'logi-options-plus'
 cask 'multiviewer-for-f1'
+cask 'opal-composer'
 cask 'raycast'
 cask 'readdle-spark'
 cask 'setapp'
@@ -49,7 +50,7 @@ cask 'font-input'
 brew 'mas'
 
 mas '1Password for Safari', id: 1569813296
-mas 'CARROTweather', id: 993487541
+mas 'CARROT Weather', id: 961390574
 mas 'Fantastical', id: 975937182
 mas 'Flighty', id: 1358823008
 mas 'JSON Peep', id: 1458969831
@@ -64,4 +65,5 @@ mas 'Slack', id: 803453959
 mas 'Testflight', id: 899247664
 mas 'Things', id: 904280696
 mas 'xScope', id: 889428659
+mas 'WiFiman', id: 1385561119
 mas 'WireGuard', id: 1451685025
