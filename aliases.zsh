@@ -4,9 +4,8 @@ alias shtop='sudo htop'                       # run `htop` with root rights
 alias grep='grep --color=auto'                # colorize `grep` output
 alias less='less -R'
 alias g='git'
-alias nvim='lvim'
-alias vim='lvim'
-alias vi='lvim'
+alias vim='nvim'
+alias vi='nvim'
 
 alias weather='curl wttr.in/~Castle+Rock'               # print weather for current location (https://github.com/chubin/wttr.in)
 
