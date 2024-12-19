@@ -46,7 +46,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   eval "$(direnv hook zsh)"
 
   # LunarVim
-  PATH=$PATH:$HOME/.local/bin:$HOME/.docker/bin
+  PATH=/opt/homebrew/opt/curl/bin:$HOME/.local/bin:$HOME/.docker/bin:$PATH
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   
 fi

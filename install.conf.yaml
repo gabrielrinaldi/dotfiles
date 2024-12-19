@@ -52,10 +52,10 @@
         force: true
         relink: true
         path: npmrc
-    ~/.warp:
+    ~/.zellij:
         force: true
         relink: true
-        path: warp
+        path: zellij
     ~/.zshrc:
         force: true
         relink: true
