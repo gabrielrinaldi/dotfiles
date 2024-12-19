@@ -1,8 +1,6 @@
 # Taps
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/services'
 tap '1password/tap'
 
 # Commands
@@ -10,60 +8,38 @@ brew 'asdf'
 brew 'awscli'
 brew 'curl'
 brew 'direnv'
-brew 'flyctl'
+brew 'fd'
+brew 'fzf'
+brew 'gh'
 brew 'git'
 brew 'htop'
 brew 'k9s'
+brew 'lazygit'
+brew 'libpq'
 brew 'neovim'
+brew 'ripgrep'
 brew 'starship'
 brew 'watch'
 brew 'wget'
+brew 'zellij'
 brew 'zsh'
 
 # Casks
-cask '1password'
 cask '1password-cli'
+cask 'alacritty'
 cask 'backblaze'
-cask 'discord'
 cask 'docker'
-cask 'figma'
-cask 'google-chrome'
 cask 'kaleidoscope'
 cask 'logi-options-plus'
-cask 'multiviewer-for-f1'
-cask 'opal-composer'
+cask 'orbstack'
 cask 'raycast'
 cask 'readdle-spark'
 cask 'setapp'
 cask 'sf-symbols'
 cask 'sublime-text'
+cask 'todoist'
 cask 'tower'
 cask 'transmit'
-cask 'visual-studio-code'
-cask 'warp'
-cask 'zoom'
 
 # Font
-cask 'font-input'
-
-# App store
-brew 'mas'
-
-mas '1Password for Safari', id: 1569813296
-mas 'CARROT Weather', id: 961390574
-mas 'Fantastical', id: 975937182
-mas 'Flighty', id: 1358823008
-mas 'JSON Peep', id: 1458969831
-mas 'Keynote', id: 409183694
-mas 'Mapper', id: 1589391989
-mas 'Microsoft Excel', id: 462058435
-mas 'Microsoft PowerPoint', id: 462062816
-mas 'Microsoft Word', id: 462054704
-mas 'Parcel', id: 639968404
-mas 'Pixelmator Pro', id: 1289583905
-mas 'Slack', id: 803453959
-mas 'Testflight', id: 899247664
-mas 'Things', id: 904280696
-mas 'xScope', id: 889428659
-mas 'WiFiman', id: 1385561119
-mas 'WireGuard', id: 1451685025
+cask 'font-caskaydia-mono-nerd-font'
