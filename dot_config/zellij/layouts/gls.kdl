@@ -1,0 +1,31 @@
+layout {
+  cwd "$HOME/Code"
+
+  new_tab_template {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane borderless=true
+
+    pane size=1 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab_template name="tab_with_nav" {
+    pane size=1 borderless=true {
+      plugin location="zellij:tab-bar"
+    }
+
+    pane borderless=true
+
+    pane size=1 borderless=true {
+      plugin location="zellij:status-bar"
+    }
+  }
+
+  tab_with_nav name="k8s"
+  tab_with_nav name="arda" cwd="Arda"
+  tab_with_nav name="scratch"
+}

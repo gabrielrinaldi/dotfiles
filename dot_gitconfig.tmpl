@@ -1,0 +1,82 @@
+[user]
+  name = Gabriel Rinaldi
+  email = {{ .email | quote }}
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBbTb4mPRCDHcKKOP9knAP3/FlXJzqU4pfEkJ2f/QK80
+
+[push]
+  default = simple
+
+[core]
+  editor = vim
+  excludesfile = /Users/gabriel/.gitignore
+  trustctime = false
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  commit = yellow reverse
+  old = red
+  new = green
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[init]
+  defaultBranch = main
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  process = git-lfs filter-process
+
+[pull]
+  rebase = true
+
+{{ if eq .chezmoi.os "darwin" -}}
+[merge]
+  tool = Kaleidoscope
+
+[merge "Kaleidoscope"]
+  log = true
+  conflictstyle = diff3
+  tool = Kaleidoscope
+
+[mergetool]
+  keepBackup = true
+  prompt = false
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+
+[diff]
+  tool = Kaleidoscope
+
+[difftool]
+  prompt = false
+  trustExitCode = true
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+{{ end -}}
+[commit]
+  gpgsign = true
+
+[gpg]
+  format = ssh
+
+{{ if eq .chezmoi.os "darwin" -}}
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+{{ end -}}

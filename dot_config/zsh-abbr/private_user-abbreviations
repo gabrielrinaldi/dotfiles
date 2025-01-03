@@ -1,0 +1,5 @@
+abbr "k"="k9s -A"
+abbr "vim"="nvim"
+abbr "vi"="nvim"
+abbr "weather"="curl wttr.in/~Castle+Rock"
+

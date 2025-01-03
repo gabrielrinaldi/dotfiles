@@ -1,0 +1,52 @@
+# Taps
+tap 'homebrew/bundle'
+tap '1password/tap'
+
+# Commands
+# TODO: Test trivy
+brew 'automake'
+brew 'awscli'
+brew 'chezmoi'
+brew 'coreutils'
+brew 'curl'
+brew 'direnv'
+brew 'fd'
+brew 'fop'
+brew 'fzf'
+brew 'gh'
+brew 'git'
+brew 'htop'
+brew 'k9s'
+brew 'lazygit'
+brew 'libpq'
+brew 'libxslt'
+brew 'libyaml'
+brew 'neovim'
+brew 'ripgrep'
+brew 'rsync'
+brew 'starship'
+brew 'watch'
+brew 'wget'
+brew 'wxwidgets'
+brew 'zellij'
+brew 'zsh'
+
+# Casks
+# TODO: Test and potentially replace Alacritty with Ghostty
+cask '1password-cli'
+cask 'alacritty'
+cask 'backblaze'
+cask 'kaleidoscope'
+cask 'orbstack'
+cask 'raycast'
+cask 'readdle-spark'
+cask 'setapp'
+cask 'spotify'
+cask 'sublime-text'
+cask 'todoist'
+cask 'tower'
+cask 'transmit'
+
+# Font
+cask 'font-caskaydia-mono-nerd-font'
+cask 'sf-symbols'

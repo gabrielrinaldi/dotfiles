@@ -1,0 +1,177 @@
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+[aws.region_aliases]
+us-east-2 = 'main'
+[aws.profile_aliases]
+default = 'GLS'
+
+[azure]
+disabled = true
+
+[[battery.display]]
+threshold = 10
+style = 'bold red'
+
+[[battery.display]]
+threshold = 30
+style = 'bold yellow'
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[cobol]
+disabled = true
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[dart]
+disabled = true
+
+[deno]
+disabled = true
+
+[direnv]
+disabled = false
+
+[dotnet]
+disabled = true
+
+[elm]
+disabled = true
+
+[fennel]
+disabled = true
+
+[git_metrics]
+disabled = false
+
+[gleam]
+disabled = true
+
+[guix_shell]
+disabled = true
+
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[julia]
+disabled = true
+
+[kubernetes]
+disabled = false
+detect_folders = ["$HOME/Code"]
+
+[[kubernetes.contexts]]
+context_pattern = "production"
+style = "bold red"
+context_alias = "prod"
+
+[[kubernetes.contexts]]
+context_pattern = "staging"
+style = "bold yellow"
+context_alias = "stag"
+
+[memory_usage]
+disabled = false
+
+[meson]
+disabled = true
+
+[mojo]
+disabled = true
+
+[nats]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[odin]
+disabled = true
+
+[openstack]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[quarto]
+disabled = true
+
+[rlang]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[singularity]
+disabled = true
+
+[solidity]
+disabled = true
+
+[spack]
+disabled = true
+
+[status]
+disabled = false
+
+[sudo]
+disabled = false
+
+[time]
+disabled = false
+
+[typst]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vlang]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[zig]
+disabled = true

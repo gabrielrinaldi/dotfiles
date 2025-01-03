@@ -1,0 +1,8 @@
+require 'awesome_print'
+
+Pry.config.history_file = '~/.irb_history'
+Pry.config.print = proc { |output, value| output.puts "=> #{value.inspect}" }
+Pry.config.prompt_name = 'local'
+
+AwesomePrint.pry!
+

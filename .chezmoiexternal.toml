@@ -1,0 +1,13 @@
+[".antidote"]
+type = "archive"
+url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
+exact = true
+stripComponents = 1
+refreshPeriod = "1h"
+
+[".asdf"]
+type = "archive"
+url = "https://github.com/asdf-vm/asdf/archive/master.tar.gz"
+exact = true
+stripComponents = 1
+refreshPeriod = "1h"

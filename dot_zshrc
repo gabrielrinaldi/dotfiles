@@ -1,0 +1,47 @@
+# Do you want red dots to be displayed while waiting for completion?
+COMPLETION_WAITING_DOTS="true"
+
+# Command history configuration
+HISTORY_SUBSTRING_SEARCH_PREFIXED=true
+
+# Git auto-fetch
+GIT_AUTO_FETCH_INTERVAL=600
+
+# Starship config
+export STARSHIP_CONFIG=$HOME/.starship.toml
+
+# asdf
+. "$HOME/.asdf/asdf.sh"
+
+# Compdef loading
+autoload -U +X compinit && compinit
+
+# Load Antidote
+source $HOME/.antidote/antidote.zsh
+antidote load
+
+# Aliases
+source $HOME/.dotfiles/aliases.zsh
+
+# Substring search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Enable 1Password
+  # export OP_BIOMETRIC_UNLOCK_ENABLED=true
+  source $HOME/.config/op/plugins.sh
+  
+  # Set my editor and git editor
+  export EDITOR="/opt/homebrew/bin/nvim"
+  export GIT_EDITOR="/opt/homebrew/bin/subl -w"
+
+  # OrbStack
+  source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+  # Path
+  PATH=/opt/homebrew/opt/curl/bin:$HOME/.local/bin:$HOME/.docker/bin:$PATH
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+  
+fi
+
