@@ -20,9 +20,6 @@ autoload -U +X compinit && compinit
 source $HOME/.antidote/antidote.zsh
 antidote load
 
-# Aliases
-source $HOME/.dotfiles/aliases.zsh
-
 # Substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
