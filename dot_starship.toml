@@ -42,10 +42,10 @@ disabled = true
 [direnv]
 disabled = false
 format = '[$loaded/$allowed]($style) '
-allowed_msg = '\uf05d'
-not_allowed_msg = '\uf10c'
-denied_msg = '\uf05c'
-loaded_msg = '\udb82\udee7'
+allowed_msg = ''
+not_allowed_msg = ''
+denied_msg = ''
+loaded_msg = '󱃻'
 unloaded_msg = ''
 
 [dotnet]
