@@ -8,16 +8,19 @@ auto-update = download
 clipboard-trim-trailing-spaces = true
 clipboard-paste-protection = true
 
+# Copy
+copy-on-select = true
+
+# Contrast
+minimum-contrast = 1.1
+
 # Cursor
 cursor-style = underline
 cursor-style-blink = true
 
 # Font (ghostty +list-fonts)
 bold-is-bright = true
-font-family = "CaskaydiaMono NFM Regular"
-font-style-bold = "CaskaydiaMono NFM Bold"
-font-family-italic = "CaskaydiaMono NFM Italic"
-font-family-bold-italic = "CaskaydiaMono NFM Bold Italic"
+font-family = "CaskaydiaMono Nerd Font Mono"
 font-size = 12
 
 # Icon
@@ -26,10 +29,17 @@ macos-icon-frame = plastic
 macos-icon-ghost-color = #ffc777
 macos-icon-screen-color = #1f2335
 
+# Secure Input
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+
 # Shell Integration
 shell-integration = zsh
 shell-integration-features = true
 
 # Theme (ghostty +list-themes)
 theme = tokyonight
+
+# Window
+macos-titlebar-style = hidden
 
