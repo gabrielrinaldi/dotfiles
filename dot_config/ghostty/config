@@ -1,0 +1,35 @@
+# Alt
+macos-option-as-alt = right
+
+# Auto update
+auto-update = download
+
+# Clipboard
+clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
+
+# Cursor
+cursor-style = underline
+cursor-style-blink = true
+
+# Font (ghostty +list-fonts)
+bold-is-bright = true
+font-family = "CaskaydiaMono NFM Regular"
+font-style-bold = "CaskaydiaMono NFM Bold"
+font-family-italic = "CaskaydiaMono NFM Italic"
+font-family-bold-italic = "CaskaydiaMono NFM Bold Italic"
+font-size = 12
+
+# Icon
+macos-icon = custom-style
+macos-icon-frame = plastic
+macos-icon-ghost-color = #ffc777
+macos-icon-screen-color = #1f2335
+
+# Shell Integration
+shell-integration = zsh
+shell-integration-features = true
+
+# Theme (ghostty +list-themes)
+theme = tokyonight
+
