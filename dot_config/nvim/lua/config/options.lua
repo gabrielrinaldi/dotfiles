@@ -6,3 +6,5 @@ local opt = vim.opt
 
 opt.relativenumber = false
 opt.commentstring = "# %s"
+
+vim.g.python3_host_prog = "~/.asdf/installs/python/3.12.8/bin/python"
