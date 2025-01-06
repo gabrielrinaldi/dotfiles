@@ -1,0 +1,7 @@
+.asdf/downloads
+.asdf/installs
+.asdf/plugins
+.asdf/repository
+.asdf/shims
+.asdf/tmp
+

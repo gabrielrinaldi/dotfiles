@@ -2,3 +2,5 @@ awesome_print
 bundler
 neovim
 pry
+ruby-lsp
+ruby-lsp-rails
