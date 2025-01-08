@@ -30,7 +30,6 @@ export EDITOR=$VISUAL
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # Enable 1Password
-  export OP_BIOMETRIC_UNLOCK_ENABLED=false
   source $HOME/.config/op/plugins.sh
   
   # OrbStack

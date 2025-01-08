@@ -262,7 +262,7 @@ serialize_pane_viewport true
 scrollback_lines_to_serialize 0
 
 // Choose the theme that is specified in the themes section.
-theme "tokyo-night"
+theme "tokyo-night-dark"
 
 // The name of the default layout to load on startup
 default_layout "gls"
