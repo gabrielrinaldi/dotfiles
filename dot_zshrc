@@ -14,7 +14,7 @@ export STARSHIP_CONFIG=$HOME/.starship.toml
 . "$HOME/.asdf/asdf.sh"
 
 # Compdef loading
-autoload -U +X compinit && compinit
+# autoload -U +X compinit && compinit
 
 # Load Antidote
 source $HOME/.antidote/antidote.zsh
