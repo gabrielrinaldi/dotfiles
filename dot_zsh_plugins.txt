@@ -18,6 +18,7 @@ getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:lib/clipboard.zsh
 ohmyzsh/ohmyzsh path:lib/compfix.zsh
+ohmyzsh/ohmyzsh path:plugins/aws
 ohmyzsh/ohmyzsh path:plugins/copyfile
 ohmyzsh/ohmyzsh path:plugins/copypath
 ohmyzsh/ohmyzsh path:plugins/dash conditional:is-macos
