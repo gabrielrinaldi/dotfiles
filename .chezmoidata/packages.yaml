@@ -1,6 +1,7 @@
 packages:
   darwin:
     brews:
+      - "asdf"
       - "automake"
       - "awscli"
       - "chezmoi"
