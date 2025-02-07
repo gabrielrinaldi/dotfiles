@@ -30,7 +30,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
   # Path
-  PATH=export PATH=$HOME/.asdf/shims:$HOME/.local/bin:$HOME/.docker/bin:$PATH
+  ## Oso
+  PATH=$HOME/.local/bin:$PATH
+  ## Curl
+  PATH=/opt/homebrew/opt/curl/bin:$PATH
+  ## ASDF
+  PATH=$HOME/.asdf/shims:$PATH
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 
 fi
