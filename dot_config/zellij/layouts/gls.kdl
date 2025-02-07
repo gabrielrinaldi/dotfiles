@@ -26,6 +26,5 @@ layout {
   }
 
   tab_with_nav name="k8s"
-  tab_with_nav name="arda" cwd="Arda"
   tab_with_nav name="scratch"
 }
