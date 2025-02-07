@@ -10,9 +10,6 @@ GIT_AUTO_FETCH_INTERVAL=600
 # Starship config
 export STARSHIP_CONFIG=$HOME/.starship.toml
 
-# Compdef loading
-# autoload -U +X compinit && compinit
-
 # Load Antidote
 source $HOME/.antidote/antidote.zsh
 antidote load
