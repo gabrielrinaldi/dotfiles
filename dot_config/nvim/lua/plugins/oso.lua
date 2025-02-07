@@ -1,6 +1,6 @@
 return {
-	-- add editorconfig
-	{
-		"weihanglo/polar.vim",
-	},
+  -- Oso polar syntax support
+  {
+    "weihanglo/polar.vim",
+  },
 }

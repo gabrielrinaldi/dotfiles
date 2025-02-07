@@ -1,6 +1,6 @@
 return {
-	-- add kdl
-	{
-		"imsnif/kdl.vim",
-	},
+  -- KDL language support
+  {
+    "imsnif/kdl.vim",
+  },
 }
