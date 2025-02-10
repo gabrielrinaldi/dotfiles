@@ -29,6 +29,9 @@ macos-icon-frame = plastic
 macos-icon-ghost-color = #ffc777
 macos-icon-screen-color = #1f2335
 
+# Keyboard fix
+macos-option-as-alt = true
+
 # Secure Input
 macos-auto-secure-input = true
 macos-secure-input-indication = true
