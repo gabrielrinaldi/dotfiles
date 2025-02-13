@@ -126,6 +126,11 @@ keybinds clear-defaults=true {
             SwitchToMode "normal"
         }
     }
+    shared_except "normal" {
+      bind "Ctrl Shift ]" { GoToNextTab }
+      bind "Ctrl Shift [" { GoToPreviousTab }
+      bind "Crtl Shift =" { ToggleFloatingPanes }
+    }
     shared_except "locked" {
         bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
