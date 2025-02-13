@@ -129,7 +129,7 @@ keybinds clear-defaults=true {
     shared_except "normal" {
       bind "Ctrl Shift ]" { GoToNextTab; }
       bind "Ctrl Shift [" { GoToPreviousTab; }
-      bind "Crtl p" { ToggleFloatingPanes; }
+      // bind "Ctrl p" { ToggleFloatingPanes; }
     }
     shared_except "locked" {
         bind "Alt +" { Resize "Increase"; }
