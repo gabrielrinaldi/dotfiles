@@ -13,3 +13,4 @@ python 3.12.8
 rebar 3.24.0
 ruby 3.3.6
 rust 1.83.0
+trivy 0.59.1
