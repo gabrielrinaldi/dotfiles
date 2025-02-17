@@ -3,6 +3,7 @@ erlang 27.2
 golang 1.23.4
 helm 3.16.3
 kubectl 1.31.3
+lazydocker 0.24.1
 lua 5.1
 neovim nightly
 nodejs 22.12.0
