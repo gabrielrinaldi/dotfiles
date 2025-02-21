@@ -1,6 +1,6 @@
 elixir 1.18.1-otp-27
 erlang 27.2
-golang 1.23.4
+golang 1.24.0
 helm 3.17.1
 kubectl 1.32.2
 lazydocker 0.24.1
