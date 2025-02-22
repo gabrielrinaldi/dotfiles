@@ -14,7 +14,9 @@ return {
           {
             pane = 2,
             section = "terminal",
-            cmd = "colorscript -e square",
+            icon = " ",
+            title = "Git Status",
+            cmd = "git --no-pager diff --stat -B -M -C",
             height = 5,
             padding = 1,
           },
