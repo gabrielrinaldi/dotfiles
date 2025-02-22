@@ -1,0 +1,28 @@
+{{- with .chezmoi.status }}
+
+{{with (print . ) }}{{ end }}
+
+{{- range .Ordinary -}}
+{{ if and (eq .X 'A') (eq .Y '.') -}}feat: add {{ .Path }}
+{{ else if and (eq .X 'D') (eq .Y '.') -}}chore: remove {{ .Path }}
+{{ else if and (eq .X 'M') (eq .Y '.') -}}chore: update {{ .Path }}
+{{ else }}chore: {{ .X }} {{ .Y }} edit {{ .Path }}
+{{ end }}
+{{- end -}}
+
+{{- range .RenamedOrCopied -}}
+{{ if and (eq .X 'R') (eq .Y '.') }}fix: {{ .Path }} attributes is incorrect
+{{ else if and (eq .X 'C') (eq .Y '.') -}}chore: copy {{ .OrigPath }} to {{ .Path }}
+{{ else }}chore: {{ .X }} {{ .Y }} edit {{ .Path }}
+{{ end }}
+{{- end -}}
+
+{{- range .Unmerged -}}
+{{ fail (print "unmerged files") }}
+{{- end -}}
+
+{{- range .Untracked -}}
+{{ fail (print "untracked files") }}
+{{- end -}}
+
+{{- end -}}
