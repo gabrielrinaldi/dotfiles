@@ -1,3 +1,48 @@
+# Do you want red dots to be displayed while waiting for completion?
+COMPLETION_WAITING_DOTS="true"
+
+# Command history configuration
+# HISTORY_SUBSTRING_SEARCH_PREFIXED=true
+
+# Git auto-fetch
+GIT_AUTO_FETCH_INTERVAL=600
+
+# Starship config
+export STARSHIP_CONFIG=$HOME/.starship.toml
+
+# Load Antidote
+source $HOME/.antidote/antidote.zsh
+antidote load
+
+# Substring search
+# bindkey '^[[A' history-substring-search-up
+# bindkey '^[[B' history-substring-search-down
+
+# Editor
+export EDITOR=nvim
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # Vistual editor
+  export VISUAL=subl
+
+  # Enable 1Password
+  source $HOME/.config/op/plugins.sh
+
+  # OrbStack
+  source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+  # Path
+  ## Oso
+  PATH=$HOME/.local/bin:$PATH
+  ## Curl
+  PATH=/opt/homebrew/opt/curl/bin:$PATH
+  ## ASDF
+  PATH=$HOME/.asdf/shims:$PATH
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+
+fi
+
+# Atuin configuration
 autoload -U add-zsh-hook
 
 zmodload zsh/datetime 2>/dev/null
@@ -108,48 +153,3 @@ bindkey -M emacs '^[OA' atuin-up-search
 bindkey -M vicmd '^[OA' atuin-up-search-vicmd
 bindkey -M viins '^[OA' atuin-up-search-viins
 bindkey -M vicmd 'k' atuin-up-search-vicmd
-
-# Do you want red dots to be displayed while waiting for completion?
-COMPLETION_WAITING_DOTS="true"
-
-# Command history configuration
-# HISTORY_SUBSTRING_SEARCH_PREFIXED=true
-
-# Git auto-fetch
-GIT_AUTO_FETCH_INTERVAL=600
-
-# Starship config
-export STARSHIP_CONFIG=$HOME/.starship.toml
-
-# Load Antidote
-source $HOME/.antidote/antidote.zsh
-antidote load
-
-# Substring search
-# bindkey '^[[A' history-substring-search-up
-# bindkey '^[[B' history-substring-search-down
-
-# Editor
-export EDITOR=nvim
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # Vistual editor
-  export VISUAL=subl
-
-  # Enable 1Password
-  source $HOME/.config/op/plugins.sh
-
-  # OrbStack
-  source ~/.orbstack/shell/init.zsh 2>/dev/null || :
-
-  # Path
-  ## Oso
-  PATH=$HOME/.local/bin:$PATH
-  ## Curl
-  PATH=/opt/homebrew/opt/curl/bin:$PATH
-  ## ASDF
-  PATH=$HOME/.asdf/shims:$PATH
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-
-fi
-
