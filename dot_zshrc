@@ -1,9 +1,6 @@
 # Do you want red dots to be displayed while waiting for completion?
 COMPLETION_WAITING_DOTS="true"
 
-# Command history configuration
-# HISTORY_SUBSTRING_SEARCH_PREFIXED=true
-
 # Git auto-fetch
 GIT_AUTO_FETCH_INTERVAL=600
 
@@ -13,10 +10,6 @@ export STARSHIP_CONFIG=$HOME/.starship.toml
 # Load Antidote
 source $HOME/.antidote/antidote.zsh
 antidote load
-
-# Substring search
-# bindkey '^[[A' history-substring-search-up
-# bindkey '^[[B' history-substring-search-down
 
 # Editor
 export EDITOR=nvim
