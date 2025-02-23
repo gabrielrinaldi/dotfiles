@@ -11,6 +11,13 @@ export STARSHIP_CONFIG=$HOME/.starship.toml
 source $HOME/.antidote/antidote.zsh
 antidote load
 
+# Docker completion
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
+# Aliases
+source ~/.aliases.zsh
+
 # Editor
 export EDITOR=nvim
 
@@ -25,12 +32,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
   # Path
-  ## Oso
+  ## Local bin
   PATH=$HOME/.local/bin:$PATH
   ## Curl
   PATH=/opt/homebrew/opt/curl/bin:$PATH
-  ## ASDF
-  PATH=$HOME/.asdf/shims:$PATH
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
 
 fi
