@@ -5,7 +5,7 @@ exact = true
 stripComponents = 1
 refreshPeriod = "1h"
 
-[".config/tmux/plugins/tpm"]
+[".local/share/tmux/plugins/tpm"]
 type = "archive"
 url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
 exact = true
