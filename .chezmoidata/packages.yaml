@@ -46,10 +46,12 @@ packages:
     casks:
       - "1password-cli"
       - "backblaze"
+      - "docker"
+      - "figma"
       - "font-caskaydia-mono-nerd-font"
+      - "ghostty"
       - "kaleidoscope"
       - "orbstack"
-      - "rapidapi"
       - "raycast"
       - "readdle-spark"
       - "setapp"
