@@ -1,7 +1,6 @@
 packages:
   darwin:
     brews:
-      - "asdf"
       - "atuin"
       - "autoconf"
       - "automake"
@@ -10,7 +9,6 @@ packages:
       - "coreutils"
       - "curl"
       - "curlie"
-      - "direnv"
       - "fd"
       - "flyctl"
       - "fop"
@@ -28,13 +26,14 @@ packages:
       - "libxslt"
       - "libyaml"
       - "luajit"
-      - "mas"
+      - "mise"
       - "ripgrep"
       - "rsync"
       - "starship"
       - "tectonic"
       - "terminal-notifier"
       - "unixodbc"
+      - "usage"
       - "watch"
       - "wget"
       - "wxwidgets"

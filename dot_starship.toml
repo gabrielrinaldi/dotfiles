@@ -40,13 +40,7 @@ disabled = true
 disabled = true
 
 [direnv]
-disabled = false
-format = '[$loaded/$allowed]($style) '
-allowed_msg = ''
-not_allowed_msg = ''
-denied_msg = ''
-loaded_msg = '󱃻'
-unloaded_msg = ''
+disabled = true
 
 [dotnet]
 disabled = true
