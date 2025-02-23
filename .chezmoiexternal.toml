@@ -5,6 +5,13 @@ exact = true
 stripComponents = 1
 refreshPeriod = "24h"
 
+[".config/k9s/skins"]
+type = "archive"
+url = "https://github.com/catppuccin/k9s/archive/main.tar.gz"
+exact = true
+stripComponents = 2
+refreshPeriod = "24h"
+
 [".local/share/tmux/plugins/tpm"]
 type = "git-repo"
 url = "git@github.com:tmux-plugins/tpm.git"
