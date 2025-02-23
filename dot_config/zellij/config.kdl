@@ -269,9 +269,6 @@ scrollback_lines_to_serialize 0
 // Choose the theme that is specified in the themes section.
 theme "tokyo-night-dark"
 
-// The name of the default layout to load on startup
-default_layout "gls"
-
 // Choose the mode that zellij uses when starting up.
 default_mode "locked"
 
