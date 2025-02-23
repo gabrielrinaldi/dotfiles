@@ -42,9 +42,6 @@ ohmyzsh/ohmyzsh path:plugins/tailscale
 ohmyzsh/ohmyzsh path:plugins/uv
 ohmyzsh/ohmyzsh path:plugins/web-search
 
-# Vi Mode
-jeffreytse/zsh-vi-mode
-
 # Directory
 agkozak/zsh-z
 
