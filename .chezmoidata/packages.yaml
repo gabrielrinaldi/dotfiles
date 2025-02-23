@@ -19,6 +19,8 @@ packages:
       - "git-lfs"
       - "gmp"
       - "htop"
+      - "markdown-toc"
+      - "markdownlint-cli2"
       - "imagemagick"
       - "k9s"
       - "lazygit"
