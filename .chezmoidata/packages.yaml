@@ -42,6 +42,7 @@ packages:
       - "zellij"
       - "zsh"
     casks:
+      - "1password-cli"
       - "backblaze"
       - "font-caskaydia-mono-nerd-font"
       - "kaleidoscope"
@@ -53,7 +54,7 @@ packages:
       - "sf-symbols"
       - "spotify"
       - "sublime-text"
+      - "tailscale"
       - "todoist"
       - "tower"
       - "transmit"
-      - "1password-cli"
