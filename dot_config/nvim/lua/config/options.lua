@@ -6,6 +6,3 @@
 local opt = vim.opt
 
 opt.relativenumber = false
-
--- Python
--- vim.g.python3_host_prog = "~/.asdf/installs/python/3.12.8/bin/python"

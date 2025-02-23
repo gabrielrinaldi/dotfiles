@@ -5,7 +5,7 @@ COMPLETION_WAITING_DOTS="true"
 GIT_AUTO_FETCH_INTERVAL=600
 
 # Starship config
-export STARSHIP_CONFIG=$HOME/.starship.toml
+export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
 
 # Load Antidote
 source $HOME/.antidote/antidote.zsh

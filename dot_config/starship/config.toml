@@ -1,5 +1,5 @@
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
 # Sets user-defined palette
 # Palettes must be defined _after_ this line
@@ -34,41 +34,35 @@ mantle = "#181825"
 crust = "#11111b"
 
 [character]
-# Note the use of Catppuccin color 'peach'
-success_symbol = "[[󰄛](green) ❯](peach)"
-error_symbol = "[[󰄛](red) ❯](peach)"
-vimcmd_symbol = "[󰄛 ❮](subtext1)"        # For use with zsh-vi-mode
+# Note the use of Catppuccin color "peach"
+success_symbol = "[❯](peach)"
+error_symbol = "[❯](peach)"
+vimcmd_symbol = "[ ❮](subtext1)"
 
 [directory]
 truncation_length = 4
-style = 'bold lavender'
-read_only = ' 󰌾'
-[directory.substitutions]
-"Desktop" = "󰇄 "
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+style = "bold lavender"
+read_only = " 󰌾"
 
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
-style = 'bold blue'
-symbol = '  '
+style = "bold blue"
+symbol = "  "
 [aws.region_aliases]
-us-east-2 = 'main'
+us-east-2 = "main"
 [aws.profile_aliases]
-default = 'GLS'
+default = "GLS"
 
 [azure]
 disabled = true
 
 [[battery.display]]
 threshold = 10
-style = 'bold red'
+style = "bold red"
 
 [[battery.display]]
 threshold = 30
-style = 'bold yellow'
+style = "bold yellow"
 
 [buf]
 disabled = true
@@ -77,16 +71,16 @@ disabled = true
 disabled = true
 
 [c]
-symbol = ' '
+symbol = " "
 
 [cmake]
-symbol = ' '
+symbol = " "
 
 [cobol]
 disabled = true
 
 [conda]
-symbol = ' '
+symbol = " "
 
 [crystal]
 disabled = true
@@ -104,13 +98,13 @@ disabled = true
 disabled = true
 
 [docker_context]
-symbol = ' '
+symbol = " "
 
 [dotnet]
 disabled = true
 
 [elixir]
-symbol = ' '
+symbol = " "
 
 [elm]
 disabled = true
@@ -119,11 +113,11 @@ disabled = true
 disabled = true
 
 [git_branch]
-style = 'bold mauve'
-symbol = ' '
+style = "bold mauve"
+symbol = " "
 
 [git_commit]
-tag_symbol = '  '
+tag_symbol = "  "
 
 [git_metrics]
 disabled = false
@@ -132,7 +126,7 @@ disabled = false
 disabled = true
 
 [golang]
-symbol = ' '
+symbol = " "
 
 [guix_shell]
 disabled = true
@@ -144,37 +138,37 @@ disabled = true
 disabled = true
 
 [hostname]
-ssh_symbol = ' '
+ssh_symbol = " "
 
 [java]
-symbol = ' '
+symbol = " "
 
 [julia]
 disabled = true
 
 [kotlin]
-symbol = ' '
+symbol = " "
 
 [kubernetes]
 disabled = false
 detect_folders = ["$HOME/Code"]
 
 [[kubernetes.contexts]]
-context_pattern = 'production'
-style = 'bold red'
-context_alias = 'prod'
+context_pattern = "production"
+style = "bold red"
+context_alias = "prod"
 
 [[kubernetes.contexts]]
-context_pattern = 'staging'
-style = 'bold yellow'
-context_alias = 'stag'
+context_pattern = "staging"
+style = "bold yellow"
+context_alias = "stag"
 
 [lua]
-symbol = ' '
+symbol = " "
 
 [memory_usage]
 disabled = false
-symbol = '󰍛 '
+symbol = "󰍛 "
 
 [meson]
 disabled = true
@@ -192,7 +186,7 @@ disabled = true
 disabled = true
 
 [nodejs]
-symbol = ' '
+symbol = " "
 
 [ocaml]
 disabled = true
@@ -204,57 +198,57 @@ disabled = true
 disabled = true
 
 [os.symbols]
-Alpaquita = ' '
-Alpine = ' '
-AlmaLinux = ' '
-Amazon = ' '
-Android = ' '
-Arch = ' '
-Artix = ' '
-CachyOS = ' '
-CentOS = ' '
-Debian = ' '
-DragonFly = ' '
-Emscripten = ' '
-EndeavourOS = ' '
-Fedora = ' '
-FreeBSD = ' '
-Garuda = '󰛓 '
-Gentoo = ' '
-HardenedBSD = '󰞌 '
-Illumos = '󰈸 '
-Kali = ' '
-Linux = ' '
-Mabox = ' '
-Macos = ' '
-Manjaro = ' '
-Mariner = ' '
-MidnightBSD = ' '
-Mint = ' '
-NetBSD = ' '
-NixOS = ' '
-Nobara = ' '
-OpenBSD = '󰈺 '
-openSUSE = ' '
-OracleLinux = '󰌷 '
-Pop = ' '
-Raspbian = ' '
-Redhat = ' '
-RedHatEnterprise = ' '
-RockyLinux = ' '
-Redox = '󰀘 '
-Solus = '󰠳 '
-SUSE = ' '
-Ubuntu = ' '
-Unknown = ' '
-Void = ' '
-Windows = '󰍲 '
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
 
 [package]
-symbol = '󰏗 '
+symbol = "󰏗 "
 
 [perl]
-symbol = ' '
+symbol = " "
 
 [php]
 disabled = true
@@ -269,7 +263,7 @@ disabled = true
 disabled = true
 
 [python]
-symbol = ' '
+symbol = " "
 
 [quarto]
 disabled = true
@@ -285,10 +279,10 @@ disabled = true
 
 [rust]
 disabled = true
-symbol = '󱘗 '
+symbol = "󱘗 "
 
 [ruby]
-symbol = ' '
+symbol = " "
 
 [scala]
 disabled = true
@@ -303,13 +297,24 @@ disabled = true
 disabled = true
 
 [status]
+format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
 disabled = false
+symbol = "󰬟 "
+success_symbol = "󰅬"
+not_executable_symbol = "󰙦 "
+not_found_symbol = " "
+sigint_symbol = " "
+signal_symbol = "󱐋 "
+style = "bold red"
+success_style = "green"
+failure_style = "bold yellow"
+map_symbol = true
 
 [sudo]
 disabled = false
 
 [swift]
-symbol = ' '
+symbol = " "
 
 [time]
 disabled = false

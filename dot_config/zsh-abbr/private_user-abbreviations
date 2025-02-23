@@ -1,6 +1,0 @@
-abbr "k"="k9s -A"
-abbr "tailscale"="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
-abbr "terraform"="tofu"
-abbr "vi"="nvim"
-abbr "vim"="nvim"
-abbr "weather"="curl wttr.in/~Castle+Rock"
