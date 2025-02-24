@@ -1,2 +1,4 @@
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export SHELL=/opt/homebrew/bin/zsh
