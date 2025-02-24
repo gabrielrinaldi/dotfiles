@@ -41,5 +41,5 @@ shell-integration = zsh
 shell-integration-features = true
 
 # Theme (ghostty +list-themes)
-theme = tokyonight
+theme = catppuccin-mocha
 
