@@ -51,6 +51,7 @@ packages:
       - "font-caskaydia-mono-nerd-font"
       - "ghostty"
       - "kaleidoscope"
+      - "obsidian"
       - "orbstack"
       - "raycast"
       - "readdle-spark"
