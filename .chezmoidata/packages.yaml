@@ -30,6 +30,7 @@ packages:
       - "markdown-toc"
       - "markdownlint-cli2"
       - "mise"
+      - "reattach-to-user-namespace"
       - "ripgrep"
       - "rsync"
       - "starship"
