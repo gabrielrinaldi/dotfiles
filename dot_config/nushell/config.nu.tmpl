@@ -6,6 +6,12 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 # Set catppuccin theme
 source ($nu.data-dir | path join "catppuccin.nu")
 
+# Disable welcome banner
+$env.config.show_banner = false
+
+# Use vi mode
+$env.config.edit_mode = 'vi'
+
 # Homebrew
 {{ if eq .chezmoi.os "linux" -}}
 path add "/home/{{- .chezmoi.username -}}/.linuxbrew/bin"
@@ -13,11 +19,18 @@ path add "/home/{{- .chezmoi.username -}}/.linuxbrew/bin"
 path add "/opt/homebrew/bin"
 {{ end -}}
 
+# Starship
+$env.STARSHIP_CONFIG = ($env.HOME | path join ".config/starship/config.toml")
+
+# Carapace
+$env.CARAPACE_BRIDGES = 'zsh,bash'
+carapace _carapace nushell | save -f ($nu.data-dir | path join "vendor/autoload/carapace.nu")
+
 # Atuin
 atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")
 
 # Mise
-^mise init nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
+mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 
 # Starship
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

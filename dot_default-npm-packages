@@ -1,3 +1,4 @@
 @mermaid-js/mermaid-cli
+@microsoft/inshellisense
 neovim
 prettier

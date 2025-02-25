@@ -6,14 +6,16 @@ import = ["~/.local/share/alacritty/catppuccin.toml"]
 
 [env]
 # Fix terminal colors
-SHELL = "/opt/homebrew/bin/nu"
 TERM = "xterm-256color"
+# Use nushell
+SHELL = "/opt/homebrew/bin/nu"
 XDG_CONFIG_HOME = "{{- .chezmoi.homeDir -}}/.config"
 XDG_DATA_HOME = "{{- .chezmoi.homeDir -}}/.local/share"
 
 [window]
 startup_mode = "Fullscreen"
 option_as_alt = "OnlyLeft"
+padding = { x = 16, y = 16 }
 
 [scrolling]
 history = 50000

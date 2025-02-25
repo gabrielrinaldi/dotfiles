@@ -6,6 +6,7 @@ packages:
       - "automake"
       - "awscli"
       - "bat"
+      - "carapace"
       - "chezmoi"
       - "coreutils"
       - "curl"
