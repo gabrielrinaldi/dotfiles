@@ -19,12 +19,11 @@ path add "/home/{{- .chezmoi.username -}}/.linuxbrew/bin"
 path add "/opt/homebrew/bin"
 {{ end -}}
 
+# Completers
+source ($nu.default-config-dir | path join "completers.nu")
+
 # Starship
 $env.STARSHIP_CONFIG = ($env.HOME | path join ".config/starship/config.toml")
-
-# Carapace
-$env.CARAPACE_BRIDGES = 'zsh,bash'
-carapace _carapace nushell | save -f ($nu.data-dir | path join "vendor/autoload/carapace.nu")
 
 # Atuin
 atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")

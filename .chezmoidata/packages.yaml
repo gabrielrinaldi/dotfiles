@@ -44,6 +44,7 @@ packages:
       - "wxwidgets"
       - "xcodes"
       - "zellij"
+      - "zoxide"
       - "zsh"
     casks:
       - "1password-cli"
