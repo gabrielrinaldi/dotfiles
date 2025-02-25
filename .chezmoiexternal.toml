@@ -1,8 +1,6 @@
-[".antidote"]
-type = "archive"
-url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
-exact = true
-stripComponents = 1
+[".local/share/alacritty/catppuccin.toml"]
+type = "file"
+url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
 refreshPeriod = "24h"
 
 [".config/k9s/skins"]
@@ -12,7 +10,8 @@ exact = true
 stripComponents = 2
 refreshPeriod = "24h"
 
-[".config/alacritty/catppuccin-mocha.toml"]
+
+[".local/share/nushell/catppuccin.nu"]
 type = "file"
-url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
+url = "https://github.com/nik-rev/catppuccin-nushell/raw/main/themes/catppuccin_mocha.nu"
 refreshPeriod = "24h"

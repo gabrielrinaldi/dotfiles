@@ -2,13 +2,14 @@
 working_directory = "~/Code"
 
 # Catppuccin theme
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+import = ["~/.local/share/alacritty/catppuccin.toml"]
 
 [env]
 # Fix terminal colors
+SHELL = "/opt/homebrew/bin/nu"
 TERM = "xterm-256color"
-XDG_CONFIG_HOME = "{{ .chezmoi.homeDir }}/.config"
-XDG_DATA_HOME = "{{ .chezmoi.homeDir }}/.local/share"
+XDG_CONFIG_HOME = "{{- .chezmoi.homeDir -}}/.config"
+XDG_DATA_HOME = "{{- .chezmoi.homeDir -}}/.local/share"
 
 [window]
 startup_mode = "Fullscreen"
