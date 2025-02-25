@@ -7,7 +7,8 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 [env]
 # Fix terminal colors
 TERM = "xterm-256color"
-XDG_CONFIG_HOME = "~/.config"
+XDG_CONFIG_HOME = "{{ .chezmoi.homeDir }}/.config"
+XDG_DATA_HOME = "{{ .chezmoi.homeDir }}/.local/share"
 
 [window]
 startup_mode = "Fullscreen"

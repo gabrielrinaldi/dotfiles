@@ -17,6 +17,7 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 
+use std "path add"
 
 
 
@@ -30,8 +31,12 @@
 
 
 
-
-
+# Mise
+'
+let mise_path = $nu.default-config-dir | path join mise.nu
+^mise activate nu | save $mise_path --force
+' | save $nu.env-path --append
+"\nuse ($nu.default-config-dir | path join mise.nu)" | save $nu.config-path --append
 
 # Starship
 mkdir ($nu.data-dir | path join "vendor/autoload")
