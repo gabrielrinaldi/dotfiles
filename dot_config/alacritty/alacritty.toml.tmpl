@@ -1,0 +1,39 @@
+[general]
+working_directory = "~/Code"
+
+# Catppuccin theme
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[env]
+# Fix terminal colors
+TERM = "xterm-256color"
+XDG_CONFIG_HOME = "~/.config"
+
+[window]
+startup_mode = "Fullscreen"
+option_as_alt = "OnlyLeft"
+
+[scrolling]
+history = 50000
+
+[font]
+normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
+size = 12.0
+
+[bell]
+animation = "EaseOut"
+duration = 200
+color = "#cdd6f4"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Underline", blinking = "Off" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
+
+[terminal]
+shell = "/opt/homebrew/bin/nu"
+
+[mouse]
+hide_when_typing = true
