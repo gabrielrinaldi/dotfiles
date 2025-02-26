@@ -8,7 +8,7 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 let aliases_path = ($nu.data-dir | path join "vendor/autoload/aliases.nu")
 echo "" | save -f $aliases_path
 for $alias_name in (ls -a ($nu.data-dir | path join "nu_scripts/aliases/**/*.nu" | into glob) | get name) {
-    echo $"source ($alias_name)\n" | save $aliases_path --append --raw
+  echo $"source ($alias_name)\n" | save $aliases_path --append --raw
 }
 
 ## Completions
@@ -23,7 +23,7 @@ for $completion in (ls -a ($nu.data-dir | path join "nu_scripts/custom-completio
 
 # Plugins
 cargo install nu_plugin_desktop_notifications
-register ~/.cargo/bin/nu_plugin_desktop_notifications
+plugin add ~/.cargo/bin/nu_plugin_desktop_notifications
 
 # Tools
 ## Atuin
@@ -31,7 +31,6 @@ atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")
 
 ## Mise
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
-
 
 ## Starship
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

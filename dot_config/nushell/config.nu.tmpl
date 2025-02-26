@@ -18,5 +18,8 @@ $env.config.edit_mode = 'vi'
 ## Aliases
 source ($nu.default-config-dir | path join "aliases.nu")
 
+## Completions
+source ($nu.default-config-dir | path join "completions.nu")
+
 ## Zoxide
 source ($nu.data-dir | path join "nu_scripts/custom-menus/zoxide-menu.nu")
