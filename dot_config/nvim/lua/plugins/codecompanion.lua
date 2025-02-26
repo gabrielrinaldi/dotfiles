@@ -1,5 +1,5 @@
 return {
-  -- Set catppuccin as the default colorscheme
+  -- Setup CodeCompanion for AI
   {
     "olimorris/codecompanion.nvim",
     config = true,
@@ -9,20 +9,33 @@ return {
     },
     opts = {
       adapters = {
-        openai = function()
-          return require("codecompanion.adapters").extend("openai", {
+        anthropic = function()
+          return require("codecompanion.adapters").extend("anthropic", {
             env = {
               api_key = "cmd:op read op://Employee/Anthropic/credential --no-newline",
             },
           })
         end,
+        opts = {
+          show_defaults = false,
+        },
       },
       strategies = {
         chat = {
           adapter = "anthropic",
         },
         inline = {
-          adapter = "copilot",
+          adapter = "anthropic",
+        },
+      },
+    },
+  },
+  {
+    "saghen/blink.cmp",
+    opts = {
+      sources = {
+        per_filetype = {
+          codecompanion = { "codecompanion" },
         },
       },
     },

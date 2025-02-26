@@ -1,17 +1,3 @@
-def load_completions [] {
-  const nu_completions = ["git"]
-
-  for nu_completion in $nu_completions {
-    const completion_path = ($nu.data-dir | path join "nu_scripts" "custom-completions" $nu_completion $"($nu_completion)-completions.nu")
-    if ($completion_path | path exists) {
-      source $completion_path
-    }
-  }
-}
-
-load_completions
-
-
 # let carapace_completer = {|spans|
 #     carapace $spans.0 nushell ...$spans | from json
 # }
