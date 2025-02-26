@@ -53,7 +53,7 @@ packages:
       - "backblaze"
       - "docker"
       - "figma"
-      - "font-caskaydia-mono-nerd-font"
+      - "font-iosevka-nerd-font"
       - "kaleidoscope"
       - "obsidian"
       - "orbstack"
