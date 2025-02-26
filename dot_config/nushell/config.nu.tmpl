@@ -11,12 +11,18 @@ path add "/opt/homebrew/bin"
 ## Disable welcome banner
 $env.config.show_banner = false
 
+## Editor
+$env.config.buffer_editor = "nvim"
+
 ## Use vi mode
 $env.config.edit_mode = 'vi'
 
 # Modules
 ## Aliases
 source ($nu.default-config-dir | path join "aliases.nu")
+
+## Bru
+use ($nu.data-dir | path join "bru/bru")
 
 ## Completions
 source ($nu.default-config-dir | path join "completions.nu")

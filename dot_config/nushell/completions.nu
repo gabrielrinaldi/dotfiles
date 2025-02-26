@@ -26,7 +26,7 @@ let external_completer = {|spans|
   })
 
   match $spans.0 {
-    __zoxide_z | __zoxide_zi => $zoxide_completer
+    z | zi | __zoxide_z | __zoxide_zi => $zoxide_completer
     _ => $carapace_completer
   } | do $in $spans
 }

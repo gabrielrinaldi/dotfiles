@@ -1,6 +1,6 @@
-[".local/share/alacritty/catppuccin.toml"]
-type = "file"
-url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
+[".local/share/nushell/bru"]
+type = "git-repo"
+url = "https://github.com/selfagency/bru.git"
 refreshPeriod = "24h"
 
 [".config/k9s/skins"]
@@ -8,6 +8,11 @@ type = "archive"
 url = "https://github.com/catppuccin/k9s/archive/main.tar.gz"
 exact = true
 stripComponents = 2
+refreshPeriod = "24h"
+
+[".local/share/alacritty/catppuccin.toml"]
+type = "file"
+url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
 refreshPeriod = "24h"
 
 [".local/share/nushell/catppuccin.nu"]

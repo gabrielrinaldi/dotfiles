@@ -11,6 +11,7 @@ packages:
       - "coreutils"
       - "curl"
       - "curlie"
+      - "eza"
       - "fd"
       - "flyctl"
       - "fop"
