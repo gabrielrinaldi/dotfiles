@@ -1,17 +1,5 @@
 use std "path add"
 
-# Create autoload directories
-mkdir ($nu.data-dir | path join "vendor/autoload")
-
-# Set catppuccin theme
-source ($nu.data-dir | path join "catppuccin.nu")
-
-# Disable welcome banner
-$env.config.show_banner = false
-
-# Use vi mode
-$env.config.edit_mode = 'vi'
-
 # Homebrew
 {{ if eq .chezmoi.os "linux" -}}
 path add "/home/{{- .chezmoi.username -}}/.linuxbrew/bin"
@@ -19,17 +7,13 @@ path add "/home/{{- .chezmoi.username -}}/.linuxbrew/bin"
 path add "/opt/homebrew/bin"
 {{ end -}}
 
-# Completers
-source ($nu.default-config-dir | path join "completers.nu")
+# Nushell configuration
+## Disable welcome banner
+$env.config.show_banner = false
 
-# Starship
-$env.STARSHIP_CONFIG = ($env.HOME | path join ".config/starship/config.toml")
+## Use vi mode
+$env.config.edit_mode = 'vi'
 
-# Atuin
-atuin init nu | save -f ($nu.data-dir | path join "vendor/autoload/atuin.nu")
-
-# Mise
-mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
-
-# Starship
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+# Modules
+## Aliases
+source ($nu.default-config-dir | path join "aliases.nu")

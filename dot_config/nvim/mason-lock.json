@@ -2,20 +2,16 @@
   "actionlint": "v1.7.7",
   "basedpyright": "1.27.1",
   "bash-language-server": "5.4.3",
-  "commitlint": "19.7.1",
   "debugpy": "1.8.12",
   "docker-compose-language-service": "0.3.0",
   "dockerfile-language-server": "0.13.0",
   "editorconfig-checker": "v3.2.0",
-  "elixir-ls": "v0.26.4",
   "erb-formatter": "0.7.3",
   "erb-lint": "0.9.0",
-  "erlang-ls": "1.1.0",
   "hadolint": "v2.12.0",
   "harper-ls": "v0.22.0",
   "helm-ls": "v0.2.0",
   "htmlbeautifier": "1.4.3",
-  "jq": "jq-1.7",
   "js-debug-adapter": "v1.97.1",
   "json-lsp": "4.10.0",
   "lua-language-server": "3.13.6",
@@ -40,6 +36,5 @@
   "trivy": "v0.59.1",
   "typescript-language-server": "4.3.3",
   "vtsls": "0.2.8",
-  "yaml-language-server": "1.16.0",
-  "yq": "v4.45.1"
+  "yaml-language-server": "1.16.0"
 }

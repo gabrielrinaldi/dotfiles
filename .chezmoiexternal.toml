@@ -10,8 +10,12 @@ exact = true
 stripComponents = 2
 refreshPeriod = "24h"
 
-
 [".local/share/nushell/catppuccin.nu"]
 type = "file"
 url = "https://github.com/nik-rev/catppuccin-nushell/raw/main/themes/catppuccin_mocha.nu"
+refreshPeriod = "24h"
+
+[".local/share/nushell/nu_scripts"]
+type = "git-repo"
+url = "https://github.com/nushell/nu_scripts"
 refreshPeriod = "24h"
