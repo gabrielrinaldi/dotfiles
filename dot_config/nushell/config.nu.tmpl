@@ -7,6 +7,9 @@ path add "/home/{{- .chezmoi.username -}}/.linuxbrew/bin"
 path add "/opt/homebrew/bin"
 {{ end -}}
 
+# Theme
+$env.LS_COLORS = (vivid generate catppuccin-mocha)
+
 # Nushell configuration
 ## Disable welcome banner
 $env.config.show_banner = false
