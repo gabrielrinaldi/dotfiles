@@ -4,18 +4,18 @@ plugin_autoupdate_last_check_duration = '1 day'
 
 [tools]
 "asdf:neovim" = 'nightly'
-elixir = '1.18'
+elixir = '1.18.2'
 erlang = '27'
-golang = '1.24'
-helm = 'latest'
+golang = '1.24.0'
+helm = '3'
 kubectl = 'latest'
 lazydocker = 'latest'
 lua = '5.1'
-node = 'lts'
+node = '22'
 opentofu = 'latest'
 perl = { version = '5.40.1', postinstall = 'cpanm Neovim::Ext' }
 python = '3.12'
-rebar = '3'
+rebar = '3.24'
 ruby = '3.3'
 rust = '1.85'
 uv = { version = 'latest', postinstall = 'uv tool install posting' }

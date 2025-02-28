@@ -5,4 +5,4 @@
 -- Custom configs
 local opt = vim.opt
 
-opt.relativenumber = false
+opt.spell = true

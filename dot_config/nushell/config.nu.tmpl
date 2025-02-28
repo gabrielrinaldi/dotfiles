@@ -12,7 +12,11 @@ $env.LS_COLORS = (vivid generate catppuccin-mocha)
 
 # Nushell configuration
 ## Disable welcome banner
+$env.config.filesize.unit = "metric"
+$env.config.float_precision = 4;
+$env.config.highlight_resolved_externals = true
 $env.config.show_banner = false
+$env.config.use_kitty_protocol = true
 
 ## Editor
 $env.config.buffer_editor = "nvim"
