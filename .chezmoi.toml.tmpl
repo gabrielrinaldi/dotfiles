@@ -1,7 +1,9 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $opAccount := promptStringOnce . "1Password Account" "Account domain" -}}
 
 [data]
   email = {{ $email | quote }}
+  opAccount = {{ $opAccount | quote }}
 
 [edit]
   command = "nvim"

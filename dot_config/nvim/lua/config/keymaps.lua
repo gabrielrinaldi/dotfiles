@@ -3,5 +3,5 @@
 -- Add any additional keymaps here
 
 -- Support mini.move
-vim.keymap.del({ "n", "i", "v" }, "<A-j>")
-vim.keymap.del({ "n", "i", "v" }, "<A-k>")
+-- vim.keymap.del({ "n", "i", "v" }, "<A-j>")
+-- vim.keymap.del({ "n", "i", "v" }, "<A-k>")
