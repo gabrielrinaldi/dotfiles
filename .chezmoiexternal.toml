@@ -5,11 +5,6 @@ url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
 refreshPeriod = "24h"
 
 # Nushell
-[".local/share/nushell/bru"]
-type = "git-repo"
-url = "https://github.com/selfagency/bru.git"
-refreshPeriod = "24h"
-
 [".local/share/nushell/catppuccin.nu"]
 type = "file"
 url = "https://github.com/nik-rev/catppuccin-nushell/raw/main/themes/catppuccin_mocha.nu"
