@@ -13,6 +13,7 @@ let carapace_completer = {|spans: list<string>|
 # Fish
 mkdir ~/.config/fish/completions
 mise completion fish | save -f ~/.config/fish/completions/mise.fish
+tailscale completion fish | save -f ~/.config/fish/completions/tailscale.fish
 let fish_completer = {|spans|
     fish --command $'complete "--do-complete=($spans | str join " ")"'
     | from tsv --flexible --noheaders --no-infer
@@ -41,6 +42,7 @@ let external_completer = {|spans|
   match $spans.0 {
     mise => $fish_completer
     nu => $fish_completer
+    tailscale => $fish_completer
     z | zi | __zoxide_z | __zoxide_zi => $zoxide_completer
     _ => $carapace_completer
   } | do $in $spans
