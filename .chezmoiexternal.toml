@@ -10,6 +10,12 @@ type = "file"
 url = "https://github.com/catppuccin/bat/raw/main/themes/Catppuccin Mocha.tmTheme"
 refreshPeriod = "24h"
 
+# Delta
+[".config/bat/themes/catppuccin.gitconfig"]
+type = "file"
+url = "https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig"
+refreshPeriod = "24h"
+
 # Eza
 [".config/eza/theme.yml"]
 type = "file"

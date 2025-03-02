@@ -1,6 +1,7 @@
 # Bat
 alias cat=bat
 alias fzf="fzf --preview \"bat --color=always --style=numbers --line-range=:500 {}\""
+alias btail="tail -f $@ | bat --paging=never -l log"
 
 # Curl
 alias curl=curlie

@@ -6,6 +6,7 @@ packages:
       - "automake"
       - "awscli"
       - "bat"
+      - "borders"
       - "carapace"
       - "chezmoi"
       - "coreutils"
