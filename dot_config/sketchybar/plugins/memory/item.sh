@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 memory=(
   icon.color="$GREEN"
   icon="$MEMORY"
@@ -8,6 +6,5 @@ memory=(
   update_freq=15
 )
 
-sketchybar \
-  --add item memory right \
+sketchybar --add item memory right \
   --set memory "${memory[@]}"

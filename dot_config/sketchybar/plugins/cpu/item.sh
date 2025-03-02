@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 cpu=(
   icon.color="$BLUE"
   icon="$CPU"

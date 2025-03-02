@@ -18,7 +18,6 @@ else
   UP_FORMAT=$(echo "$UP" | awk '{ printf "%03.0f kbps", $1}')
 fi
 
-sketchybar \
-  -m \
+sketchybar -m \
   --set network.down label="$DOWN_FORMAT" icon.highlight="$(if [ "$DOWN" -gt "0" ]; then echo "on"; else echo "off"; fi)" \
   --set network.up label="$UP_FORMAT" icon.highlight="$(if [ "$UP" -gt "0" ]; then echo "on"; else echo "off"; fi)"

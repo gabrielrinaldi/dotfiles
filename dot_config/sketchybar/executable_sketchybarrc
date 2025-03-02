@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC1091
 
 source "$HOME/.config/sketchybar/colors.sh"
 source "$HOME/.config/sketchybar/icons.sh"
@@ -6,9 +7,7 @@ source "$HOME/.config/sketchybar/icons.sh"
 # source "$HOME/.config/sketchybar/userconfig.sh" # Loads all defined variables
 
 # Directories
-ITEMS_DIR="$HOME/.config/sketchybar/items"
 PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
-SCRIPTS_DIR="$HOME/.config/sketchybar/scripts"
 
 FONT="CaskaydiaMono Nerd Font Mono"
 ICON_PADDINGS=8
@@ -60,16 +59,18 @@ sketchybar --bar "${bar_config[@]}" \
   "${background_defaults[@]}" \
   "${popup_defaults[@]}"
 
-sketchybar --add event aerospace_workspace_change
-
 sketchybar --hotload true
 
 # Left items
 source "$PLUGINS_DIR/apple/item.sh"
+source "$PLUGINS_DIR/applications/item.sh"
 
 # Right items
-source "$PLUGINS_DIR/cpu/item.sh"
-source "$PLUGINS_DIR/memory/item.sh"
+source "$PLUGINS_DIR/calendar/item.sh"
 source "$PLUGINS_DIR/network/item.sh"
+source "$PLUGINS_DIR/memory/item.sh"
+source "$PLUGINS_DIR/cpu/item.sh"
+source "$PLUGINS_DIR/menu_items/item.sh"
+source "$PLUGINS_DIR/spaces/item.sh"
 
 sketchybar --update

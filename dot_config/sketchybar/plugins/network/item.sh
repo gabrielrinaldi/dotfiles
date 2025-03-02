@@ -1,27 +1,24 @@
-#!/usr/bin/env bash
-
 network_down=(
-  y_offset=-6
-  label.font="$FONT:Bold:10"
-  icon="$NETWORK_DOWN"
   icon.color="$GREEN"
   icon.highlight_color="$BLUE"
+  icon="$NETWORK_DOWN"
+  label.font="$FONT:Bold:10"
   update_freq=1
+  y_offset=-6
 )
 
 network_up=(
   background.padding_right=-70
-  y_offset=6
-  label.font="$FONT:Bold:10"
-  icon="$NETWORK_UP"
   icon.color="$GREEN"
   icon.highlight_color="$BLUE"
-  update_freq=1
+  icon="$NETWORK_UP"
+  label.font="$FONT:Bold:10"
   script="$PLUGINS_DIR/network/script.sh"
+  update_freq=1
+  y_offset=6
 )
 
-sketchybar \
-  --add item network.down right \
+sketchybar --add item network.down right \
   --set network.down "${network_down[@]}" \
   --add item network.up right \
   --set network.up "${network_up[@]}"

@@ -5,12 +5,7 @@ working_directory = "~/Code"
 import = ["~/.local/share/alacritty/catppuccin.toml"]
 
 [env]
-# Fix terminal colors
 TERM = "xterm-256color"
-# Use nushell
-SHELL = "/opt/homebrew/bin/zsh"
-XDG_CONFIG_HOME = "{{- .chezmoi.homeDir -}}/.config"
-XDG_DATA_HOME = "{{- .chezmoi.homeDir -}}/.local/share"
 ZELLIJ_AUTO_ATTACH = "true"
 ZELLIJ_AUTO_EXIT = "true"
 

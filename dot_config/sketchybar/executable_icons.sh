@@ -3,8 +3,9 @@
 
 # General Icons
 APPLE=󰀵
-
+CLOCK=
 CPU=
+DATE=
 DISK=
 MEMORY=
 NETWORK=
