@@ -4,18 +4,18 @@ COMPLETION_WAITING_DOTS="true"
 # Git auto-fetch
 GIT_AUTO_FETCH_INTERVAL=600
 
-# Starship config
-export STARSHIP_CONFIG=$HOME/.config/starship/config.toml
+# Docker
+source "$HOME/.config/zsh/docker.zsh"
+
+# Eza
+source "$HOME/.config/zsh/eza.zsh"
 
 # Load Antidote
 source $HOME/.antidote/antidote.zsh
 antidote load
 
-# LS Colors
-export LS_COLORS=$(vivid generate catppuccin-mocha)
-
-# Editor
-export EDITOR=nvim
+# Environment
+source "$HOME/.config/zsh/env.zsh"
 
 # OS specific configuration
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -39,9 +39,6 @@ source "$HOME/.config/zsh/aliases.zsh"
 
 # Carapace
 source "$HOME/.config/zsh/carapace.zsh"
-
-# Docker
-source "$HOME/.config/zsh/docker.zsh"
 
 # FZF
 source "$HOME/.config/zsh/fzf.zsh"

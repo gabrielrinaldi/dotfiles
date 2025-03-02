@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+source "$HOME/.config/sketchybar/colors.sh"
+source "$HOME/.config/sketchybar/icons.sh"
+# TODO: Test dynamic island plugin
+# source "$HOME/.config/sketchybar/userconfig.sh" # Loads all defined variables
+
+# Directories
+ITEMS_DIR="$HOME/.config/sketchybar/items"
+PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
+SCRIPTS_DIR="$HOME/.config/sketchybar/scripts"
+
+FONT="CaskaydiaMono Nerd Font Mono"
+ICON_PADDINGS=8
+LABEL_PADDINGS=0
+
+bar_config=(
+  color="$BAR_COLOR"
+  height=30
+  padding_left=16
+  padding_right=16
+)
+
+icon_defaults=(
+  icon.color="$ICON_COLOR"
+  icon.font="$FONT:Bold:16.0"
+  icon.padding_left="$ICON_PADDINGS"
+  icon.padding_right="$ICON_PADDINGS"
+)
+
+label_defaults=(
+  label.color="$TEXT"
+  label.font="$FONT:Bold:12.0"
+  label.padding_left="$LABEL_PADDINGS"
+  label.padding_right="$LABEL_PADDINGS"
+)
+
+background_defaults=(
+  background.corner_radius=9
+  background.height=30
+  background.padding_left="$PADDINGS"
+  background.padding_right="$PADDINGS"
+)
+
+popup_defaults=(
+  popup.height=30
+  popup.horizontal=false
+  popup.background.border_color="$BLUE"
+  popup.background.border_width=2
+  popup.background.color="$MANTLE"
+  popup.background.corner_radius=11
+  popup.background.shadow.drawing=on
+)
+
+sketchybar --bar "${bar_config[@]}" \
+  --default \
+  updates=when_shown \
+  "${icon_defaults[@]}" \
+  "${label_defaults[@]}" \
+  "${background_defaults[@]}" \
+  "${popup_defaults[@]}"
+
+sketchybar --add event aerospace_workspace_change
+
+sketchybar --hotload true
+
+# Left items
+source "$PLUGINS_DIR/apple/item.sh"
+
+# Right items
+source "$PLUGINS_DIR/cpu/item.sh"
+source "$PLUGINS_DIR/memory/item.sh"
+source "$PLUGINS_DIR/network/item.sh"
+
+sketchybar --update

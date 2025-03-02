@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2034
+
+# Catppuccin Mocha
+BASE=0xff1e1e2e
+MANTLE=0xff181825
+CRUST=0xff11111b
+
+TEXT=0xffcdd6f4
+SUBTEXT0=0xffa6adc8
+SUBTEXT1=0xffbac2de
+
+SURFACE0=0xff313244
+SURFACE1=0xff45475a
+SURFACE2=0xff585b70
+
+OVERLAY0=0xff6c7086
+OVERLAY1=0xff7f849c
+OVERLAY2=0xff9399b2
+
+BLUE=0xff89b4fa
+FLAMINGO=0xfff2cdcd
+GREEN=0xffa6e3a1
+LAVENDER=0xffb4befe
+MAROON=0xffeba0ac
+MAUVE=0xffcba6f7
+PEACH=0xfffab387
+PINK=0xfff5c2e7
+RED=0xfff38ba8
+ROSEWATER=0xfff5e0dc
+SAPPHIRE=0xff74c7ec
+SKY=0xff89dceb
+TEAL=0xff94e2d5
+YELLOW=0xfff9e2af
+
+TRANSPARENT=0x00000000
+
+RANDOM_CAT_COLOR=("$BLUE" "$LAVENDER" "$SAPPHIRE" "$SKY" "$TEAL" "$GREEN" "$YELLOW" "$PEACH" "$MAROON" "$RED" "$MAUVE" "$PINK" "$FLAMINGO" "$ROSEWATER")
+
+function getRandomCatColor() {
+  echo "${RANDOM_CAT_COLOR[$RANDOM % ${#RANDOM_CAT_COLOR[@]}]}"
+}
+
+# General bar colors
+BAR_COLOR=$BASE
+ICON_COLOR=$TEXT
+LABEL_COLOR=$TEXT

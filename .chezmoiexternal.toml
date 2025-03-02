@@ -4,15 +4,10 @@ type = "file"
 url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
 refreshPeriod = "24h"
 
-# Nushell
-[".local/share/nushell/catppuccin.nu"]
+# Eza
+[".config/eza/theme.yml"]
 type = "file"
-url = "https://github.com/nik-rev/catppuccin-nushell/raw/main/themes/catppuccin_mocha.nu"
-refreshPeriod = "24h"
-
-[".local/share/nushell/nu_scripts"]
-type = "git-repo"
-url = "https://github.com/nushell/nu_scripts"
+url = "https://github.com/eza-community/eza-themes/raw/main/themes/catppuccin.yml"
 refreshPeriod = "24h"
 
 # K9s
