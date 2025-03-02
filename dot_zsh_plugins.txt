@@ -40,9 +40,7 @@ ohmyzsh/ohmyzsh path:plugins/starship
 ohmyzsh/ohmyzsh path:plugins/tailscale
 ohmyzsh/ohmyzsh path:plugins/uv
 ohmyzsh/ohmyzsh path:plugins/web-search
-
-# Directory
-agkozak/zsh-z
+ohmyzsh/ohmyzsh path:plugins/zoxide
 
 # Completion
 zsh-users/zsh-completions

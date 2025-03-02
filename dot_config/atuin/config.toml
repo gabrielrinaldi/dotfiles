@@ -13,7 +13,7 @@ update_check = true
 ## Address of the sync server
 sync_address = "https://api.atuin.sh"
 
-## How often to sync history. 
+## How often to sync history.
 sync_frequency = "10m"
 
 ## Which search mode to use

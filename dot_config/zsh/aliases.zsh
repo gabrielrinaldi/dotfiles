@@ -9,3 +9,6 @@ alias vim=nvim
 # OpnTofu
 alias terraform=tofu
 
+# Tailscale
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+

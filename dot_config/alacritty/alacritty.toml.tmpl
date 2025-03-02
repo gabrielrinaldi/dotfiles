@@ -8,14 +8,18 @@ import = ["~/.local/share/alacritty/catppuccin.toml"]
 # Fix terminal colors
 TERM = "xterm-256color"
 # Use nushell
-SHELL = "/opt/homebrew/bin/nu"
+SHELL = "/opt/homebrew/bin/zsh"
 XDG_CONFIG_HOME = "{{- .chezmoi.homeDir -}}/.config"
 XDG_DATA_HOME = "{{- .chezmoi.homeDir -}}/.local/share"
+ZELLIJ_AUTO_ATTACH = "true"
+ZELLIJ_AUTO_EXIT = "true"
 
 [window]
-startup_mode = "Fullscreen"
+# TODO: Change to None
+decorations = "Buttonless"
+startup_mode = "Maximized"
 option_as_alt = "OnlyLeft"
-padding = { x = 16, y = 16 }
+padding = { x = 8, y = 8 }
 
 [scrolling]
 history = 50000
@@ -37,7 +41,7 @@ style = { shape = "Underline", blinking = "Off" }
 vi_mode_style = { shape = "Block", blinking = "Off" }
 
 [terminal]
-shell = "/opt/homebrew/bin/nu"
+shell = "/opt/homebrew/bin/zsh"
 
 [mouse]
 hide_when_typing = true
