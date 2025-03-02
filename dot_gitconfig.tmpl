@@ -9,6 +9,7 @@
 [core]
   editor = vim
   excludesfile = /Users/gabriel/.gitignore
+  pager = delta
   trustctime = false
 
 [color]
@@ -29,8 +30,16 @@
   changed = green
   untracked = cyan
 
+[delta]
+  dark = true
+  navigate = true
+  side-by-side = true
+
 [init]
   defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
@@ -41,34 +50,9 @@
 [pull]
   rebase = true
 
-{{ if eq .chezmoi.os "darwin" -}}
 [merge]
-  tool = Kaleidoscope
+  conflictstyle = zdiff3
 
-[merge "Kaleidoscope"]
-  log = true
-  conflictstyle = diff3
-  tool = Kaleidoscope
-
-[mergetool]
-  keepBackup = true
-  prompt = false
-
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
-
-[diff]
-  tool = Kaleidoscope
-
-[difftool]
-  prompt = false
-  trustExitCode = true
-
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
-{{ end -}}
 [commit]
   gpgsign = true
 

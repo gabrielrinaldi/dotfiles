@@ -1,17 +1,17 @@
 network_down=(
   icon.color="$GREEN"
   icon.highlight_color="$BLUE"
-  icon="$NETWORK_DOWN"
+  icon=""
   label.font="$FONT:Bold:10"
   update_freq=1
   y_offset=-6
 )
 
 network_up=(
-  background.padding_right=-70
+  background.padding_right=-72
   icon.color="$GREEN"
   icon.highlight_color="$BLUE"
-  icon="$NETWORK_UP"
+  icon=""
   label.font="$FONT:Bold:10"
   script="$PLUGINS_DIR/network/script.sh"
   update_freq=1

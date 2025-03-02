@@ -2,48 +2,38 @@ POPUP_OFF="sketchybar --set apple.logo popup.drawing=off"
 POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
 
 apple_logo=(
-  icon="$APPLE"
+  icon="󰀵"
   icon.color="$PEACH"
   label.drawing=off
   click_script="$POPUP_CLICK_SCRIPT"
-  popup.height=0
 )
 
 apple_prefs=(
-  icon="$PREFERENCES"
+  icon=""
   label="Preferences"
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
   click_script="open -a 'System Preferences'; $POPUP_OFF"
 )
 
 apple_activity=(
-  icon="$ACTIVITY"
+  icon=""
   label="Activity"
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
   click_script="open -a 'Activity Monitor'; $POPUP_OFF"
 )
 
 apple_divider=(
   icon.drawing=off
   label.drawing=off
-  background.color="$BLUE"
+  background.color="$PEACH"
   background.height=1
-  padding_left=7
-  padding_right=7
-  width=110
+  padding_left=8
+  padding_right=8
+  width=100
   background.drawing=on
 )
 
 apple_lock=(
-  icon="$LOCK"
+  icon=""
   label="Lock Screen"
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
   click_script="osascript -e 'tell application \
               \"System Events\" to keystroke \"q\" \
                 using {command down,control down}';
@@ -51,12 +41,8 @@ apple_lock=(
 )
 
 apple_logout=(
-  icon="$LOGOUT"
-  icon.padding_left=7
+  icon="󰗽"
   label="Logout"
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
   click_script="osascript -e 'tell application \
               \"System Events\" to keystroke \"q\" \
                 using {command down,shift down}';
@@ -64,31 +50,19 @@ apple_logout=(
 )
 
 apple_sleep=(
-  icon="$SLEEP"
-  icon.padding_left=5
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
+  icon="󰒲"
   label="Sleep"
   click_script="osascript -e 'tell app \"System Events\" to sleep'; $POPUP_OFF"
 )
 
 apple_reboot=(
-  icon="$REBOOT"
-  icon.padding_left=5
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
+  icon="󰜉"
   label="Reboot"
   click_script="osascript -e 'tell app \"loginwindow\" to «event aevtrrst»'; $POPUP_OFF"
 )
 
 apple_shutdown=(
-  icon="$POWER"
-  icon.padding_left=5
-  background.color=0x00000000
-  background.height=30
-  background.drawing=on
+  icon="󰐥"
   label="Shutdown"
   click_script="osascript -e 'tell app \"loginwindow\" to «event aevtrsdn»'; $POPUP_OFF"
 )

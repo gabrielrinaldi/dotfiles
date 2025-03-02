@@ -4,6 +4,12 @@ type = "file"
 url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
 refreshPeriod = "24h"
 
+# Bat
+[".config/bat/themes/catppuccin.tmTheme"]
+type = "file"
+url = "https://github.com/catppuccin/bat/raw/main/themes/Catppuccin Mocha.tmTheme"
+refreshPeriod = "24h"
+
 # Eza
 [".config/eza/theme.yml"]
 type = "file"

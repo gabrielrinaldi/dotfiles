@@ -1,7 +1,7 @@
 calendar_date=(
   click_script="$PLUGIN_DIR/date/scripts/zen.sh"
   icon.color="$PEACH"
-  icon="$DATE"
+  icon="󰃮"
   label.font="$FONT:Bold:10"
   script="$PLUGINS_DIR/calendar/date.sh"
   update_freq=120
@@ -9,10 +9,10 @@ calendar_date=(
 )
 
 calendar_clock=(
-  background.padding_right=-73
+  background.padding_right=-77
   click_script="$PLUGIN_DIR/date/scripts/zen.sh"
   icon.color="$PEACH"
-  icon="$CLOCK"
+  icon="󰅐"
   label.font="$FONT:Bold:10"
   script="$PLUGINS_DIR/calendar/clock.sh"
   update_freq=15

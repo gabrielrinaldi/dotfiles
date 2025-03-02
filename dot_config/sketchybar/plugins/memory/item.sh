@@ -1,6 +1,6 @@
 memory=(
   icon.color="$GREEN"
-  icon="$MEMORY"
+  icon=""
   label="..."
   script="$PLUGINS_DIR/memory/script.sh"
   update_freq=15

@@ -5,4 +5,8 @@ defaults write com.apple.dock auto-hide -bool YES
 defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 2
 defaults write NSGlobalDomain _HIHideMenuBar -bool true && killall Finder
+
+convert -size 2560x1600 xc:#181825 "$HOME/.local/share/mocha.png"
+
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'$HOME/.local/share/mocha.png'"'
 {{ end -}}

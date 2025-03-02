@@ -1,10 +1,10 @@
-sketchybar --add item chevron left \
-  --set chevron icon=󰘔 \
+sketchybar --add item application.icon left \
+  --set application.icon icon=󰘔 \
   icon.color="$PEACH" \
   label.drawing=off
 
-sketchybar --add item application left \
-  --set application \
+sketchybar --add item application.name left \
+  --set application.name \
   icon.drawing=off \
   script="$PLUGINS_DIR/applications/script.sh" \
-  --subscribe application front_app_switched
+  --subscribe application.name front_app_switched

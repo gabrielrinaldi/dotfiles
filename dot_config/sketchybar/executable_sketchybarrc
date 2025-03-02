@@ -2,7 +2,6 @@
 # shellcheck disable=SC1091
 
 source "$HOME/.config/sketchybar/colors.sh"
-source "$HOME/.config/sketchybar/icons.sh"
 # TODO: Test dynamic island plugin
 # source "$HOME/.config/sketchybar/userconfig.sh" # Loads all defined variables
 
@@ -10,8 +9,9 @@ source "$HOME/.config/sketchybar/icons.sh"
 PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
 
 FONT="CaskaydiaMono Nerd Font Mono"
-ICON_PADDINGS=8
-LABEL_PADDINGS=0
+ICON_PADDING=8
+LABEL_PADDING=0
+BACKGROUND_PADDING=4
 
 bar_config=(
   color="$BAR_COLOR"
@@ -23,31 +23,32 @@ bar_config=(
 icon_defaults=(
   icon.color="$ICON_COLOR"
   icon.font="$FONT:Bold:16.0"
-  icon.padding_left="$ICON_PADDINGS"
-  icon.padding_right="$ICON_PADDINGS"
+  icon.padding_left="$ICON_PADDING"
+  icon.padding_right="$ICON_PADDING"
 )
 
 label_defaults=(
   label.color="$TEXT"
   label.font="$FONT:Bold:12.0"
-  label.padding_left="$LABEL_PADDINGS"
-  label.padding_right="$LABEL_PADDINGS"
+  label.padding_left="$LABEL_PADDING"
+  label.padding_right="$LABEL_PADDING"
 )
 
 background_defaults=(
-  background.corner_radius=9
-  background.height=30
-  background.padding_left="$PADDINGS"
-  background.padding_right="$PADDINGS"
+  background.corner_radius=4
+  background.height=20
+  background.color="$SURFACE0"
+  background.padding_left="$BACKGROUND_PADDING"
+  background.padding_right="$BACKGROUND_PADDING"
+  background.drawing=off
 )
 
 popup_defaults=(
-  popup.height=30
   popup.horizontal=false
   popup.background.border_color="$BLUE"
   popup.background.border_width=2
-  popup.background.color="$MANTLE"
-  popup.background.corner_radius=11
+  popup.background.color="$BASE"
+  popup.background.corner_radius=4
   popup.background.shadow.drawing=on
 )
 
@@ -66,6 +67,7 @@ source "$PLUGINS_DIR/apple/item.sh"
 source "$PLUGINS_DIR/applications/item.sh"
 
 # Right items
+source "$PLUGINS_DIR/battery/item.sh"
 source "$PLUGINS_DIR/calendar/item.sh"
 source "$PLUGINS_DIR/network/item.sh"
 source "$PLUGINS_DIR/memory/item.sh"
