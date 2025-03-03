@@ -72,6 +72,7 @@ source "$PLUGINS_DIR/calendar/item.sh"
 source "$PLUGINS_DIR/network/item.sh"
 source "$PLUGINS_DIR/memory/item.sh"
 source "$PLUGINS_DIR/cpu/item.sh"
+source "$PLUGINS_DIR/weather/item.sh"
 source "$PLUGINS_DIR/menu_items/item.sh"
 source "$PLUGINS_DIR/spaces/item.sh"
 

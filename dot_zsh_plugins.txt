@@ -47,6 +47,9 @@ ohmyzsh/ohmyzsh path:plugins/zoxide
 zsh-users/zsh-completions
 mattmc3/zephyr path:plugins/completion
 
+# Vi mode
+jeffreytse/zsh-vi-mode
+
 # Deferred
 zsh-users/zsh-autosuggestions kind:defer
 zdharma-continuum/fast-syntax-highlighting kind:defer

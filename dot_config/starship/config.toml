@@ -36,8 +36,9 @@ crust = "#11111b"
 [character]
 # Note the use of Catppuccin color "peach"
 success_symbol = "[❯](peach)"
-error_symbol = "[❯](peach)"
-vimcmd_symbol = "[ ❮](subtext1)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[](subtext1)"
+vimcmd_visual_symbol = "[󰫙](subtext0)"
 
 [directory]
 truncation_length = 4

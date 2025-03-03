@@ -10,7 +10,7 @@ alias curl=curlie
 alias ls="eza -labh --icons auto --group-directories-first --git --time-style relative --no-permissions --no-user"
 
 # NeoVim
-alias v="fd --type f | fzf-tmux -p --reverse | xargs nvim"
+alias v="fd --type f | fzf --reverse | xargs nvim"
 alias vi=nvim
 alias vim=nvim
 
