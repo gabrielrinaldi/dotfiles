@@ -30,6 +30,12 @@ exact = true
 stripComponents = 2
 refreshPeriod = "24h"
 
+# LazyVim
+[".config/nvim/init.lua"]
+type = "file"
+url = "https://github.com/LazyVim/starter/raw/main/init.lua"
+refreshPeriod = "24h"
+
 # Zellij
 [".local/share/zellij/zjstatus.wasm"]
 type = "file"
