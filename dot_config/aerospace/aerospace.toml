@@ -80,6 +80,12 @@ alt-comma = 'layout accordion horizontal vertical'
 # Fullscreen
 alt-ctrl-shift-f = 'fullscreen'
 
+# Joins
+ctrl-shift-left = 'join-with left'
+ctrl-shift-down = 'join-with down'
+ctrl-shift-up = 'join-with up'
+ctrl-shift-right = 'join-with right'
+
 # Focus
 alt-shift-h = 'focus left'
 alt-shift-j = 'focus down'

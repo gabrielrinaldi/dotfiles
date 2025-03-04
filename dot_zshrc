@@ -4,9 +4,6 @@ COMPLETION_WAITING_DOTS="true"
 # Git auto-fetch
 GIT_AUTO_FETCH_INTERVAL=600
 
-# Docker
-source "$HOME/.config/zsh/docker.zsh"
-
 # Eza
 source "$HOME/.config/zsh/eza.zsh"
 
