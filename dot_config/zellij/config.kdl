@@ -166,14 +166,12 @@ keybinds clear-defaults=true {
     }
     bind "Alt n" { NewPane; }
     bind "Alt o" { MoveTab "right"; }
-  }
-  shared_among "normal" {
-    bind "Ctrl w" {
+    bind "Ctrl `" {
       LaunchOrFocusPlugin "https://github.com/laperlej/zellij-choose-tree/releases/download/v0.4.2/zellij-choose-tree.wasm" {
-            floating true
-            move_to_focused_tab true
-            show_plugins false
-        }; SwitchToMode "Locked";
+        floating true
+        move_to_focused_tab true
+        show_plugins false
+      }; SwitchToMode "Locked";
     }
   }
   shared_except "locked" "renametab" "renamepane" {

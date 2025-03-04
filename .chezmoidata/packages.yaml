@@ -26,6 +26,7 @@ packages:
       - "git-extras"
       - "git-lfs"
       - "gmp"
+      - "gnu-sed"
       - "htop"
       - "ifstat"
       - "imagemagick"

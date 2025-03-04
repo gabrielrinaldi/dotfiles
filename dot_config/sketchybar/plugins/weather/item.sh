@@ -1,5 +1,6 @@
 weather=(
-  icon.color="$BLUE"
+  icon.color="$SKY"
+  icon.font="$FONT:Bold:24.0"
   icon=""
   label=""
   script="$PLUGINS_DIR/weather/script.sh"

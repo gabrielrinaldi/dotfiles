@@ -4,8 +4,6 @@ focus_status=$(defaults read com.apple.controlcenter "NSStatusItem Visible Focus
 
 if [ "$focus_status" -eq "1" ]; then
   sketchybar --set "Control Center,FocusModes" drawing=on
-
-  echo 'THERE'
 else
   sketchybar --set "Control Center,FocusModes" drawing=off
 
