@@ -17,9 +17,6 @@ alias vim=nvim
 # OpnTofu
 alias terraform=tofu
 
-# Podman
-alias docker=podman
-
 # Tailscale
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
