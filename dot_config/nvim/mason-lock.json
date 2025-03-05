@@ -3,7 +3,7 @@
   "basedpyright": "1.28.1",
   "bash-language-server": "5.4.3",
   "codespell": "2.4.1",
-  "debugpy": "1.8.12",
+  "debugpy": "1.8.13",
   "docker-compose-language-service": "0.3.0",
   "dockerfile-language-server": "0.13.0",
   "erb-formatter": "0.7.3",
