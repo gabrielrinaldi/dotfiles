@@ -1,0 +1,3 @@
+{{- /* chezmoi:modify-template */ -}}
+{{ fromJson .chezmoi.stdin | setValueAtPath "cliPluginsExtraDirs" (list "/opt/homebrew/lib/docker/cli-plugins") | setValueAtPath "currentContext" "colima" | toPrettyJson }}
+
