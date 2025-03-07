@@ -18,6 +18,7 @@ return {
         end,
         opts = {
           show_defaults = false,
+          log_level = "DEBUG",
         },
       },
       strategies = {
@@ -26,17 +27,6 @@ return {
         },
         inline = {
           adapter = "anthropic",
-        },
-      },
-    },
-  },
-  {
-    "saghen/blink.cmp",
-    opts = {
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer", "codecompanion" },
-        per_filetype = {
-          codecompanion = { "codecompanion" },
         },
       },
     },
