@@ -43,9 +43,6 @@ source "$HOME/.config/zsh/carapace.zsh"
 # FZF
 source "$HOME/.config/zsh/fzf.zsh"
 
-# Zellij
-source "$HOME/.config/zsh/zellij.zsh"
-
 # Atuin configuration
 source "$HOME/.config/zsh/atuin.zsh"
 
