@@ -36,6 +36,12 @@ type = "file"
 url = "https://github.com/LazyVim/starter/raw/main/init.lua"
 refreshPeriod = "24h"
 
+# Xcode
+["Library/Developer/Xcode/UserData/FontAndColorThemes/Catppuccin Mocha.xccolortheme"]
+type = "file"
+url = "https://github.com/catppuccin/xcode/raw/main/themes/Catppuccin Mocha.xccolortheme"
+refreshPeriod = "24h"
+
 # Zellij
 [".local/share/zellij/zjstatus.wasm"]
 type = "file"
