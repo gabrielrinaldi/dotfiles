@@ -18,7 +18,6 @@ return {
         end,
         opts = {
           show_defaults = false,
-          log_level = "DEBUG",
         },
       },
       strategies = {
