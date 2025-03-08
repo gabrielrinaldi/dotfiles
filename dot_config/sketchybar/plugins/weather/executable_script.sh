@@ -55,4 +55,5 @@ else
   ICON="${WEATHER_SYMBOL_NIGHT[$CONDITION]}"
 fi
 
-sketchybar -m --set "$NAME" icon="$ICON" label="$LABEL"
+sketchybar -m --set "$NAME" icon="$ICON"
+sketchybar -m --set "weather.label" label="$LABEL"

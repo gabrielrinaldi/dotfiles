@@ -9,7 +9,7 @@ calendar_date=(
 )
 
 calendar_clock=(
-  background.padding_right=-77
+  background.padding_right=-69
   click_script="$PLUGIN_DIR/date/scripts/zen.sh"
   icon.color="$PEACH"
   icon="󰅐"

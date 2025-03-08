@@ -8,7 +8,7 @@ network_down=(
 )
 
 network_up=(
-  background.padding_right=-72
+  background.padding_right=-64
   icon.color="$GREEN"
   icon.highlight_color="$BLUE"
   icon=""

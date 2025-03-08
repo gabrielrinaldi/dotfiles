@@ -9,7 +9,7 @@ source "$HOME/.config/sketchybar/colors.sh"
 PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
 
 FONT="CaskaydiaMono Nerd Font Mono"
-ICON_PADDING=8
+ICON_PADDING=4
 LABEL_PADDING=0
 BACKGROUND_PADDING=4
 
@@ -70,9 +70,9 @@ source "$PLUGINS_DIR/applications/item.sh"
 source "$PLUGINS_DIR/battery/item.sh"
 source "$PLUGINS_DIR/calendar/item.sh"
 source "$PLUGINS_DIR/network/item.sh"
-source "$PLUGINS_DIR/memory/item.sh"
-source "$PLUGINS_DIR/cpu/item.sh"
+source "$PLUGINS_DIR/monitor/item.sh"
 source "$PLUGINS_DIR/weather/item.sh"
+source "$PLUGINS_DIR/mic/item.sh"
 source "$PLUGINS_DIR/menu_items/item.sh"
 source "$PLUGINS_DIR/spaces/item.sh"
 
