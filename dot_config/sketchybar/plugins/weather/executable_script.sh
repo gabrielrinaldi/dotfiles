@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-declare -A WEATHER_SYMBOL_DAY=(
+declare WEATHER_SYMBOL_DAY=(
   ["Unknown"]=""
   ["Cloudy"]=""
   ["Fog"]=""
@@ -22,7 +22,7 @@ declare -A WEATHER_SYMBOL_DAY=(
   ["VeryCloudy"]=""
 )
 
-declare -A WEATHER_SYMBOL_NIGHT=(
+declare WEATHER_SYMBOL_NIGHT=(
   ["Unknown"]=""
   ["Cloudy"]=""
   ["Fog"]=""

@@ -5,7 +5,8 @@ sketchybar --add alias "Control Center,FocusModes" right \
   icon.drawing=off \
   label.drawing=off \
   script="$PLUGINS_DIR/menu_items/script.sh" \
-  update_freq=15
+  update_freq=15 \
+  updates=on
 
 sketchybar --add alias "Tailscale,Item-0" right \
   --set "Tailscale,Item-0" \

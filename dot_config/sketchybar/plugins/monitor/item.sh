@@ -5,7 +5,7 @@ cpu=(
   label=""
   label.font="$FONT:Bold:10"
   script="$PLUGINS_DIR/monitor/cpu.sh"
-  update_freq=1
+  update_freq=2
   y_offset=6
 )
 
@@ -15,7 +15,7 @@ memory=(
   label=""
   label.font="$FONT:Bold:10"
   script="$PLUGINS_DIR/monitor/memory.sh"
-  update_freq=15
+  update_freq=5
   y_offset=-6
 )
 
