@@ -29,7 +29,6 @@ echo "Setting macOS defaults..."
 osascript -e 'tell application "System Preferences" to quit'
 
 # Sudo commands
-# if [[ $- == *i* ]]; then
 # Ask for the administrator password upfront
 sudo -v
 
@@ -58,8 +57,15 @@ sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 sudo ln -s "$HOME/.local/share/mocha.png" /System/Library/CoreServices/DefaultDesktop.jpg
 
 # Change default shell to fish
-chsh -s /opt/homebrew/bin/fish
-# fi
+FISH_PATH="/opt/homebrew/bin/fish"
+if [ -x "$FISH_PATH" ]; then
+  if ! grep -q "^$FISH_PATH$" /etc/shells; then
+    echo "Adding $FISH_PATH to /etc/shells"
+    echo "$FISH_PATH" | sudo tee -a /etc/shells
+  fi
+
+  chsh -s /opt/homebrew/bin/fish
+fi
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.9764705882 0.8862745098 0.6862745098"
