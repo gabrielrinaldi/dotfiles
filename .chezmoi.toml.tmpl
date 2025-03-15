@@ -1,7 +1,9 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $justShell := promptBoolOnce . "justShell" "Is this just a shell configuration?" -}}
 {{- $opAccount := promptStringOnce . "1Password Account" "Account domain" -}}
 
 [data]
+  justShell = {{ $justShell }}
   email = {{ $email | quote }}
   opAccount = {{ $opAccount | quote }}
 

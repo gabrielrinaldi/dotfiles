@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+{{- if not .justShell -}}
+# Check if Homebrew is installed
+check_homebrew() {
+  if command -v brew &>/dev/null; then
+    echo "Homebrew is already installed."
+    return 0
+  else
+    echo "Homebrew is not installed."
+    return 1
+  fi
+}
+
+# Install Homebrew
+install_homebrew() {
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Homebrew installation completed."
+}
+
+check_homebrew
+if [ $? -ne 0 ]; then
+  install_homebrew
+fi
+{{- end -}}
