@@ -8,7 +8,6 @@ packages:
       - "bat"
       - "borders"
       - "carapace"
-      - "chezmoi"
       - "colima"
       - "coreutils"
       - "curl"
