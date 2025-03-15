@@ -42,6 +42,9 @@ if [[ $- == *i* ]]; then
   rm -rf ~/Library/Application Support/Dock/desktoppicture.db
   sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
   sudo ln -s "$HOME/.local/share/mocha.png" /System/Library/CoreServices/DefaultDesktop.jpg
+
+  # Change default shell to fish
+  chsh -s /opt/homebrew/bin/fish
 fi
 
 # Set highlight color to green
