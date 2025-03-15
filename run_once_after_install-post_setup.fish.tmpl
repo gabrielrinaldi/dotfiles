@@ -2,4 +2,10 @@
 
 echo "Installing fisher..."
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+
+echo "Installing fish plugins..."
 fisher update
+
+{{ if eq .chezmoi.os "darwin" -}}
+fish_add_path ~/.local/bin
+{{ end -}}
