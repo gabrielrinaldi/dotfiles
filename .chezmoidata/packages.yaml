@@ -56,7 +56,6 @@ packages:
       - "xcodes"
       - "zellij"
       - "zoxide"
-      # TODO: - "zsh"
     casks:
       - "1password-cli"
       - "nikitabobko/tap/aerospace"
@@ -69,7 +68,7 @@ packages:
       - "kaleidoscope"
       - "obsidian"
       - "raycast"
-      - "readdle-spark"
+      - "rustdesk"
       - "setapp"
       - "sf-symbols"
       - "spotify"
