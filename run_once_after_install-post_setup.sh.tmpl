@@ -1,34 +1,228 @@
 #!/usr/bin/env bash
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 echo "Rebuilding bat cache..."
 bat cache --build
 
 {{ if eq .chezmoi.os "darwin" -}}
+# Homebrew
+echo "Load homebrew..."
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 echo "Setting macOS defaults..."
-defaults write com.apple.dock auto-hide -bool YES
-defaults write -g InitialKeyRepeat -int 15
-defaults write -g KeyRepeat -int 2
-defaults write NSGlobalDomain _HIHideMenuBar -bool true && killall Finder
 
-magick -size 2560x1600 xc:"#181825" "$HOME/.local/share/mocha.png"
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
 
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'$HOME/.local/share/mocha.png'"'
-
+# Sudo commands
 if [[ $- == *i* ]]; then
-  sudo scutil --set LocalHostName {{ .hostname }}
-  sudo scutil --set ComputerName {{ .hostname }}
+  # Ask for the administrator password upfront
+  sudo -v
+
+  # Set computer name (as done via System Preferences → Sharing)
+  sudo scutil --set ComputerName "{{ .hostname }}"
+  sudo scutil --set HostName "{{ .hostname }}"
+  sudo scutil --set LocalHostName "{{ .hostname }}"
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "{{ .hostname }}"
+
+  # Set power settings
+  {{ if eq .hostname "kenobi" -}}
+  sudo pmset -a autorestart 1
+  sudo pmset -a disksleep 0
+  sudo pmset -a displaysleep 10
+  sudo pmset -a networkoversleep 1
+  sudo pmset -a sleep 0
+  sudo pmset -a ttyskeepawake 1
+  sudo pmset -a womp 1
+  {{ end -}}
+
+  # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
+  # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
+  magick -size 2560x1600 xc:"#181825" "$HOME/.local/share/mocha.png"
+  rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+  sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+  sudo ln -s "$HOME/.local/share/mocha.png" /System/Library/CoreServices/DefaultDesktop.jpg
 fi
 
-{{ if eq .hostname "kenobi" -}}
-sudo pmset -a acwake 0
-sudo pmset -a autorestart 1
-sudo pmset -a disksleep 0
-sudo pmset -a displaysleep 10
-sudo pmset -a networkoversleep 1
-sudo pmset -a sleep 0
-sudo pmset -a ttyskeepawake 1
-sudo pmset -a womp 1
-{{ end -}}
+# Set highlight color to green
+defaults write NSGlobalDomain AppleHighlightColor -string "0.9764705882 0.8862745098 0.6862745098"
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Trackpad: map bottom right corner to right-click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Set language and text formats
+defaults write NSGlobalDomain AppleLanguages -array "en-US" "pt-BR"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Save screenshots to the desktop
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+
+# Save screenshots in PNG format
+defaults write com.apple.screencapture type -string "png"
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Show item info near icons except Desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo false" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy name" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy name" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy name" ~/Library/Preferences/com.apple.finder.plist
+
+# Increase grid spacing for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 88" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:gridSpacing 88" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:gridSpacing 88" ~/Library/Preferences/com.apple.finder.plist
+
+# Increase the size of icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:iconSize 72" ~/Library/Preferences/com.apple.finder.plist
+
+# Use list view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+
+# Set the icon size of Dock items to 48 pixels
+defaults write com.apple.dock tilesize -int 48
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Wipe all (default) app icons from the Dock
+defaults write com.apple.dock persistent-apps -array
+
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Show recent applications in Dock
+defaults write com.apple.dock show-recents -bool true
+
+# Add a spacer to the left side of the Dock (where the applications are)
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+
+# Add a spacer to the right side of the Dock (where the Trash is)
+defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+
+# Disable hot corners
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-tr-corner -int 0
+defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
+
+# Prevent Safari from opening ‘safe’ files automatically after downloading
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Enable Safari’s debug menu
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+# Make Safari’s search banners default to Contains instead of Starts With
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+# Add a context menu item for showing the Web Inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Disable AutoFill
+defaults write com.apple.Safari AutoFillFromAddressBook -bool false
+defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillCreditCardData -bool false
+defaults write com.apple.Safari AutoFillMiscellaneousForms -bool true
+
+# Warn about fraudulent websites
+defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
+
+# Update extensions automatically
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+# Enable Secure Keyboard Entry in Terminal.app
+defaults write com.apple.terminal SecureKeyboardEntry -bool true
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Show the main window when launching Activity Monitor
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Visualize CPU usage in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Download newly available updates in background
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+# Install System data files & security updates
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+# Don't download apps purchased on other Macs
+defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
+
+# Turn on app auto-update
+defaults write com.apple.commerce AutoUpdate -bool true
+
+# Allow the App Store to reboot machine on macOS updates
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# Auto hide menu bar
+defaults write NSGlobalDomain _HIHideMenuBar -bool true && killall Finder
 {{ end -}}
