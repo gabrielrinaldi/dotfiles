@@ -57,7 +57,7 @@ packages:
       - "xcodes"
       - "zellij"
       - "zoxide"
-      - "zsh"
+      # TODO: - "zsh"
     casks:
       - "1password-cli"
       - "nikitabobko/tap/aerospace"

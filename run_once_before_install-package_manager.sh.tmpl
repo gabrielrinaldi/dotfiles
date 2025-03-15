@@ -21,6 +21,7 @@ install_homebrew() {
 
 check_homebrew
 if [ $? -ne 0 ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   install_homebrew
   brew install 1password
 fi
