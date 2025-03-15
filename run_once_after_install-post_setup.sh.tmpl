@@ -29,37 +29,37 @@ echo "Setting macOS defaults..."
 osascript -e 'tell application "System Preferences" to quit'
 
 # Sudo commands
-if [[ $- == *i* ]]; then
-  # Ask for the administrator password upfront
-  sudo -v
+# if [[ $- == *i* ]]; then
+# Ask for the administrator password upfront
+sudo -v
 
-  # Set computer name (as done via System Preferences → Sharing)
-  sudo scutil --set ComputerName "{{ .hostname }}"
-  sudo scutil --set HostName "{{ .hostname }}"
-  sudo scutil --set LocalHostName "{{ .hostname }}"
-  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "{{ .hostname }}"
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "{{ .hostname }}"
+sudo scutil --set HostName "{{ .hostname }}"
+sudo scutil --set LocalHostName "{{ .hostname }}"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "{{ .hostname }}"
 
-  # Set power settings
-  {{ if eq .hostname "kenobi" -}}
-  sudo pmset -a autorestart 1
-  sudo pmset -a disksleep 0
-  sudo pmset -a displaysleep 10
-  sudo pmset -a networkoversleep 1
-  sudo pmset -a sleep 0
-  sudo pmset -a ttyskeepawake 1
-  sudo pmset -a womp 1
-  {{ end -}}
+# Set power settings
+{{ if eq .hostname "kenobi" -}}
+sudo pmset -a autorestart 1
+sudo pmset -a disksleep 0
+sudo pmset -a displaysleep 10
+sudo pmset -a networkoversleep 1
+sudo pmset -a sleep 0
+sudo pmset -a ttyskeepawake 1
+sudo pmset -a womp 1
+{{ end -}}
 
-  # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
-  # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-  magick -size 2560x1600 xc:"#181825" "$HOME/.local/share/mocha.png"
-  rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-  sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-  sudo ln -s "$HOME/.local/share/mocha.png" /System/Library/CoreServices/DefaultDesktop.jpg
+# Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
+# all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
+magick -size 2560x1600 xc:"#181825" "$HOME/.local/share/mocha.png"
+rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+sudo ln -s "$HOME/.local/share/mocha.png" /System/Library/CoreServices/DefaultDesktop.jpg
 
-  # Change default shell to fish
-  chsh -s /opt/homebrew/bin/fish
-fi
+# Change default shell to fish
+chsh -s /opt/homebrew/bin/fish
+# fi
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.9764705882 0.8862745098 0.6862745098"
@@ -170,12 +170,6 @@ defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-br-modifier -int 0
-
-# Warn about fraudulent websites
-defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
-
-# Update extensions automatically
-defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 # Enable Secure Keyboard Entry in Terminal.app
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
