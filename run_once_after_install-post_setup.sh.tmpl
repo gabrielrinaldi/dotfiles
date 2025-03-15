@@ -10,10 +10,21 @@ defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 2
 defaults write NSGlobalDomain _HIHideMenuBar -bool true && killall Finder
 
-magick convert -size 2560x1600 xc:#181825 "$HOME/.local/share/mocha.png"
+magick -size 2560x1600 xc:#181825 "$HOME/.local/share/mocha.png"
 
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "'$HOME/.local/share/mocha.png'"'
 
-sudo scutil --set LocalHostName {{ .hostname }}
-sudo scutil --set ComputerName {{ .hostname }}
+if [[ $- == *i* ]]; then
+  sudo scutil --set LocalHostName {{ .hostname }}
+  sudo scutil --set ComputerName {{ .hostname }}
+fi
+
+{{ if eq .hostname "kenobi" -}}
+pmset -a displaysleep 10
+pmset -a disksleep 0
+pmset -a sleep 0
+pmset -a acwake 0
+pmset -a womp 1
+pmset -a autorestart 1
+{{ end -}}
 {{ end -}}
