@@ -20,11 +20,13 @@ if [[ $- == *i* ]]; then
 fi
 
 {{ if eq .hostname "kenobi" -}}
-pmset -a displaysleep 10
-pmset -a disksleep 0
-pmset -a sleep 0
 pmset -a acwake 0
-pmset -a womp 1
 pmset -a autorestart 1
+pmset -a disksleep 0
+pmset -a displaysleep 10
+pmset -a networkoversleep 1
+pmset -a sleep 0
+pmset -a ttyskeepawake 1
+pmset -a womp 1
 {{ end -}}
 {{ end -}}
