@@ -31,7 +31,10 @@ return {
         },
       },
       explorer = { enabled = true },
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        hidden = true,
+      },
       notifier = {
         enabled = true,
         timeout = 2000,

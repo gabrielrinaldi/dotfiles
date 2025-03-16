@@ -1,13 +1,17 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $justShell := promptBoolOnce . "justShell" "Is this just a shell configuration?" -}}
-{{- $hostname := promptStringOnce . "hostname" "What is the hostname of this machine?" -}}
-{{- $opAccount := promptStringOnce . "1Password Account" "Account domain" -}}
+encryption = "age"
+
+{{ $email := promptStringOnce . "email" "Email address" }}
+{{ $hostname := promptStringOnce . "hostname" "What is the hostname of this machine" }}
+{{ $opToken := promptStringOnce . "opToken" "What is the service account for op" }}
+
+[age]
+  identity = "~/.local/share/key.txt"
+  recipient = "age1wm353levwftvdzvq9vtx8uy5apcrjhk7527k7pk5xw8m8uggn9hszv7xyc"
 
 [data]
-  justShell = {{ $justShell }}
   email = {{ $email | quote }}
-  opAccount = {{ $opAccount | quote }}
   hostname = {{ $hostname | quote }}
+  opToken = {{ $opToken | quote }}
 
 [edit]
   command = "nvim"

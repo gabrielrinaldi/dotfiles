@@ -1,0 +1,12 @@
+[theme]
+name = "catppuccin"
+
+[colors]
+AlertInfo = "#89b4fa"
+AlertWarn = "#f9e2af"
+AlertError = "#f38ba8"
+Annotation = "#bac2de"
+Base = "#cdd6f4"
+Guidance = "#fab387"
+Important = "#f2cdcd"
+Title = "#cdd6f4"

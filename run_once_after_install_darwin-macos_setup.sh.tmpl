@@ -1,27 +1,25 @@
 #!/usr/bin/env bash
 
+{{ if eq .chezmoi.os "darwin" -}}
 # Homebrew
 # Check if Homebrew is installed
 check_homebrew() {
   if command -v brew &>/dev/null; then
-    echo "Homebrew is already installed."
     return 0
   else
-    echo "Homebrew is not installed."
     return 1
   fi
 }
 
 check_homebrew
+
 if [ $? -ne 1 ]; then
-  echo "Load homebrew..."
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   echo "Rebuilding bat cache..."
   bat cache --build
 fi
 
-{{ if eq .chezmoi.os "darwin" -}}
 echo "Setting macOS defaults..."
 
 # Close any open System Preferences panes, to prevent them from overriding
@@ -52,9 +50,7 @@ sudo pmset -a womp 1
 # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
 magick -size 2560x1600 xc:"#181825" "$HOME/.local/share/mocha.png"
-rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-sudo ln -s "$HOME/.local/share/mocha.png" /System/Library/CoreServices/DefaultDesktop.jpg
+osascript -e 'tell application "System Events" to set picture of current desktop to "$HOME/.local/share/mocha.png"'
 
 # Change default shell to fish
 FISH_PATH="/opt/homebrew/bin/fish"
@@ -160,12 +156,6 @@ defaults write com.apple.dock autohide -bool true
 
 # Show recent applications in Dock
 defaults write com.apple.dock show-recents -bool true
-
-# Add a spacer to the left side of the Dock (where the applications are)
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-
-# Add a spacer to the right side of the Dock (where the Trash is)
-defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 # Disable hot corners
 defaults write com.apple.dock wvous-tl-corner -int 0

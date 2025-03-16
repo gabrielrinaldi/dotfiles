@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/opt/homebrew/bin/fish
 
 echo "Installing fisher..."
@@ -5,7 +6,4 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 
 echo "Installing fish plugins..."
 fisher update
-
-{{ if eq .chezmoi.os "darwin" -}}
-fish_add_path ~/.local/bin
 {{ end -}}

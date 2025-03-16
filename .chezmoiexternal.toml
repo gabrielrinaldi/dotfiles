@@ -1,9 +1,3 @@
-# Alacritty
-[".local/share/alacritty/catppuccin.toml"]
-type = "file"
-url = "https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml"
-refreshPeriod = "24h"
-
 # Bat
 [".config/bat/themes/catppuccin.tmTheme"]
 type = "file"
@@ -20,6 +14,12 @@ refreshPeriod = "24h"
 [".config/eza/theme.yml"]
 type = "file"
 url = "https://github.com/eza-community/eza-themes/raw/main/themes/catppuccin.yml"
+refreshPeriod = "24h"
+
+# Ghostty
+[".config/ghostty/themes/catppuccin-mocha.conf"]
+type = "file"
+url = "https://github.com/catppuccin/ghostty/raw/main/themes/catppuccin-mocha.conf"
 refreshPeriod = "24h"
 
 # K9s

@@ -1,36 +1,47 @@
-## Date format used
+# Date format used
 dialect = "us"
 
-## Default timezone to use when displaying time
+# Default timezone to use when displaying time
 timezone = "local"
 
-## Enable or disable automatic sync
+# Enable or disable automatic sync
 auto_sync = true
 
-## Enable or disable automatic update checks
+# Enable or disable automatic update checks
 update_check = true
 
-## Address of the sync server
+# Address of the sync server
 sync_address = "https://api.atuin.sh"
 
-## How often to sync history.
+# How often to sync history.
 sync_frequency = "10m"
 
-## Which search mode to use
+# Which search mode to use
 search_mode = "fuzzy"
 
-## Which filter mode to use when Atuin is invoked from a shell up-key binding
+# Which filter mode to use when Atuin is invoked from a shell up-key binding
 filter_mode_shell_up_key_binding = "workspace"
 
-## Which search mode to use when Atuin is invoked from a shell up-key binding
+# Which search mode to use when Atuin is invoked from a shell up-key binding
 search_mode_shell_up_key_binding = "prefix"
 
-## Which style to use
+# Which style to use
 style = "auto"
 
-## If enabled, upon hitting enter Atuin will immediately execute the command. Press tab to return to the shell and edit.
+# Configures whether to store commands that failed (those with non-zero exit status) or not
+store_failed = false
+
+# If enabled, upon hitting enter Atuin will immediately execute the command. Press tab to return to the shell and edit
 enter_accept = true
+
+[daemon]
+# Run daemon in the background
+enabled = true
 
 [sync]
 # Enable sync v2 by default
 records = true
+
+[theme]
+# Set theme to catppuccin mocha
+name = "catppuccin"

@@ -1,6 +1,12 @@
+# Set path
+set PATH ~/.local/bin $PATH
+
+# Environment
+source $__fish_config_dir/env.fish
+
 if status is-interactive
     # Load homebrew
-    eval "$(brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 
     # Setup prompt
     starship init fish | source
@@ -8,6 +14,14 @@ if status is-interactive
     # Setup atuin
     atuin init fish | source
 
+    # Setup zoxide
+    zoxide init --cmd cd fish | source
+
     # Theme
-    fish_config theme save "Catppuccin Mocha"
+    # fish_config theme save "Catppuccin Mocha"
+
+    # Greeting
+    function fish_greeting
+        fastfetch
+    end
 end

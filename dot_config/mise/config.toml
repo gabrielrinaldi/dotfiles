@@ -3,17 +3,14 @@ activate_aggressive = true
 plugin_autoupdate_last_check_duration = '1 day'
 
 [tools]
-"asdf:neovim" = 'nightly'
-elixir = '1.18.2'
+elixir = '1.18'
 erlang = '27'
-golang = '1.24.0'
+golang = '1.24'
 helm = '3'
-kubectl = 'latest'
-lazydocker = 'latest'
 lua = '5.1'
 node = '22'
-opentofu = 'latest'
-perl = { version = '5.40.1', postinstall = 'cpanm Neovim::Ext' }
+opentofu = '1.9'
+perl = { version = '5.40', postinstall = 'cpanm Neovim::Ext' }
 python = '3.12'
 rebar = '3.24'
 ruby = '3.3'

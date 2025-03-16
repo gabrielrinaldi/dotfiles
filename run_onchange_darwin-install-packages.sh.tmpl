@@ -3,6 +3,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+echo "Installing packages..."
 brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
@@ -11,4 +12,23 @@ brew {{ . | quote }}
 cask {{ . | quote }}
 {{ end -}}
 EOF
+
+echo "Enabling services..."
+# Iterate over the output of brew services
+while IFS= read -r line; do
+  # Skip empty lines and the header row
+  if [ -z "$line" ] || echo "$line" | grep -q "^Name"; then
+    continue
+  fi
+
+  # Extract the name and status from each line
+  name=$(echo "$line" | awk '{print $1}')
+  status=$(echo "$line" | awk '{print $2}')
+
+  # Check if the service is not started or has an error status
+  if [ "$status" != "started" ]; then
+    echo "Starting $name..."
+    brew services start "$name"
+  fi
+done < <(brew services)
 {{ end -}}
