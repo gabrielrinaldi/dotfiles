@@ -1,5 +1,5 @@
 {{- /* chezmoi:modify-template */ -}}
-{{ if eq `[ -e "$HOME/.docker/config.json" ] && echo "true" || echo "false"` "true" -}}
+{{ if lookPath "$HOME/.docker/config.json" -}}
 {{ fromJson .chezmoi.stdin | setValueAtPath "cliPluginsExtraDirs" (list "/opt/homebrew/lib/docker/cli-plugins") | setValueAtPath "currentContext" "colima" | toPrettyJson }}
 {{ end -}}
 
