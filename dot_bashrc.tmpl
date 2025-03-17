@@ -3,3 +3,6 @@ export OP_SERVICE_ACCOUNT_TOKEN={{ .opToken | quote }}
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Setup path
+export PATH="$HOME/.local/bin:$HOME/.lmstudio/bin$PATH"

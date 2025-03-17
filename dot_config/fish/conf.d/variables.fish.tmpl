@@ -12,10 +12,10 @@ set -x HOMEBREW_GITHUB_API_TOKEN {{ onepasswordRead "op://Shell/Homebrew/token" 
 set -x GH_TOKEN {{ onepasswordRead "op://Shell/GitHub/token" | quote }}
 
 # Colima
-set -x DOCKER_HOST $(docker context inspect | jq '.[] | select(.Name == "'$(docker context show)'") | .Endpoints.docker.Host' -r)
+set -x DOCKER_HOST unix://{{ .chezmoi.homeDir }}/.config/colima/default/docker.sock
 
 # Colors
-set -x LS_COLORS $(vivid generate catppuccin-mocha)
+set -x LS_COLORS "$(vivid generate catppuccin-mocha)"
 
 # Editor
 set -x EDITOR nvim

@@ -1,21 +1,16 @@
-# Set path
-set PATH ~/.local/bin $PATH
-
-# Environment
-source $__fish_config_dir/env.fish
-
 if status is-interactive
-    # Load homebrew
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-
-    # Setup prompt
+    # Starship Prompt
+    function starship_transient_prompt_func
+        starship module character
+    end
     starship init fish | source
+    enable_transience
 
     # Setup atuin
     atuin init fish | source
 
     # Setup zoxide
-    zoxide init --cmd cd fish | source
+    zoxide init fish | source
 
     # Theme
     # fish_config theme save "Catppuccin Mocha"
