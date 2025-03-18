@@ -44,3 +44,7 @@ shell-integration-features = true
 
 # Theme (ghostty +list-themes)
 theme = catppuccin-mocha
+
+# Window
+window-padding-x = 8
+window-padding-y = 8
