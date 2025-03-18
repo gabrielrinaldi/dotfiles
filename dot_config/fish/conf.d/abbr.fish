@@ -2,6 +2,14 @@ if status is-interactive
     # Homebrew
     abbr --add brewup 'brew upgrade'
 
+    # Eza
+    abbr --add l 'eza -labh --icons auto --group-directories-first --git --time-style relative --no-permissions --no-user'
+    abbr --add ll 'eza -labh --icons auto --group-directories-first --git --time-style relative'
+    abbr --add lt 'eza -labh --icons auto --group-directories-first --git --no-permissions --no-user'
+    abbr --add llt 'eza -labh --icons auto --group-directories-first --git'
+    abbr --add tree 'eza -Ta --icons --ignore-glob=".git|.DS_Store"'
+    abbr --add llt 'eza -TaD --icons --ignore-glob=".git|.DS_Store"'
+
     # Git
     abbr --add ga 'git add'
     abbr --add gaa 'git add --all'

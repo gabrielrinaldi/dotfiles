@@ -1,4 +1,7 @@
 if status is-interactive
+    # Keybindings
+    set -g fish_key_bindings fish_vi_key_bindings
+
     # Starship Prompt
     function starship_transient_prompt_func
         starship module character
