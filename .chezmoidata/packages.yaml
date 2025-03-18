@@ -34,6 +34,7 @@ packages:
       - "imagemagick"
       - "jq"
       - "k9s"
+      - "kubecolor"
       - "kubectl"
       - "lazydocker"
       - "lazygit"

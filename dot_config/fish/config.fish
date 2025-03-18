@@ -12,8 +12,8 @@ if status is-interactive
     # Setup zoxide
     zoxide init fish | source
 
-    # Theme
-    # fish_config theme save "Catppuccin Mocha"
+    # Setup kubectl
+    kubectl completion fish | source
 
     # Greeting
     function fish_greeting
