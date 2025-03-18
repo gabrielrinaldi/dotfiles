@@ -54,10 +54,6 @@ layout {
         command_git_branch_interval    "10"
         command_git_branch_rendermode  "static"
 
-        command_weather_command "(http get https://wttr.in/80108?m&format=%c%t+H:%h)"
-        command_weather_interval "1"
-        command_weather_rendermode "dynamic"
-
         datetime        "{format} "
         datetime_format "%a %d/%m %H:%M"
         datetime_timezone "America/Denver"
