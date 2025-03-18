@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://dlvhdr.github.io/gh-dash/configuration/gh-dash/schema.json
+
+prSections:
+  - title: All
+    filters: >-
+      is:open
+      updated:>={{ nowModify "-3w" }}
+      sort:updated-desc
+  - title: Mine
+    filters: >-
+      is:open
+      author:@me
+      sort:updated-desc
+    layout:
+      author:
+        hidden: true
+  - title: Review
+    filters: >-
+      is:open
+      -author:@me
+      review-requested:@me
+      sort:updated-desc
+  - title: Involved
+    filters: >-
+      is:open
+      -author:@me
+      involves:@me
+      sort:updated-desc
+
+prApproveComment: LGTM
+preview:
+  open: true
+  width: 100
+view: prs
+
+theme:
+  colors:
+    text:
+      primary: "#cdd6f4"
+      secondary: "#89b4fa"
+      inverted: "#11111b"
+      faint: "#bac2de"
+      warning: "#f9e2af"
+      success: "#a6e3a1"
+      error: "#f38ba8"
+    background:
+      selected: "#313244"
+    border:
+      primary: "#89b4fa"
+      secondary: "#45475a"
+      faint: "#313244"
