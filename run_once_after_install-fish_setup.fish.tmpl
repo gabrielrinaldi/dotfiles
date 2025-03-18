@@ -9,5 +9,7 @@ fisher update
 fish_config theme save "Catppuccin Mocha"
 
 echo "Installing yazi packages"
-ya pack -a yazi-rs/flavors:catppuccin-mocha
+if not ya pack -l | grep -q "yazi-rs/flavors:catppuccin-mocha"
+    ya pack -a yazi-rs/flavors:catppuccin-mocha
+end
 {{ end -}}
