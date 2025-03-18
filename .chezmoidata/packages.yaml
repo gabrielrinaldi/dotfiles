@@ -20,6 +20,7 @@ packages:
       - "fastfetch"
       - "fd"
       - "felixkratz/formulae/sketchybar"
+      - "ffmpeg"
       - "fish"
       - "fop"
       - "fzf"
@@ -42,8 +43,10 @@ packages:
       - "mise"
       - "neovim"
       - "openssl"
+      - "poppler"
       - "readline"
       - "ripgrep"
+      - "sevenzip"
       - "starship"
       - "tailscale"
       - "tectonic"
@@ -55,6 +58,7 @@ packages:
       - "wget"
       - "wxwidgets"
       - "xcodes"
+      - "yazi"
       - "zellij"
       - "zoxide"
     casks:
@@ -78,10 +82,3 @@ packages:
       - "tower"
       - "transmit"
       - "yellowdot"
-services:
-  darwin:
-    - "atuin"
-    - "borders"
-    - "colima"
-    - "sketchybar"
-    - "tailscale"
