@@ -27,8 +27,11 @@ while IFS= read -r line; do
 
   # Check if the service is not started or has an error status
   if [ "$status" != "started" ]; then
-    echo "Starting $name..."
-    brew services start "$name"
+    # Skip tailscale service
+    if [ "$name" != "tailscale" ]; then
+      echo "Starting $name..."
+      brew services start "$name"
+    fi
   fi
 done < <(brew services)
 {{ end -}}
