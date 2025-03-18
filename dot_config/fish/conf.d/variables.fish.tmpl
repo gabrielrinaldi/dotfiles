@@ -9,7 +9,7 @@ set -x XDG_DATA_HOME "$HOME/.local/share"
 # Keys
 set -x OP_SERVICE_ACCOUNT_TOKEN {{ .opToken | quote }}
 set -x HOMEBREW_GITHUB_API_TOKEN {{ onepasswordRead "op://Shell/Homebrew/token" | quote }}
-set -x GH_TOKEN {{ onepasswordRead "op://Shell/GitHub/token" | quote }}
+set -x ANTHROPIC_API_KEY {{ onepasswordRead "op://Shell/Anthropic/credential" | quote }}
 
 # Colima
 set -x DOCKER_HOST unix://{{ .chezmoi.homeDir }}/.config/colima/default/docker.sock

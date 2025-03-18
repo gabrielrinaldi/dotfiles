@@ -21,6 +21,8 @@ if status is-interactive
     abbr --add gco 'git checkout'
     abbr --add gg lazygit
     abbr --add ggpush 'git push origin "$(git_current_branch)"'
+    abbr --add ghce 'gh copilot explain'
+    abbr --add ghcs 'gh copilot suggest'
     abbr --add ghpr 'gh pr create --fill'
     abbr --add gpr 'git pull --rebase --autostash'
     abbr --add gst 'git status'

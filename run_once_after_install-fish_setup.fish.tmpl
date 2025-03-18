@@ -14,6 +14,10 @@ if not ya pack -l | grep -q "yazi-rs/flavors:catppuccin-mocha"
 end
 
 echo "Installing gh extensions..."
+if not gh extension list | grep -q github/gh-copilot
+    gh extension install github/gh-copilot
+end
+
 if not gh extension list | grep -q dlvhdr/gh-dash
     gh extension install dlvhdr/gh-dash
 end
