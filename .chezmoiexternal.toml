@@ -16,12 +16,6 @@ type = "file"
 url = "https://github.com/eza-community/eza-themes/raw/main/themes/catppuccin.yml"
 refreshPeriod = "24h"
 
-# Ghostty
-[".config/ghostty/themes/catppuccin-mocha.conf"]
-type = "file"
-url = "https://github.com/catppuccin/ghostty/raw/main/themes/catppuccin-mocha.conf"
-refreshPeriod = "24h"
-
 # K9s
 [".config/k9s/skins"]
 type = "archive"
