@@ -10,6 +10,8 @@ set -x XDG_DATA_HOME "$HOME/.local/share"
 set -x OP_SERVICE_ACCOUNT_TOKEN {{ .opToken | quote }}
 set -x HOMEBREW_GITHUB_API_TOKEN {{ onepasswordRead "op://Shell/Homebrew/token" | quote }}
 set -x ANTHROPIC_API_KEY {{ onepasswordRead "op://Shell/Anthropic/credential" | quote }}
+set -x TAVILY_API_KEY {{ onepasswordRead "op://Shell/Tavily/credential" | quote }}
+set -x OPENAI_API_KEY {{ onepasswordRead "op://Shell/OpenAI/credential" | quote }}
 
 # Colima
 set -x DOCKER_HOST unix://{{ .chezmoi.homeDir }}/.config/colima/default/docker.sock
@@ -22,9 +24,6 @@ set -x EDITOR nvim
 {{ if eq .chezmoi.os "darwin" -}}
 set -x VISUAL subl
 {{ end -}}
-
-# Eza
-set -x EZA_CONFIG_DIR "$HOME/.config/eza"
 
 # FZF theme
 set -x FZF_DEFAULT_OPTS "\
