@@ -6,6 +6,9 @@ set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p
 set -x XDG_CONFIG_HOME "$HOME/.config"
 set -x XDG_DATA_HOME "$HOME/.local/share"
 
+# Done
+set -x __done_min_cmd_duration 4000
+
 # Keys
 set -x OP_SERVICE_ACCOUNT_TOKEN {{ .opToken | quote }}
 set -x HOMEBREW_GITHUB_API_TOKEN {{ onepasswordRead "op://Shell/Homebrew/token" | quote }}
