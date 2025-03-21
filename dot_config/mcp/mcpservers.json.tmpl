@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "github.com/tavily-ai/tavily-mcp": {
+      "command": "npx",
+      "args": ["-y", "tavily-mcp@0.1.3"],
+      "env": {
+        "TAVILY_API_KEY": {{ onepasswordRead "op://Shell/Tavily/credential" | quote }}
+      }
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/time": {
+      "command": "uvx",
+      "args": ["mcp-server-time", "--local-timezone=America/Denver"]
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/git": {
+      "command": "uvx",
+      "args": ["mcp-server-git"]
+    },
+    "todoist": {
+      "command": "npx",
+      "args": ["-y", "@abhiz123/todoist-mcp-server"],
+      "env": {
+        "TODOIST_API_TOKEN": {{ onepasswordRead "op://Shell/Todoist/credential" | quote }}
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "cli-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "cli-mcp-server"
+      ],
+      "env": {
+        "ALLOWED_DIR": {{ .chezmoi.homeDir | quote }},
+        "ALLOWED_COMMANDS": "ls,cat,pwd,echo,kubectl",
+        "ALLOWED_FLAGS": "-l,-a,--help,--version,-n",
+        "MAX_COMMAND_LENGTH": "1024",
+        "COMMAND_TIMEOUT": "30"
+      }
+    }
+  }
+}

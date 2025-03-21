@@ -7,8 +7,11 @@ return {
     version = false,
     build = "make",
     dependencies = {
+      "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
-      "zbirenbaum/copilot.lua",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "ravitemer/mcphub.nvim",
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
@@ -45,7 +48,6 @@ return {
     },
     opts = {
       provider = "claude",
-      auto_suggestions_provider = "copilot", -- Disabled
       cursor_applying_provider = "claude",
       memory_summary_provider = "claude",
       behaviour = {
@@ -77,21 +79,31 @@ return {
           api_key_name = "",
           endpoint = "http://100.100.1.50:1234/v1",
           model = "llama-3.3-70b-instruct",
-          max_tokens = 20480,
+          max_tokens = 8192,
         },
         ["kenobi-qwen"] = {
           __inherited_from = "openai",
           api_key_name = "",
           endpoint = "http://100.100.1.50:1234/v1",
           model = "qwen2.5-coder-32b-instruct",
-          max_tokens = 20480,
+          max_tokens = 8192,
+          disable_tools = true,
         },
         ["kenobi-gemma"] = {
           __inherited_from = "openai",
           api_key_name = "",
           endpoint = "http://100.100.1.50:1234/v1",
           model = "gemma-3-27b-it",
-          max_tokens = 20480,
+          max_tokens = 4096,
+          disable_tools = true,
+        },
+        ["kenobi-deepseek"] = {
+          __inherited_from = "openai",
+          api_key_name = "",
+          endpoint = "http://100.100.1.50:1234/v1",
+          model = "deepseek-coder-v2-lite-instruct-mlx",
+          max_tokens = 8192,
+          disable_tools = true,
         },
       },
     },
