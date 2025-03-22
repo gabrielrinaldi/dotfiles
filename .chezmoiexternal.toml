@@ -4,6 +4,12 @@ type = "file"
 url = "https://github.com/catppuccin/bat/raw/main/themes/Catppuccin Mocha.tmTheme"
 refreshPeriod = "24h"
 
+# btop
+[".config/btop/themes/catppuccin_mocha.theme"]
+type = "file"
+url = "https://github.com/catppuccin/btop/raw/main/themes/catppuccin_mocha.theme"
+refreshPeriod = "24h"
+
 # Delta
 [".config/bat/themes/catppuccin.gitconfig"]
 type = "file"

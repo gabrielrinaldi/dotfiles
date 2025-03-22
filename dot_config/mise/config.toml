@@ -3,6 +3,7 @@ activate_aggressive = true
 plugin_autoupdate_last_check_duration = '1 day'
 
 [tools]
+"asdf:neovim" = 'nightly'
 elixir = '1.18'
 erlang = '27'
 golang = '1.24'
