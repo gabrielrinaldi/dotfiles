@@ -57,6 +57,7 @@ packages:
       - "terminal-notifier"
       - "terraform" # Support nvim plugins, use opentofu instead
       - "terraform-ls"
+      - "thefuck"
       - "unzip"
       - "usage"
       - "vivid"

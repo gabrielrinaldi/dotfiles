@@ -18,6 +18,9 @@ if status is-interactive
     # Setup kubectl
     kubectl completion fish | source
 
+    # Setup thefuck
+    thefuck --alias | source
+
     # Greeting
     function fish_greeting
         fastfetch
