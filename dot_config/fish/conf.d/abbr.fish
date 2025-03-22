@@ -10,6 +10,9 @@ if status is-interactive
     abbr --add tree 'eza -Ta --icons --ignore-glob=".git|.DS_Store"'
     abbr --add llt 'eza -TaD --icons --ignore-glob=".git|.DS_Store"'
 
+    # Fish
+    abbr --add reload 'source ~/.config/fish/**/*.fish'
+
     # Git
     abbr --add ga 'git add'
     abbr --add gaa 'git add --all'
