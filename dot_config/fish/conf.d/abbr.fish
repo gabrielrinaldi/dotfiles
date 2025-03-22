@@ -29,6 +29,9 @@ if status is-interactive
     abbr --add gsth 'git stash --all'
     abbr --add gstp 'git stash pop'
 
+    # Lazydocker
+    abbr --add lzd lazydocker
+
     # Paths
     abbr --add config '~/.config/'
     abbr --add local '~/.local/'
