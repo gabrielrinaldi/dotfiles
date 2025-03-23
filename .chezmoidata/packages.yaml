@@ -87,6 +87,7 @@ packages:
       - "font-caskaydia-mono-nerd-font"
       - "ghostty"
       - "hey"
+      - "kitty"
       - "lm-studio"
       - "obsidian"
       - "raycast"
