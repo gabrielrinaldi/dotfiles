@@ -41,7 +41,6 @@ macos-secure-input-indication = true
 # Shell Integration
 shell-integration = fish
 shell-integration-features = true
-shell-integration-features = sudo
 
 # Theme (ghostty +list-themes)
 theme = catppuccin-mocha

@@ -264,6 +264,7 @@ disabled = true
 disabled = true
 
 [python]
+format = "via [${symbol}${pyenv_prefix}(${version} )]($style)"
 symbol = " "
 
 [quarto]

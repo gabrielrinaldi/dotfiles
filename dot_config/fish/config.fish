@@ -21,6 +21,9 @@ if status is-interactive
     # Setup thefuck
     thefuck --alias | source
 
+    # Setup AI
+    source ~/.fish-ai/bin/activate.fish
+
     # Greeting
     function fish_greeting
         fastfetch
