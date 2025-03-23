@@ -5,7 +5,6 @@ return {
     name = "catppuccin",
     priority = 1000,
     integrations = {
-      aerial = true,
       blink_cmp = true,
     },
     opts = {
