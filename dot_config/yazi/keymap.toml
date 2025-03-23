@@ -1,0 +1,53 @@
+[[manager.prepend_keymap]]
+on = ["c", "m"]
+run = "plugin chmod"
+desc = "Chmod on selected files"
+
+[[manager.prepend_keymap]]
+on = "T"
+run = "plugin max-preview"
+desc = "Maximize or restore preview"
+
+[[manager.prepend_keymap]]
+on = "M"
+run = "plugin mount"
+
+[[manager.prepend_keymap]]
+on = "F"
+run = "plugin smart-filter"
+desc = "Smart filter"
+
+[[manager.prepend_keymap]]
+on = "E"
+run = "plugin eza-preview"
+desc = "Toggle tree/list dir preview"
+
+[[manager.prepend_keymap]]
+on = "-"
+run = "plugin eza-preview --inc-level"
+desc = "Increment tree level"
+
+[[manager.prepend_keymap]]
+on = "_"
+run = "plugin eza-preview --dec-level"
+desc = "Decrement tree level"
+
+[[manager.prepend_keymap]]
+on = "$"
+run = "plugin eza-preview --toggle-follow-symlinks"
+desc = "Toggle tree follow symlinks"
+
+[[manager.prepend_keymap]]
+on = "<C-e>"
+run = "seek 5"
+desc = "Paginate down markdown file"
+
+[[manager.prepend_keymap]]
+on = "<C-y>"
+run = "seek -5"
+desc = "Paginate up markdown file"
+
+[[manager.prepend_keymap]]
+on = "<A-y>"
+run = ["plugin copy-file-contents"]
+desc = "Copy contents of file"

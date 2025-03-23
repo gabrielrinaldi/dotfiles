@@ -42,6 +42,21 @@ type = "file"
 url = "https://github.com/catppuccin/xcode/raw/main/themes/Catppuccin Mocha.xccolortheme"
 refreshPeriod = "24h"
 
+# Yazi
+[".config/yazi/plugins/miller.yazi"]
+type = "archive"
+url = "https://github.com/AnirudhG07/miller.yazi/archive/patch-1.tar.gz"
+exact = true
+stripComponents = 1
+refreshPeriod = "24h"
+
+[".config/yazi/plugins/yatline-catppuccin.yazi"]
+type = "archive"
+url = "https://github.com/imsi32/yatline-catppuccin.yazi/archive/main.tar.gz"
+exact = true
+stripComponents = 1
+refreshPeriod = "24h"
+
 # Zellij
 [".local/share/zellij/zjstatus.wasm"]
 type = "file"
