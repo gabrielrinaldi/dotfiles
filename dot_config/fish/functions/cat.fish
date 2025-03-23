@@ -1,3 +1,3 @@
 function cat --description 'View contents of a file'
-    bat $argv
+    prettybat $argv
 end
