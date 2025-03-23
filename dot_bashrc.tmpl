@@ -1,8 +1,12 @@
 # Set 1Password token
 export OP_SERVICE_ACCOUNT_TOKEN={{ .opToken | quote }}
 
+# Setup path
+export PATH="$HOME/.local/bin:$HOME/.lmstudio/bin:$PATH"
+
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Setup path
-export PATH="$HOME/.local/bin:$HOME/.lmstudio/bin$PATH"
+# Starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init bash)"
