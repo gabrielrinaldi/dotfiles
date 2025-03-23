@@ -6,5 +6,7 @@ local wk = require("which-key")
 
 -- Avante keymaps
 wk.add({
+  -- Aavante
+  { "<leader>a", group = "ai" },
   { "<leader>am", desc = "Avante MCP", icon = "󰴗" },
 })

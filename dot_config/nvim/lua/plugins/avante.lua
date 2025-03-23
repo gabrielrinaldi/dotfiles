@@ -36,15 +36,6 @@ return {
           opts.file_types = vim.list_extend(opts.file_types or {}, { "Avante" })
         end,
       },
-      {
-        "folke/which-key.nvim",
-        optional = true,
-        opts = {
-          spec = {
-            { "<leader>a", group = "ai" },
-          },
-        },
-      },
     },
     opts = {
       provider = "claude",
