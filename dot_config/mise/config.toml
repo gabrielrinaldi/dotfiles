@@ -2,6 +2,11 @@
 activate_aggressive = true
 plugin_autoupdate_last_check_duration = '1 day'
 
+[tasks.chezmoi]
+alias = 'c'
+description = 'Apply chezmoi changes'
+run = "chezmoi apply"
+
 [tools]
 "asdf:neovim" = 'nightly'
 elixir = '1.18'
