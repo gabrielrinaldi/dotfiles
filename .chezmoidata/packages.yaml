@@ -55,7 +55,6 @@ packages:
       - "tailscale"
       - "tectonic"
       - "terminal-notifier"
-      - "terraform" # Support nvim plugins, use opentofu instead
       - "terraform-ls"
       - "thefuck"
       - "unzip"
