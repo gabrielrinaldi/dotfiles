@@ -1,53 +1,156 @@
-[[manager.prepend_keymap]]
-on = ["c", "m"]
-run = "plugin chmod"
-desc = "Chmod on selected files"
-
-[[manager.prepend_keymap]]
-on = "T"
-run = "plugin max-preview"
-desc = "Maximize or restore preview"
-
-[[manager.prepend_keymap]]
-on = "M"
-run = "plugin mount"
-
-[[manager.prepend_keymap]]
-on = "F"
-run = "plugin smart-filter"
-desc = "Smart filter"
-
-[[manager.prepend_keymap]]
-on = "E"
-run = "plugin eza-preview"
-desc = "Toggle tree/list dir preview"
-
-[[manager.prepend_keymap]]
-on = "-"
-run = "plugin eza-preview --inc-level"
-desc = "Increment tree level"
-
-[[manager.prepend_keymap]]
-on = "_"
-run = "plugin eza-preview --dec-level"
-desc = "Decrement tree level"
-
-[[manager.prepend_keymap]]
-on = "$"
-run = "plugin eza-preview --toggle-follow-symlinks"
-desc = "Toggle tree follow symlinks"
-
-[[manager.prepend_keymap]]
-on = "<C-e>"
-run = "seek 5"
-desc = "Paginate down markdown file"
-
-[[manager.prepend_keymap]]
-on = "<C-y>"
-run = "seek -5"
-desc = "Paginate up markdown file"
-
-[[manager.prepend_keymap]]
-on = "<A-y>"
-run = ["plugin copy-file-contents"]
-desc = "Copy contents of file"
+[manager]
+prepend_keymap = [
+  # chmod
+  { on = [
+    "c",
+    "m",
+  ], run = "plugin chmod", desc = "Chmod on selected files" },
+  # toggle full screen
+  { on = [
+    "T",
+    "f",
+  ], run = "plugin max-preview", desc = "Maximize or restore preview" },
+  # mount
+  { on = "M", run = "plugin mount" },
+  # smart filter
+  { on = "F", run = "plugin smart-filter", desc = "Smart filter" },
+  # eza
+  { on = "E", run = "plugin eza-preview", desc = "Toggle tree/list dir preview" },
+  { on = "-", run = "plugin eza-preview --inc-level", desc = "Increment tree level" },
+  { on = "_", run = "plugin eza-preview --dec-level", desc = "Decrement tree level" },
+  { on = "$", run = "plugin eza-preview --toggle-follow-symlinks", desc = "Toggle tree follow symlinks" },
+  # markdown pagination
+  { on = "<C-e>", run = "seek 5", desc = "Paginate down markdown file" },
+  { on = "<C-y>", run = "seek -5", desc = "Paginate up markdown file" },
+  # compress
+  { on = "C", run = "plugin ouch zip", desc = "Compress with ouch" },
+  # copy file
+  { on = "<A-y>", run = [
+    "plugin copy-file-contents",
+  ], desc = "Copy contents of file" },
+  # rsync
+  { on = [
+    "R",
+    "s",
+  ], run = "plugin rsync", desc = "Copy files using rsync" },
+  { on = [
+    "R",
+    "g",
+  ], run = "plugin rsync --args='gabriel@100.100.1.50'", desc = "Copy files using rsync to default location" },
+  # trash
+  { on = [
+    "d",
+    "u",
+  ], run = "plugin restore", desc = "Restore last deleted files/folders" },
+  { on = [
+    "d",
+    "d",
+  ], run = [
+    "escape --visual",
+    '''
+    shell --confirm 'trash-put "$@"'
+''',
+  ], desc = "Put file on the trash" },
+  # open
+  { on = [
+    "O",
+    "o",
+  ], run = "open --interactive", desc = "Open selected files interactively" },
+  { on = [
+    "O",
+    "c",
+  ], run = "plugin open-with-cmd block", desc = "Open with command in the terminal" },
+  { on = [
+    "O",
+    "C",
+  ], run = "plugin open-with-cmd", desc = "Open with command" },
+  { on = [
+    "O",
+    "b",
+  ], run = [
+    "escape --visual",
+    '''
+    shell --block 'prettybat --paging=always "$@"'
+''',
+  ], desc = "Open with bat" },
+  # search
+  { on = [
+    "f",
+    "g",
+  ], run = "plugin fg", desc = "find file by content (fuzzy match)" },
+  { on = [
+    "f",
+    "G",
+  ], run = "plugin fg rg", desc = "find file by content (ripgrep match)" },
+  { on = [
+    "f",
+    "f",
+  ], run = "plugin fg fzf", desc = "find file by filename" },
+  # bookmarks
+  { on = [
+    "u",
+    "a",
+  ], run = "plugin yamb save", desc = "Add bookmark" },
+  { on = [
+    "u",
+    "g",
+  ], run = "plugin yamb jump_by_key", desc = "Jump bookmark by key" },
+  { on = [
+    "u",
+    "d",
+  ], run = "plugin yamb delete_by_key", desc = "Delete bookmark by key" },
+  { on = [
+    "u",
+    "A",
+  ], run = "plugin yamb delete_all", desc = "Delete all bookmarks" },
+  { on = [
+    "u",
+    "r",
+  ], run = "plugin yamb rename_by_key", desc = "Rename bookmark by key" },
+  # image conversion
+  { on = [
+    "c",
+    "j",
+  ], run = "plugin convert --extension=jpg", desc = "Convert image to JPG" },
+  { on = [
+    "c",
+    "p",
+  ], run = "plugin convert --extension=png", desc = "Convert image to PNG" },
+  { on = [
+    "c",
+    "w",
+  ], run = "plugin convert --extension=webp", desc = "Convert image to WEBP" },
+  # tagging
+  { on = [
+    "T",
+    "a",
+  ], run = "plugin simple-tag -- toggle-tag", desc = "Toggle tag with any key" },
+  { on = [
+    "T",
+    "t",
+  ], run = "plugin simple-tag -- toggle-ui", desc = "Toggle tag indicator (icon > tag key > hidden)" },
+  { on = [
+    "T",
+    "f",
+  ], run = "plugin simple-tag -- filter", desc = "Filter files by a tag (press any key)" },
+  { on = [
+    "T",
+    "s",
+  ], run = "plugin simple-tag -- toggle-select", desc = "Selection only tagged files (press any tag key to select)" },
+  { on = [
+    "T",
+    "F",
+  ], run = "plugin simple-tag -- filter --input --mode=or", desc = "Filter files by contain tags (input box)" },
+  { on = [
+    "T",
+    "c",
+  ], run = "plugin simple-tag -- clear", desc = "Remove all tags from selected or hovered files" },
+  { on = [
+    "T",
+    "a",
+  ], run = "plugin simple-tag -- toggle-select --mode=unite", desc = "Add tagged files to selection (press any tag key to select)" },
+  { on = [
+    "T",
+    "u",
+  ], run = "plugin simple-tag -- toggle-select --mode=undo", desc = "Undo selection action" },
+]

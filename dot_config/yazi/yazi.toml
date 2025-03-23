@@ -5,23 +5,31 @@ show_symlink = true
 sort_by = "natural"
 sort_dir_first = true
 
+[opener]
+extract = [
+  { run = 'ya pub augmented-extract --list "$@"', desc = "Extract here", for = "unix" },
+  { run = 'ya pub augmented-extract --list %*', desc = "Extract here", for = "windows" },
+]
+
 [preview]
 tab_size = 2
 max_width = 2000
 max_height = 1200
 wrap = "yes"
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*/"
-run = "git"
-
 [plugin]
+prepend_fetchers = [
+  { id = "git", name = "*", run = "git" },
+  { id = "git", name = "*/", run = "git" },
+]
+
+append_fetchers = [
+  { id = "simple-tag", name = "*", run = "simple-tag" },
+  { id = "simple-tag", name = "*/", run = "simple-tag" },
+]
+
+prepend_preloaders = [{ mime = "audio/*", run = "audio-preview" }]
+
 prepend_previewers = [
   # Archive previewer
   { mime = "application/*zip", run = "ouch" },
@@ -31,6 +39,9 @@ prepend_previewers = [
   { mime = "application/x-rar", run = "ouch" },
   { mime = "application/x-xz", run = "ouch" },
 
+  # Audio
+  { mime = "audio/*", run = "audio-preview" },
+
   # csv
   { mime = "text/csv", run = "miller" },
 
@@ -39,4 +50,9 @@ prepend_previewers = [
 
   # Markdown
   { name = "*.md", run = "glow" },
+
+  # Rich
+  { name = "*.rst", run = "rich-preview" },
+  { name = "*.ipynb", run = "rich-preview" },
+  { name = "*.json", run = "rich-preview" },
 ]

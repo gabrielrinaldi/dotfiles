@@ -15,8 +15,14 @@ set -gx XDG_MUSIC_DIR $HOME/Music
 set -gx XDG_PICTURES_DIR $HOME/Pictures
 set -gx XDG_VIDEOS_DIR $HOME/Videos
 
-# Set local bin path
-set -x PATH ~/.local/bin $PATH
+# Set gnu utils path
+set -gx PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
+
+# Set trash-cli path
+set -gx PATH /opt/homebrew/opt/trash-cli/bin $PATH
 
 # Set lmstudio path
 set -gx PATH ~/.lmstudio/bin $PATH
+
+# Set local bin path
+set -gx PATH ~/.local/bin $PATH

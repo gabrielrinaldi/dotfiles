@@ -1,5 +1,21 @@
+-- Setup augment commands
+require("augment-command"):setup({
+  smart_paste = true,
+  enter_directory_after_creation = true,
+  recursively_extract_archives = false,
+  must_have_hovered_item = true,
+  smooth_scrolling = true,
+  wraparound_file_navigation = true,
+})
+
 -- Enable borders
 require("full-border"):setup()
+
+-- Enable bookmarks
+require("yamb"):setup({
+  jump_notify = true,
+  path = os.getenv("HOME") .. "/.local/share/yazi/bookmark",
+})
 
 -- Enable copy file contents
 require("copy-file-contents"):setup({
@@ -10,8 +26,43 @@ require("copy-file-contents"):setup({
 -- Enable eza
 require("eza-preview"):setup({})
 
+-- Enable fd
+require("fg"):setup({
+  default_action = "menu",
+})
+
 -- Enable git
 require("git"):setup()
+
+-- Enable trash-cli
+require("restore"):setup({
+  show_confirm = true,
+})
+
+-- Enable tagging
+require("simple-tag"):setup({
+  ui_mode = "icon",
+  hints_disabled = false,
+  linemode_order = 500,
+  save_path = os.getenv("HOME") .. "/.local/share/yazi/tags",
+
+  colors = {
+    ["!"] = "#f38ba8",
+    ["@"] = "#fab387",
+    ["$"] = "#f9e2af",
+    ["*"] = "#89b4fa",
+    ["#"] = "#f5e0dc",
+  },
+
+  icons = {
+    default = "󰚋",
+    ["!"] = "",
+    ["@"] = "",
+    ["$"] = "󰒘",
+    ["*"] = "",
+    ["#"] = "󰠦",
+  },
+})
 
 -- Enable lualine like status line
 local catppuccin_theme = require("yatline-catppuccin"):setup("mocha")
