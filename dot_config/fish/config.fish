@@ -12,9 +12,6 @@ if status is-interactive
     # Setup atuin
     atuin init fish | source
 
-    # Setup zoxide
-    zoxide init fish | source
-
     # Setup kubectl
     kubectl completion fish | source
 
