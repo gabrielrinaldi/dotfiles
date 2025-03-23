@@ -24,6 +24,14 @@ if status is-interactive
     # Setup AI
     source ~/.fish-ai/bin/activate.fish
 
+    # Cursor
+    set fish_cursor_default block
+    set fish_cursor_insert underscore blink
+    set fish_cursor_replace_one line blink
+    set fish_cursor_replace line blink
+    set fish_cursor_external block
+    set fish_cursor_visual block
+
     # Greeting
     function fish_greeting
         fastfetch
