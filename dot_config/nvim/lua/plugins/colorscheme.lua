@@ -5,6 +5,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     integrations = {
+      aerial = true,
       blink_cmp = true,
     },
     opts = {
@@ -14,7 +15,15 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin",
+    },
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      options = {
+        theme = "catppuccin",
+      },
     },
   },
 }
