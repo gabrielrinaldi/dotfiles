@@ -36,6 +36,11 @@ type = "file"
 url = "https://github.com/LazyVim/starter/raw/main/init.lua"
 refreshPeriod = "24h"
 
+[".local/share/tmux/plugins/tpm"]
+type = "git-repo"
+url = "git@github.com:tmux-plugins/tpm.git"
+refreshPeriod = "24h"
+
 # Xcode
 ["Library/Developer/Xcode/UserData/FontAndColorThemes/Catppuccin Mocha.xccolortheme"]
 type = "file"
