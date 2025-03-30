@@ -46,6 +46,14 @@
         "MAX_COMMAND_LENGTH": "1024",
         "COMMAND_TIMEOUT": "30"
       }
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": {{ onepasswordRead "op://Shell/Slack/credential" | quote }},
+        "SLACK_TEAM_ID": {{ onepasswordRead "op://Shell/Slack/username" | quote }}
+      }
     }
   }
 }
