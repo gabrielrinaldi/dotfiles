@@ -4,14 +4,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "Installing packages..."
-brew bundle --file=/dev/stdin <<EOF
-{{ range .packages.darwin.brews -}}
-brew {{ . | quote }}
-{{ end -}}
-{{ range .packages.darwin.casks -}}
-cask {{ . | quote }}
-{{ end -}}
-EOF
+brew bundle --file=~/.brewfile
 
 echo "Enabling services..."
 # Iterate over the output of brew services
