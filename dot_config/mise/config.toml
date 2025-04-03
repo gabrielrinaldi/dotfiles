@@ -21,4 +21,4 @@ python = '3.12'
 rebar = '3.24'
 ruby = '3.3'
 rust = '1.85'
-uv = { version = 'latest', postinstall = 'uv tool install posting' }
+uv = { version = 'latest', postinstall = 'uv tool install posting; uv tool install asitop' }
