@@ -8,6 +8,7 @@ return {
     cmd = "MCPHub",
     build = "npm install -g mcp-hub@latest",
     opts = {
+      auto_approve = false,
       port = 3050,
       config = vim.fn.expand("~/.config/mcp/mcpservers.json"),
       log = {
