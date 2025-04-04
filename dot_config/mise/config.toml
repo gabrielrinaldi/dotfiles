@@ -8,7 +8,6 @@ description = 'Apply chezmoi changes'
 run = "chezmoi apply"
 
 [tools]
-"asdf:neovim" = 'nightly'
 elixir = '1.18'
 erlang = '27'
 golang = '1.24'
