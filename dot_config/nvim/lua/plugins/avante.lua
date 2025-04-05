@@ -61,16 +61,20 @@ return {
       end,
       hints = { enabled = true },
       disabled_tools = {
-        "list_files", -- Built-in file operations
-        "search_files",
-        "read_file",
-        "create_file",
-        "rename_file",
-        "delete_file",
+        "bash",
         "create_dir",
-        "rename_dir",
+        "create_file",
         "delete_dir",
-        "bash", -- Built-in terminal access
+        "delete_file",
+        "fetch",
+        "git_commit",
+        "git_diff",
+        "list_files",
+        "read_file",
+        "rename_dir",
+        "rename_file",
+        "search_files",
+        "web_search",
       },
       file_selector = {
         provider = "snacks",
