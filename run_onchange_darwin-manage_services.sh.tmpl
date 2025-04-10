@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+SERVICES_DIR="{{ .chezmoi.sourceDir }}/services"
+TARGET_DIR="$HOME/Library/LaunchAgents"
+TEMP_DIR=$(mktemp -d)
+
+# Function to clean up temporary files
+cleanup() {
+  rm -rf "$TEMP_DIR"
+}
+
+# Register cleanup function to run on exit
+trap cleanup EXIT
+
+if [ -d "$SERVICES_DIR" ]; then
+  # Process both .plist and .plist.tmpl files
+  find "$SERVICES_DIR" -type f \( -name "*.plist" -o -name "*.plist.tmpl" \) | while read -r service; do
+    # Check if it's a template file
+    if [[ "$service" == *.tmpl ]]; then
+      base_name=$(basename "$service" .tmpl)
+      temp_file="$TEMP_DIR/$base_name"
+
+      echo -e "  Rendering template $service..."
+      chezmoi execute-template <"$service" >"$temp_file"
+
+      # Use the rendered file for further processing
+      service_name=$(basename "$base_name" .plist)
+      target_service="$TARGET_DIR/$(basename "$base_name")"
+
+      echo -e "  Copying rendered $service_name to $TARGET_DIR..."
+      cp "$temp_file" "$target_service"
+    else
+      # Regular .plist file
+      service_name=$(basename "$service" .plist)
+      target_service="$TARGET_DIR/$(basename "$service")"
+
+      echo -e "  Copying $service_name to $TARGET_DIR..."
+      cp "$service" "$target_service"
+    fi
+
+    # Extract label and load the service
+    label=$(plutil -extract Label xml1 -o - "$target_service" 2>/dev/null | sed -n 's/.*<string>\(.*\)<\/string>.*/\1/p')
+    if [ -z "$label" ]; then
+      label=$service_name
+    fi
+
+    echo -e "  Loading $service_name ($label)..."
+
+    launchctl unload "$target_service" 2>/dev/null
+
+    if launchctl load -w "$target_service"; then
+      echo -e "    Successfully loaded"
+    else
+      echo -e "    Failed to load"
+    fi
+  done
+else
+  echo -e "Error: Directory $SERVICES_DIR does not exist"
+  exit 1
+fi
