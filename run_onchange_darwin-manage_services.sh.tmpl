@@ -12,6 +12,9 @@ cleanup() {
 # Register cleanup function to run on exit
 trap cleanup EXIT
 
+# String to identify services to skip
+SKIP_STRING="skip"
+
 if [ -d "$SERVICES_DIR" ]; then
   # Process both .plist and .plist.tmpl files
   find "$SERVICES_DIR" -type f \( -name "*.plist" -o -name "*.plist.tmpl" \) | while read -r service; do
@@ -36,6 +39,12 @@ if [ -d "$SERVICES_DIR" ]; then
 
       echo -e "  Copying $service_name to $TARGET_DIR..."
       cp "$service" "$target_service"
+    fi
+
+    # Skip loading if service name contains SKIP_STRING
+    if [[ "$service_name" == *"$SKIP_STRING"* ]]; then
+      echo -e "  Skipping loading of $service_name due to SKIP_STRING match"
+      continue
     fi
 
     # Extract label and load the service
