@@ -20,7 +20,10 @@
 	<key>ProgramArguments</key>
 	<array>
     <string>/opt/homebrew/bin/colima</string>
-		<string>start</string>
+    <string>start</string>
+{{ if eq .hostname "kenobi" -}}
+    <string>kenobi</string>
+{{ end -}}
 		<string>-f</string>
   </array>
   <key>EnvironmentVariables</key>

@@ -17,7 +17,11 @@ set -x TAVILY_API_KEY {{ onepasswordRead "op://Shell/Tavily/credential" | quote 
 set -x OPENAI_API_KEY {{ onepasswordRead "op://Shell/OpenAI/credential" | quote }}
 
 # Colima
+{{ if eq .hostname "kenobi" -}}
+set -x DOCKER_HOST unix://{{ .chezmoi.homeDir }}/.config/colima/kenobi/docker.sock
+{{ else -}}
 set -x DOCKER_HOST unix://{{ .chezmoi.homeDir }}/.config/colima/default/docker.sock
+{{ end -}}
 
 # Colors
 set -x LS_COLORS "$(vivid generate catppuccin-mocha)"
