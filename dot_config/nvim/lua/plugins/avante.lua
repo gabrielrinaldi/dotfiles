@@ -84,29 +84,31 @@ return {
         enabled = true,
       },
       vendors = {
-        ["kenobi-llama"] = {
-          __inherited_from = "openai",
-          api_key_name = "",
-          endpoint = "http://100.100.1.50:1234/v1",
-          model = "llama-4-scout-17b-16e-mlx-text",
+        ["kenobi-athene"] = {
+          __inherited_from = "ollama",
+          endpoint = "http://100.100.1.50:11434",
+          model = "athene-v2:72b-q8_0",
           max_tokens = 32768,
-          disable_tools = false,
         },
-        ["kenobi-coder"] = {
-          __inherited_from = "openai",
-          api_key_name = "",
-          endpoint = "http://100.100.1.50:1234/v1",
-          model = "qwen2.5-coder-32b-instruct-mlx",
+        ["kenobi-mistral"] = {
+          __inherited_from = "ollama",
+          endpoint = "http://100.100.1.50:11434",
+          model = "mistral-small3.1:24b-instruct-2503-q8_0",
+          max_tokens = 32768,
+        },
+        ["kenobi-gemma"] = {
+          __inherited_from = "ollama",
+          endpoint = "http://100.100.1.50:11434",
+          model = "gemma3:27b-it-q8_0",
           max_tokens = 32768,
           disable_tools = true,
         },
-        ["kenobi-qwen"] = {
-          __inherited_from = "openai",
-          api_key_name = "",
-          endpoint = "http://100.100.1.50:1234/v1",
-          model = "qwen2.5-32b-instruct-mlx",
+        ["kenobi-deepcoder"] = {
+          __inherited_from = "ollama",
+          endpoint = "http://100.100.1.50:11434",
+          model = "deepcoder:14b-preview-q8_0",
           max_tokens = 32768,
-          disable_tools = false,
+          disable_tools = true,
         },
       },
     },
