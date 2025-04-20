@@ -8,7 +8,7 @@ source "$HOME/.config/sketchybar/colors.sh"
 # Directories
 PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
 
-FONT="CaskaydiaMono Nerd Font Mono"
+FONT="JetBrainsMono Nerd Font Mono"
 ICON_PADDING=4
 LABEL_PADDING=0
 BACKGROUND_PADDING=4
