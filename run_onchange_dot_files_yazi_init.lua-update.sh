@@ -25,6 +25,7 @@ plugins=(
   "imsi32/yatline-catppuccin"
   "imsi32/yatline-githead"
   "ndtoan96/ouch"
+  "Reledia/miller"
   "yazi-rs/plugins:chmod"
   "yazi-rs/plugins:full-border"
   "yazi-rs/plugins:git"
