@@ -86,26 +86,26 @@ return {
       vendors = {
         ["kenobi-athene"] = {
           __inherited_from = "ollama",
-          endpoint = "http://100.100.1.50:11434",
+          endpoint = "http://10.10.0.13:11434",
           model = "athene-v2:72b-q8_0",
           max_tokens = 32768,
         },
         ["kenobi-mistral"] = {
           __inherited_from = "ollama",
-          endpoint = "http://100.100.1.50:11434",
+          endpoint = "http://10.10.0.13:11434",
           model = "mistral-small3.1:24b-instruct-2503-q8_0",
           max_tokens = 32768,
         },
         ["kenobi-gemma"] = {
           __inherited_from = "ollama",
-          endpoint = "http://100.100.1.50:11434",
+          endpoint = "http://10.10.0.13:11434",
           model = "gemma3:27b-it-q8_0",
           max_tokens = 32768,
           disable_tools = true,
         },
         ["kenobi-deepcoder"] = {
           __inherited_from = "ollama",
-          endpoint = "http://100.100.1.50:11434",
+          endpoint = "http://10.10.0.13:11434",
           model = "deepcoder:14b-preview-q8_0",
           max_tokens = 32768,
           disable_tools = true,
